@@ -1,0 +1,29 @@
+﻿date,intelligenceIndex,deltaVsPrevStep,model,slug,creator,isOpenWeights,isReasoning
+2022-11-30,3.202,,GPT-3.5 Turbo,gpt-35-turbo,OpenAI,False,False
+2023-03-14,6.7756,3.5736,GPT-4,gpt-4,OpenAI,False,False
+2023-11-06,7.6879,0.9123,GPT-4 Turbo,gpt-4-turbo,OpenAI,False,False
+2024-03-04,11.7552,4.0673,Claude 3 Opus,claude-3-opus,Anthropic,False,False
+2024-09-12,17.2068,5.4516,o1-preview,o1-preview,OpenAI,False,True
+2024-12-05,23.8573,6.6505,o1,o1,OpenAI,False,True
+2025-02-24,27.6167,3.7594,Claude 3.7 Sonnet (Reasoning),claude-3-7-sonnet-thinking,Anthropic,False,True
+2025-04-16,31.0956,3.4789,o3,o3,OpenAI,False,True
+2025-05-22,31.6899,0.5943,Claude 4 Opus (Reasoning),claude-4-opus-thinking,Anthropic,False,True
+2025-06-10,33.294,1.6041,o3-pro,o3-pro,OpenAI,False,True
+2025-07-10,34.0824,0.7884,Grok 4,grok-4,SpaceXAI,False,True
+2025-08-05,34.5377,0.4553,Claude 4.1 Opus (Reasoning),claude-4-1-opus-thinking,Anthropic,False,True
+2025-08-07,35.3127,0.775,GPT-5 (high),gpt-5,OpenAI,False,True
+2025-09-23,37.0355,1.7228,GPT-5 Codex (high),gpt-5-codex,OpenAI,False,True
+2025-09-29,37.3918,0.3563,Claude 4.5 Sonnet (Reasoning),claude-4-5-sonnet-thinking,Anthropic,False,True
+2025-11-13,37.4661,0.0743,GPT-5.1 (high),gpt-5-1,OpenAI,False,True
+2025-11-18,40.6068,3.1407,Gemini 3 Pro Preview (high),gemini-3-pro,Google,False,True
+2025-11-24,41.8728,1.266,Claude Opus 4.5 (Reasoning),claude-opus-4-5-thinking,Anthropic,False,True
+2025-12-11,43.3436,1.4708,GPT-5.2 (xhigh),gpt-5-2,OpenAI,False,True
+2026-02-05,45.5117,2.1681,GPT-5.3 Codex (xhigh),gpt-5-3-codex,OpenAI,False,True
+2026-02-17,48.3663,2.8546,"Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",claude-sonnet-4-6-adaptive,Anthropic,False,True
+2026-03-05,53.1231,4.7568,GPT-5.4 (xhigh),gpt-5-4,OpenAI,False,True
+2026-04-16,54.9641,1.841,"Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",claude-opus-4-7,Anthropic,False,True
+2026-04-23,56.3067,1.3426,GPT-5.5 (xhigh),gpt-5-5,OpenAI,False,True
+2026-05-28,57.3304,1.0237,"Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",claude-opus-4-8,Anthropic,False,True
+2026-06-09,62.0727,4.7423,"Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",claude-fable-5,Anthropic,False,True
+2026-07-24,63.0532,0.9805,"Claude Opus 5 (Adaptive Reasoning, Max Effort)",claude-opus-5,Anthropic,False,True
+2026-09-01,65.6529,2.5997,"Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-fable-5-1,Anthropic,False,True

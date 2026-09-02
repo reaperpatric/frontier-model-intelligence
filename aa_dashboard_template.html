@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artificial Analysis · 前沿大模型智能指数演进</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --border:#e3e8ef; --border2:#eef2f7;
+    --text:#0f172a; --text2:#475569; --text3:#94a3b8;
+    --grid:#eef2f7; --accent:#2563eb; --up:#d92b2b;
+    --shadow:0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 64px}
+  header.top{margin-bottom:22px}
+  h1{font-size:24px;margin:0 0 6px;letter-spacing:-.01em;font-weight:650}
+  .sub{color:var(--text2);font-size:13px}
+  .sub a{color:var(--accent);text-decoration:none}
+  .badge{display:inline-block;padding:1px 8px;border:1px solid var(--border);
+    border-radius:999px;font-size:11px;color:var(--text2);background:#fff;margin-left:6px}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:18px 0 24px}
+  .kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+  .kpi .k{font-size:11.5px;color:var(--text3);letter-spacing:.02em}
+  .kpi .v{font-size:23px;font-weight:660;letter-spacing:-.02em;margin-top:3px;font-variant-numeric:tabular-nums}
+  .kpi .d{font-size:11.5px;color:var(--text2);margin-top:2px}
+  .up{color:var(--up)}
+
+  /* ---- 迭代节奏板块 ---- */
+  .concl{background:#f8fafc;border:1px solid var(--border);border-left:3px solid var(--accent);
+    border-radius:8px;padding:13px 16px;margin:14px 0 4px;font-size:13px;color:var(--text2);line-height:1.75}
+  .concl b{color:var(--text)}
+  .concl .hl{color:var(--accent);font-weight:660}
+  .defs{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:10px;margin:14px 0 2px}
+  .def{background:#f8fafc;border:1px solid var(--border2);border-radius:8px;padding:10px 13px}
+  .def .h{font-size:12px;font-weight:640;color:var(--text);margin-bottom:3px}
+  .def .h i{display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;
+    border-radius:4px;background:var(--accent);color:#fff;font-style:normal;font-size:10.5px;margin-right:5px}
+  .def .h i.b{background:#0ea5e9}
+  .def .h i.c{background:#8b5cf6}
+  .def .p{font-size:11.5px;color:var(--text2);line-height:1.6}
+  .def .v{font-size:17px;font-weight:660;color:var(--text);margin-top:5px;font-variant-numeric:tabular-nums}
+  .def .v span{font-size:11.5px;font-weight:500;color:var(--text3);margin-left:3px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+  .sect{font-size:11px;color:var(--text3);letter-spacing:.06em;font-weight:600;
+    margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border2)}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px 14px;margin-bottom:18px;box-shadow:var(--shadow)}
+  .card h2{font-size:15.5px;margin:0 0 2px;font-weight:640}
+  .card .note{font-size:12px;color:var(--text3);margin-bottom:10px}
+  svg{display:block;width:100%;height:auto;overflow:visible}
+  .axis text{font-size:10.5px;fill:var(--text3)}
+  .axis line{stroke:var(--grid);stroke-width:1}
+  .gl{stroke:var(--grid);stroke-width:1}
+  .axline{stroke:#cbd5e1;stroke-width:1}
+  .dot{cursor:pointer}
+  .hit{fill:transparent;cursor:pointer}
+
+  .legend{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
+  .lg{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--text2);
+    border:1px solid var(--border);border-radius:6px;padding:3px 9px;cursor:pointer;user-select:none;background:#fff}
+  .lg.off{opacity:.38}
+  .lg i{width:9px;height:9px;border-radius:2px;display:inline-block}
+  .lg b{font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+
+  #tip{position:fixed;pointer-events:none;z-index:99;background:#0f172a;color:#fff;
+    border-radius:7px;padding:8px 11px;font-size:12px;line-height:1.55;opacity:0;
+    transition:opacity .1s;box-shadow:0 6px 20px rgba(15,23,42,.22);max-width:280px}
+  #tip .t{font-weight:640;margin-bottom:2px}
+  #tip .r{color:#cbd5e1}
+  #tip .r b{color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--border2);white-space:nowrap}
+  th{color:var(--text3);font-weight:600;font-size:11.5px;letter-spacing:.02em;
+     position:sticky;top:0;background:var(--card);z-index:1}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  tbody tr:hover{background:#f8fafc}
+  .pill{display:inline-block;padding:0 6px;border-radius:4px;font-size:10.5px;line-height:17px}
+  .scroll{max-height:430px;overflow:auto;border:1px solid var(--border2);border-radius:8px}
+  .tag{display:inline-block;font-size:10.5px;color:var(--text2);background:#f1f5f9;
+    border-radius:4px;padding:0 5px;margin-left:5px}
+  footer{color:var(--text3);font-size:11.5px;margin-top:26px;line-height:1.8}
+  footer a{color:var(--accent);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .dl{margin-top:9px;padding-top:9px;border-top:1px solid var(--border2)}
+  .dl a{display:inline-block;margin:0 10px 0 0;padding:2px 8px;border:1px solid var(--border);
+    border-radius:5px;background:#fff}
+  code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:11.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>前沿大模型智能指数演进 <span class="badge">Artificial Analysis</span></h1>
+    <div class="sub">
+      数据源：<a href="https://artificialanalysis.ai/" target="_blank" rel="noreferrer">artificialanalysis.ai</a>
+      · Frontier Language Model Intelligence, Over Time · 抓取时间 <span id="gen"></span>
+    </div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="sect">前沿迭代节奏分析</div>
+
+  <div class="card">
+    <h2>前沿模型迭代间隔</h2>
+    <div class="note">「前沿」定义为任意时点上智能指数排名 <b>Top-3</b> 的模型；追踪这些模型推出新版本的时间节奏。共 <b id="cadN"></b> 次迭代事件、<b id="cadV"></b> 个去重后的模型版本。</div>
+    <div class="kpis" id="cadKpis"></div>
+    <div class="concl" id="cadConcl"></div>
+    <div class="defs" id="cadDefs"></div>
+  </div>
+
+  <div class="card">
+    <h2>迭代间隔分布</h2>
+    <div class="note">按口径 A（厂商版本迭代间隔）分桶统计，鼠标悬停查看区间与占比。</div>
+    <svg id="chartHist" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>迭代加速度（分年度）</h2>
+      <div class="note">各年度迭代事件的中位间隔天数，柱越低代表迭代越快。</div>
+      <svg id="chartYear" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="card">
+      <h2>迭代节奏时间线</h2>
+      <div class="note">每次迭代一个点：横轴为新版发布日、纵轴为距该厂商上次迭代的天数。</div>
+      <svg id="chartTL" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </div>
+
+  <div class="sect">月度迭代加速度 · <span id="mstart3">2026</span> 年以来</div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>月度迭代间隔</h2>
+      <div class="note">圆点为单次迭代（按厂商着色），蓝线为<b>滚动 3 个月中位间隔</b>。月度样本稀疏，以趋势线为准。</div>
+      <svg id="chartMonth" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="card">
+      <h2>月度迭代次数与前沿增量</h2>
+      <div class="note">柱为当月迭代次数（左轴），线为当月前沿智能指数增量（右轴）。</div>
+      <svg id="chartMonth2" viewBox="0 0 520 320" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span id="mstart2">2026 年</span>月度明细</h2>
+    <div class="note">「滚动 3 月中位」取当月及前两个月的所有迭代样本，用于平滑月度噪声。</div>
+    <div class="scroll">
+      <table id="tblMonth">
+        <thead><tr><th>月份</th><th class="num">迭代次数</th><th class="num">中位间隔</th>
+          <th class="num">滚动 3 月中位</th><th class="num">前沿增量</th><th class="num">月末前沿</th>
+          <th>当月刷新前沿的模型</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>各厂商迭代节奏</h2>
+    <div class="note">仅统计进入过 Top-3 的厂商；n 为该厂商的迭代次数。</div>
+    <div class="scroll">
+      <table id="tblCad">
+        <thead><tr><th>厂商</th><th class="num">迭代次数</th><th class="num">中位间隔</th>
+          <th class="num">平均间隔</th><th class="num">最短</th><th class="num">最长</th>
+          <th>最近一次迭代</th><th class="num">距今</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Top-3 席位更替事件</h2>
+    <div class="note">每次有新模型挤入 Top-3 记一条；「距上次」为相邻更替日的间隔天数。</div>
+    <div class="scroll">
+      <table id="tblChg">
+        <thead><tr><th>日期</th><th class="num">距上次</th><th>新进入</th>
+          <th>厂商</th><th class="num">指数</th><th>被挤出</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>前沿模型在榜时长</h2>
+    <div class="note">从进入 Top-3 到被挤出的天数；标注「至今」者当前仍在榜。</div>
+    <div class="scroll">
+      <table id="tblTen">
+        <thead><tr><th class="num">#</th><th>模型</th><th>厂商</th>
+          <th>进入日期</th><th>退出日期</th><th class="num">在榜天数</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sect">前沿指数演进</div>
+
+  <div class="card">
+    <h2>前沿智能指数阶梯曲线</h2>
+    <div class="note">取截至每个时点的历史最高 Artificial Analysis Intelligence Index（AAII）。每一个台阶代表一次「前沿被刷新」，共 <b id="nstep"></b> 次。</div>
+    <svg id="chart1" viewBox="0 0 1000 430" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="card">
+    <h2>分厂商前沿对比</h2>
+    <div class="note">各厂商自身的历史最高智能指数演进（点击图例可切换显示）。</div>
+    <div class="legend" id="legend2"></div>
+    <svg id="chart2" viewBox="0 0 1000 440" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="card">
+    <h2>全模型分布</h2>
+    <div class="note">每个点为一个模型版本，横轴发布日期、纵轴智能指数；灰色为其他厂商。</div>
+    <div class="legend" id="legend3"></div>
+    <svg id="chart3" viewBox="0 0 1000 430" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="card">
+    <h2>前沿台阶明细</h2>
+    <div class="note">仅列出刷新历史最高分的模型，共 <b id="nstep2"></b> 条。</div>
+    <div class="scroll">
+      <table id="tbl">
+        <thead><tr>
+          <th>刷新日期</th><th>模型</th><th>厂商</th>
+          <th class="num">智能指数</th><th class="num">较上一级</th>
+          <th class="num">较起点累计</th><th>属性</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>前沿领跑厂商格局</h2>
+    <div class="note">按时间顺序列出「谁在领跑」以及领跑切换。</div>
+    <div class="scroll">
+      <table id="tbl2">
+        <thead><tr><th>起始日期</th><th>领跑厂商</th><th>代表模型</th><th class="num">当期指数</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>厂商当前最优模型</h2>
+    <div class="note">各厂商已发布模型中智能指数最高者。</div>
+    <div class="scroll">
+      <table id="tbl3">
+        <thead><tr><th class="num">#</th><th>厂商</th><th>最优模型</th>
+          <th>发布日期</th><th class="num">智能指数</th><th class="num">台阶数</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    指标说明：Artificial Analysis Intelligence Index（AAII）由 AA 独立评测，综合
+    GPQA Diamond、Humanity's Last Exam、LiveCodeBench、AIME、Terminal-Bench、τ²-banking、
+    SciCode、CritPt、AA-Omniscience、AA-LCR 等基准加权而成。<br>
+    数据获取方式：页面 RSC payload 中提取 manifest（<code>/data/*.txt</code> + AES key），
+    使用 <code>AES-256-GCM</code>（iv = SHA256(key)[:12]）解密后 gzip 解压得到全量 JSON。
+    脚本见 <code>aa_frontier_fetch.py</code>、<code>analyze_cadence.py</code>。
+    <div class="dl">
+      数据下载：
+      <a href="aa_models.csv">aa_models.csv</a>
+      <a href="aa_frontier.csv">aa_frontier.csv</a>
+      <a href="aa_frontier_by_creator.csv">aa_frontier_by_creator.csv</a>
+      <a href="aa_cadence.json">aa_cadence.json</a>
+      <a href="aa_frontier.json">aa_frontier.json</a>
+    </div>
+  </footer>
+</div>
+<div id="tip"></div>
+
+<script>
+const DATA = /*__DATA__*/;
+const KPI  = /*__KPI__*/;
+const CAD  = /*__CAD__*/;
+
+const NS = "http://www.w3.org/2000/svg";
+const CREATOR_COLORS = {
+  "OpenAI":"#10a37f","Anthropic":"#d97757","Google":"#4285f4","Meta":"#2563eb",
+  "DeepSeek":"#4d6bfe","Alibaba":"#ff6a00","xAI":"#111827","Kimi":"#16a34a",
+  "Moonshot":"#16a34a","Z AI":"#1c7ff8","Mistral":"#ff7000","NVIDIA":"#76b900",
+  "Cohere":"#39a0ed","Amazon":"#ff9900","Microsoft":"#0ea5e9","SpaceXAI":"#7c3aed",
+  "IBM":"#0f62fe","MiniMax":"#e11d48","Sapiens AI":"#0891b2","Thinking Machines":"#64748b",
+  "Upstage":"#f59e0b","LG AI Research":"#a21caf","SK Telecom":"#ea580c",
+  "Motif Technologies":"#0d9488","Apodex":"#7c2d12","Tencent":"#0052d9","Baidu":"#2932e1"
+};
+const OTHER = "#a8b3c4";
+const color = c => CREATOR_COLORS[c] || OTHER;
+
+const el = (t, a={}) => { const e = document.createElementNS(NS, t);
+  for (const k in a) e.setAttribute(k, a[k]); return e; };
+const ts = s => new Date(s + "T00:00:00Z").getTime();
+const fmtD = s => s.slice(0,7).replace("-", " 年 ") + " 月";
+const fmtN = (v, n=2) => v == null ? "—" : Number(v).toFixed(n);
+
+/* ---------- tooltip ---------- */
+const tip = document.getElementById("tip");
+function showTip(ev, html){
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const r = tip.getBoundingClientRect();
+  let x = ev.clientX + 14, y = ev.clientY + 14;
+  if (x + r.width > innerWidth - 10) x = ev.clientX - r.width - 14;
+  if (y + r.height > innerHeight - 10) y = ev.clientY - r.height - 14;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+const hideTip = () => tip.style.opacity = 0;
+function bindTip(node, html){
+  node.addEventListener("mousemove", e => showTip(e, html));
+  node.addEventListener("mouseleave", hideTip);
+}
+
+/* ---------- 通用坐标系 ---------- */
+function makeScale(box, x0, x1, y0, y1){
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  return {
+    iw, ih,
+    x: v => box.l + (v - x0) / (x1 - x0) * iw,
+    y: v => box.t + ih - (v - y0) / (y1 - y0) * ih
+  };
+}
+function drawAxes(svg, sc, box, y0, y1, x0, x1){
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t+sc.ih,
+    x2:box.l+sc.iw, y2:box.t+sc.ih}));
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t,
+    x2:box.l, y2:box.t+sc.ih}));
+  const g = el("g", {class:"axis"});
+  // Y 轴
+  const ystep = (y1 - y0) > 60 ? 20 : 10;
+  for (let v = Math.ceil(y0/ystep)*ystep; v <= y1; v += ystep){
+    const y = sc.y(v);
+    g.appendChild(el("line", {class:"gl", x1:box.l, y1:y, x2:box.l+sc.iw, y2:y}));
+    const t = el("text", {x:box.l-9, y:y+3.5, "text-anchor":"end"});
+    t.textContent = v; g.appendChild(t);
+  }
+  // X 轴：每 6 个月
+  const d0 = new Date(x0), d1 = new Date(x1);
+  let y = d0.getUTCFullYear(), m = 0;
+  if (d0.getUTCMonth() > 6){ y += 1; }
+  const ticks = [];
+  for (let yy = y; ; yy++){
+    for (const mm of [0, 6]){
+      const t = Date.UTC(yy, mm, 1);
+      if (t > x1) break;
+      if (t >= x0) ticks.push(t);
+    }
+    if (Date.UTC(yy, 6, 1) > x1) break;
+    if (yy > d1.getUTCFullYear() + 1) break;
+  }
+  for (const t of ticks){
+    const x = sc.x(t);
+    const lb = el("text", {x:x, y:box.t+sc.ih+18, "text-anchor":"middle"});
+    const dt = new Date(t);
+    lb.textContent = dt.getUTCFullYear() + "-" + String(dt.getUTCMonth()+1).padStart(2,"0");
+    g.appendChild(lb);
+  }
+  svg.appendChild(g);
+}
+function stepPath(pts, sc){
+  let d = "";
+  pts.forEach((p, i) => {
+    const x = sc.x(ts(p.date)), y = sc.y(p.v);
+    if (i === 0) d += `M${x},${y}`;
+    else { d += `L${x},${sc.y(pts[i-1].v)}L${x},${y}`; }
+  });
+  return d;
+}
+
+/* ---------- 图1：前沿阶梯 ---------- */
+function chart1(){
+  const svg = document.getElementById("chart1");
+  const box = {w:1000, h:430, l:54, r:24, t:16, b:46};
+  const steps = DATA.frontier.map(s => ({date:s.date, v:s.intelligenceIndex,
+    name:s.model, creator:s.creator, d:s.deltaVsPrevStep, open:s.isOpenWeights}));
+  const x0 = ts("2022-10-01"), x1 = ts(DATA.dateRange[1]) + 40*864e5;
+  const y1 = Math.ceil(steps[steps.length-1].v / 10) * 10;
+  const sc = makeScale(box, x0, x1, 0, y1);
+  drawAxes(svg, sc, box, 0, y1, x0, x1);
+
+  // 面积
+  let area = `M${sc.x(ts(steps[0].date))},${sc.y(0)}`;
+  area += `L${sc.x(ts(steps[0].date))},${sc.y(steps[0].v)}`;
+  steps.forEach((p,i) => {
+    if (i === 0) return;
+    const x = sc.x(ts(p.date));
+    area += `L${x},${sc.y(steps[i-1].v)}L${x},${sc.y(p.v)}`;
+  });
+  area += `L${sc.x(ts(steps[steps.length-1].date))},${sc.y(0)}Z`;
+  svg.appendChild(el("path", {d:area, fill:"#2563eb", opacity:.07}));
+  svg.appendChild(el("path", {d:stepPath(steps, sc), fill:"none",
+    stroke:"#2563eb", "stroke-width":2.4, "stroke-linejoin":"round"}));
+
+  steps.forEach(p => {
+    const x = sc.x(ts(p.date)), y = sc.y(p.v);
+    const c = el("circle", {class:"dot", cx:x, cy:y, r:4.2,
+      fill:"#fff", stroke:"#2563eb", "stroke-width":2.2});
+    svg.appendChild(c);
+    const hit = el("circle", {class:"hit", cx:x, cy:y, r:13});
+    bindTip(hit, `<div class="t">${p.name}</div>
+      <div class="r">厂商 <b>${p.creator}</b> · 智能指数 <b>${fmtN(p.v)}</b></div>
+      <div class="r">发布 <b>${p.date}</b>${p.d != null ? ` · 较上一级 <b>+${fmtN(p.d)}</b>` : ""}</div>
+      <div class="r">${p.open ? "开源权重" : "闭源"}</div>`);
+    bindTip(c, `<div class="t">${p.name}</div>
+      <div class="r">厂商 <b>${p.creator}</b> · 智能指数 <b>${fmtN(p.v)}</b></div>
+      <div class="r">发布 <b>${p.date}</b></div>`);
+    svg.appendChild(hit);
+  });
+
+  // 标注当前最高
+  const last = steps[steps.length-1];
+  const lx = sc.x(ts(last.date)), ly = sc.y(last.v);
+  const tg = el("g");
+  const tx = el("text", {x:Math.min(lx-8, box.l+sc.iw-6), y:ly-13,
+    "text-anchor":"end", "font-size":"11.5", "font-weight":"640", fill:"#0f172a"});
+  tx.textContent = last.name.length > 34 ? last.name.slice(0,34) + "…" : last.name;
+  tg.appendChild(tx);
+  const t2 = el("text", {x:Math.min(lx-8, box.l+sc.iw-6), y:ly+2,
+    "text-anchor":"end", "font-size":"11", fill:"#475569"});
+  t2.textContent = fmtN(last.v) + " · " + last.date;
+  tg.appendChild(t2);
+  svg.appendChild(tg);
+}
+
+/* ---------- 图2：分厂商 ---------- */
+let c2Hidden = new Set();
+function chart2(){
+  const svg = document.getElementById("chart2");
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const box = {w:1000, h:440, l:54, r:24, t:16, b:46};
+  const all = DATA.frontierByCreator;
+  const names = Object.keys(all).filter(n => !c2Hidden.has(n));
+  const x0 = ts("2022-10-01"), x1 = ts(DATA.dateRange[1]) + 40*864e5;
+  let ymax = 0;
+  names.forEach(n => all[n].forEach(s => { if (s.intelligenceIndex > ymax) ymax = s.intelligenceIndex; }));
+  const y1 = Math.max(10, Math.ceil(ymax / 10) * 10);
+  const sc = makeScale(box, x0, x1, 0, y1);
+  drawAxes(svg, sc, box, 0, y1, x0, x1);
+
+  names.forEach(n => {
+    const pts = all[n].map(s => ({date:s.date, v:s.intelligenceIndex,
+      name:s.model, creator:n, d:s.deltaVsPrevStep}));
+    svg.appendChild(el("path", {d:stepPath(pts, sc), fill:"none",
+      stroke:color(n), "stroke-width":2, "stroke-linejoin":"round", opacity:.92}));
+    pts.forEach(p => {
+      const x = sc.x(ts(p.date)), y = sc.y(p.v);
+      const c = el("circle", {class:"dot", cx:x, cy:y, r:3.2,
+        fill:"#fff", stroke:color(n), "stroke-width":1.8});
+      svg.appendChild(c);
+      const hit = el("circle", {class:"hit", cx:x, cy:y, r:11});
+      bindTip(hit, `<div class="t">${p.name}</div>
+        <div class="r">厂商 <b>${n}</b> · 智能指数 <b>${fmtN(p.v)}</b></div>
+        <div class="r">发布 <b>${p.date}</b>${p.d!=null?` · 较上一台阶 <b>+${fmtN(p.d)}</b>`:""}</div>`);
+      svg.appendChild(hit);
+    });
+    // 末端标签
+    const lp = pts[pts.length-1];
+    const t = el("text", {x:sc.x(ts(lp.date))+8, y:sc.y(lp.v)+3.5,
+      "font-size":"10.5", fill:"#475569"});
+    t.textContent = n + " " + fmtN(lp.v, 1);
+    svg.appendChild(t);
+  });
+}
+function legend2(){
+  const box = document.getElementById("legend2");
+  box.innerHTML = "";
+  const all = DATA.frontierByCreator;
+  const names = Object.keys(all).sort((a,b) =>
+    all[b][all[b].length-1].intelligenceIndex - all[a][all[a].length-1].intelligenceIndex);
+  const DEFAULTS = new Set(names.slice(0, 8));
+  names.forEach(n => { if (!DEFAULTS.has(n)) c2Hidden.add(n); });
+  names.forEach(n => {
+    const latest = all[n][all[n].length-1].intelligenceIndex;
+    const s = document.createElement("span");
+    s.className = "lg" + (c2Hidden.has(n) ? " off" : "");
+    s.innerHTML = `<i style="background:${color(n)}"></i>${n} <b>${fmtN(latest,1)}</b>`;
+    s.onclick = () => {
+      if (c2Hidden.has(n)) c2Hidden.delete(n); else c2Hidden.add(n);
+      s.classList.toggle("off");
+      chart2();
+    };
+    box.appendChild(s);
+  });
+}
+
+/* ---------- 图3：全模型散点 ---------- */
+let c3HideOther = false;
+function chart3(){
+  const svg = document.getElementById("chart3");
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const box = {w:1000, h:430, l:54, r:24, t:16, b:46};
+  const ms = DATA.models.filter(m => c3HideOther
+    ? CREATOR_COLORS[m.creator] : true);
+  const x0 = ts("2022-10-01"), x1 = ts(DATA.dateRange[1]) + 40*864e5;
+  const ymax = Math.max(...ms.map(m => m.intel));
+  const y1 = Math.ceil(ymax / 10) * 10;
+  const sc = makeScale(box, x0, x1, 0, y1);
+  drawAxes(svg, sc, box, 0, y1, x0, x1);
+
+  // 前沿参考线
+  const fp = DATA.frontier.map(s => ({date:s.date, v:s.intelligenceIndex}));
+  svg.appendChild(el("path", {d:stepPath(fp, sc), fill:"none",
+    stroke:"#2563eb", "stroke-width":1.6, opacity:.35, "stroke-dasharray":"5 4"}));
+
+  ms.forEach(m => {
+    const x = sc.x(ts(m.date)), y = sc.y(m.intel);
+    const c = el("circle", {class:"dot", cx:x, cy:y, r:3.1,
+      fill:color(m.creator), opacity:.62, stroke:"#fff", "stroke-width":.6});
+    svg.appendChild(c);
+    const hit = el("circle", {class:"hit", cx:x, cy:y, r:8});
+    bindTip(hit, `<div class="t">${m.name}</div>
+      <div class="r">厂商 <b>${m.creator}</b> · 智能指数 <b>${fmtN(m.intel)}</b></div>
+      <div class="r">发布 <b>${m.date}</b> · ${m.open ? "开源权重" : "闭源"}${m.est ? " · <b>估算值</b>" : ""}</div>
+      ${m.price != null ? `<div class="r">混合价格 <b>$${fmtN(m.price)}</b> / 1M tokens</div>` : ""}`);
+    svg.appendChild(hit);
+  });
+}
+function legend3(){
+  const box = document.getElementById("legend3");
+  box.innerHTML = "";
+  const names = Object.keys(CREATOR_COLORS)
+    .filter(n => DATA.models.some(m => m.creator === n));
+  names.forEach(n => {
+    const s = document.createElement("span");
+    s.className = "lg";
+    s.innerHTML = `<i style="background:${color(n)}"></i>${n}`;
+    box.appendChild(s);
+  });
+  const s = document.createElement("span");
+  s.className = "lg" + (c3HideOther ? " off" : "");
+  s.innerHTML = `<i style="background:${OTHER}"></i>其他厂商 <b>${c3HideOther?"已隐藏":"显示"}</b>`;
+  s.onclick = () => { c3HideOther = !c3HideOther; legend3(); chart3(); };
+  box.appendChild(s);
+}
+
+/* ---------- KPI ---------- */
+function kpis(){
+  document.getElementById("gen").textContent = DATA.generatedAt;
+  document.getElementById("nstep").textContent = KPI.steps;
+  document.getElementById("nstep2").textContent = KPI.steps;
+  const items = [
+    {k:"当前前沿指数", v:fmtN(KPI.current),
+     d:`${KPI.currentModel} · ${KPI.currentDate}`},
+    {k:"近 12 个月提升", v:(KPI.chg12m != null ? "+" + KPI.chg12m + "%" : "—"),
+     d:KPI.val12m != null ? `${fmtN(KPI.val12m)} → ${fmtN(KPI.current)}` : "", up:true},
+    {k:"前沿刷新次数", v:KPI.steps,
+     d:`${KPI.first.date} 起，领跑易主 ${KPI.leaderChanges} 次`},
+    {k:"指数年化增速 (CAGR)", v:(KPI.cagr != null ? KPI.cagr + "%" : "—"),
+     d:`${fmtN(KPI.first.value)} → ${fmtN(KPI.current)}，${KPI.years} 年`, up:true},
+    {k:"收录模型数", v:KPI.modelCount, d:`${KPI.dateRange[0]} ~ ${KPI.dateRange[1]}`},
+    {k:"当前领跑厂商", v:KPI.currentCreator, d:KPI.leaders[KPI.leaders.length-1].model},
+  ];
+  document.getElementById("kpis").innerHTML = items.map(i =>
+    `<div class="kpi"><div class="k">${i.k}</div>
+      <div class="v${i.up ? " up" : ""}">${i.v}</div>
+      <div class="d">${i.d}</div></div>`).join("");
+}
+
+/* ---------- 表格 ---------- */
+function tables(){
+  const tb = document.querySelector("#tbl tbody");
+  const base = DATA.frontier[0].intelligenceIndex;
+  tb.innerHTML = DATA.frontier.slice().reverse().map(s => {
+    const open = s.isOpenWeights;
+    return `<tr>
+      <td>${s.date}</td>
+      <td>${s.model}</td>
+      <td><span style="color:${color(s.creator)}">●</span> ${s.creator}</td>
+      <td class="num">${fmtN(s.intelligenceIndex)}</td>
+      <td class="num up">${s.deltaVsPrevStep != null ? "+" + fmtN(s.deltaVsPrevStep) : "—"}</td>
+      <td class="num">+${fmtN(s.intelligenceIndex - base)}</td>
+      <td>${open ? '<span class="pill" style="background:#ecfdf5;color:#047857">开源</span>'
+                 : '<span class="pill" style="background:#f1f5f9;color:#475569">闭源</span>'}
+          ${s.isReasoning ? '<span class="tag">推理</span>' : ''}
+          ${s.isOpenWeights ? '' : ''}</td>
+    </tr>`;
+  }).join("");
+
+  const tb2 = document.querySelector("#tbl2 tbody");
+  const fr = DATA.frontier;
+  tb2.innerHTML = KPI.leaders.map((l, i) => {
+    const rec = fr.find(s => s.date === l.from && s.model === l.model) || {};
+    return `<tr><td>${l.from}</td>
+      <td><span style="color:${color(l.creator)}">●</span> ${l.creator}</td>
+      <td>${l.model}</td>
+      <td class="num">${rec.intelligenceIndex != null ? fmtN(rec.intelligenceIndex) : "—"}</td></tr>`;
+  }).join("");
+
+  const tb3 = document.querySelector("#tbl3 tbody");
+  tb3.innerHTML = KPI.topCreators.map((c, i) => `<tr>
+    <td class="num">${i+1}</td>
+    <td><span style="color:${color(c.name)}">●</span> ${c.name}</td>
+    <td>${c.model}</td><td>${c.date}</td>
+    <td class="num">${fmtN(c.latest)}</td>
+    <td class="num">${c.steps}</td></tr>`).join("");
+}
+
+/* ---------- 迭代节奏：KPI / 结论 / 口径 ---------- */
+const d2m = d => d == null ? "—" : (d / 30.44).toFixed(1) + " 个月";
+function cadKpis(){
+  const c = CAD.cadence, s = CAD.seat, t = CAD.tenure;
+  const y = CAD.byYear;
+  const first = y[0], last = y[y.length - 1];
+  const items = [
+    {k:"厂商版本迭代间隔（中位）", v:c.median + " 天", d:`≈ ${d2m(c.median)}，n=${c.n}`},
+    {k:"常见区间 P25–P75", v:`${c.p25}–${c.p75} 天`,
+     d:`≈ ${d2m(c.p25)} – ${d2m(c.p75)}`},
+    {k:"Top-3 席位更替间隔（中位）", v:s.median + " 天", d:`前沿阵容每 ${s.median} 天变动一次`},
+    {k:"模型在榜时长（中位）", v:t.median + " 天", d:`进入 Top-3 后平均可维持 ${t.median} 天`},
+    {k:`${last.year} 年迭代间隔（中位）`, v:last.median + " 天",
+     d:`较 ${first.year} 年的 ${first.median} 天提速 ${(first.median/last.median).toFixed(1)}×`, up:true},
+  ];
+  document.getElementById("cadKpis").innerHTML = items.map(i =>
+    `<div class="kpi"><div class="k">${i.k}</div>
+      <div class="v${i.up ? " up" : ""}">${i.v}</div>
+      <div class="d">${i.d}</div></div>`).join("");
+}
+function cadConcl(){
+  const c = CAD.cadence, y = CAD.byYear;
+  const first = y[0], last = y[y.length - 1];
+  const inBand = CAD.cadenceHistogram
+    .filter(b => b.lo >= 30 && b.hi <= 91)
+    .reduce((a, b) => a + b.count, 0);
+  const pctIn = Math.round(inBand / c.n * 100);
+  document.getElementById("cadConcl").innerHTML =
+    `按<b>口径 A</b>，前沿厂商推出下一代模型的间隔中位数为 <span class="hl">${c.median} 天（≈${d2m(c.median)}）</span>，` +
+    `四分位区间 <b>${c.p25}–${c.p75} 天</b>（≈${d2m(c.p25)}–${d2m(c.p75)}），` +
+    `其中 <b>${pctIn}%</b> 的迭代落在 1–3 个月区间内 —— 与「1–3 个月」的经验判断<b>基本吻合</b>。<br>` +
+    `但节奏在明显加快：中位间隔从 ${first.year} 年的 <b>${first.median} 天</b>压缩到 ` +
+    `${last.year} 年的 <span class="hl">${last.median} 天</span>（提速 ${(first.median/last.median).toFixed(1)} 倍）。` +
+    `同时，一个模型挤进 Top-3 后平均只能维持 <b>${CAD.tenure.median} 天</b>就被更新的版本挤出。`;
+  document.getElementById("cadN").textContent = c.n;
+  document.getElementById("cadV").textContent = CAD.versionCount;
+}
+function cadDefs(){
+  const c = CAD.cadence, s = CAD.seat, l = CAD.leader;
+  const defs = [
+    {tag:"A", title:"厂商版本迭代间隔【主口径】",
+     desc:"同一厂商连续两次发布「进入 Top-3 的新版本」的日期差。例：Claude Opus 4.7 → Claude Opus 5。这是「迭代新版本」的直接度量。",
+     val:c.median, unit:`天 · n=${c.n}`},
+    {tag:"B", cls:"b", title:"Top-3 席位更替间隔", cls2:1,
+     desc:"Top-3 阵容发生变化的相邻日期差，含跨厂商挤位。反映前沿格局整体的动荡频率，因此短于口径 A。",
+     val:s.median, unit:`天 · n=${s.n}`},
+    {tag:"C", cls:"c", title:"榜首易主间隔", cls3:1,
+     desc:"第 1 名换人的相邻日期差。只有新模型超过原榜首时才计入。",
+     val:l.median, unit:`天 · n=${l.n}`},
+  ];
+  document.getElementById("cadDefs").innerHTML = defs.map(d =>
+    `<div class="def"><div class="h"><i class="${d.cls || ""}">${d.tag}</i>${d.title}</div>
+      <div class="p">${d.desc}</div>
+      <div class="v">中位 ${d.val}<span>${d.unit}</span></div></div>`).join("");
+}
+
+/* ---------- 迭代节奏：直方图 ---------- */
+function chartHist(){
+  const svg = document.getElementById("chartHist");
+  const box = {w:1000, h:300, l:120, r:60, t:14, b:40};
+  const hs = CAD.cadenceHistogram;
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  const max = Math.max(...hs.map(h => h.count));
+  const bw = ih / hs.length;
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t, x2:box.l, y2:box.t+ih}));
+
+  hs.forEach((h, i) => {
+    const y = box.t + i * bw + bw * 0.18;
+    const h2 = bw * 0.64;
+    const w = h.count / max * iw;
+    const isMain = h.lo >= 30 && h.hi <= 91;
+    const rect = el("rect", {x:box.l, y:y, width:Math.max(w, 1), height:h2,
+      fill:isMain ? "#2563eb" : "#cbd5e1", rx:3, class:"dot"});
+    svg.appendChild(rect);
+    const lb = el("text", {x:box.l-10, y:y+h2/2+4, "text-anchor":"end",
+      "font-size":"11.5", fill:"#475569"});
+    lb.textContent = h.label;
+    svg.appendChild(lb);
+    const cnt = el("text", {x:box.l+w+8, y:y+h2/2+4, "font-size":"11.5",
+      "font-weight":"600", fill:"#0f172a"});
+    cnt.textContent = h.count + " 次";
+    svg.appendChild(cnt);
+    const hit = el("rect", {x:box.l, y:box.t+i*bw, width:iw, height:bw, class:"hit"});
+    bindTip(hit, `<div class="t">${h.label}</div>
+      <div class="r">迭代次数 <b>${h.count}</b> 次 · 占全部 ${CAD.cadence.n} 次的
+      <b>${Math.round(h.count/CAD.cadence.n*100)}%</b></div>
+      <div class="r">区间 <b>${h.lo === 0 ? 0 : h.lo}–${h.hi > 1e5 ? "∞" : h.hi}</b> 天</div>`);
+    svg.appendChild(hit);
+  });
+  // 轴刻度
+  const g = el("g", {class:"axis"});
+  for (let v = 0; v <= max; v += Math.max(1, Math.ceil(max / 6))){
+    const x = box.l + v / max * iw;
+    g.appendChild(el("line", {class:"gl", x1:x, y1:box.t, x2:x, y2:box.t+ih}));
+    const t = el("text", {x:x, y:box.t+ih+18, "text-anchor":"middle"});
+    t.textContent = v; g.appendChild(t);
+  }
+  const xl = el("text", {x:box.l+iw/2, y:box.h-6, "text-anchor":"middle",
+    "font-size":"11", fill:"#94a3b8"});
+  xl.textContent = "迭代次数";
+  g.appendChild(xl);
+  svg.appendChild(g);
+}
+
+/* ---------- 迭代节奏：分年度柱状 ---------- */
+function chartYear(){
+  const svg = document.getElementById("chartYear");
+  const box = {w:520, h:320, l:52, r:16, t:20, b:46};
+  const ys = CAD.byYear;
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  const max = Math.max(...ys.map(y => y.median)) * 1.18;
+  const sc = v => box.t + ih - v / max * ih;
+
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t+ih,
+    x2:box.l+iw, y2:box.t+ih}));
+  const g = el("g", {class:"axis"});
+  for (let v = 0; v <= max; v += 60){
+    const y = sc(v);
+    g.appendChild(el("line", {class:"gl", x1:box.l, y1:y, x2:box.l+iw, y2:y}));
+    const t = el("text", {x:box.l-8, y:y+3.5, "text-anchor":"end"});
+    t.textContent = v; g.appendChild(t);
+  }
+  const bw = iw / ys.length;
+  ys.forEach((y, i) => {
+    const x = box.l + i * bw + bw * 0.22, w = bw * 0.56;
+    const top = sc(y.median);
+    const r = el("rect", {x:x, y:top, width:w, height:box.t+ih-top,
+      fill:"#2563eb", opacity:.28 + i * 0.18, rx:3, class:"dot"});
+    svg.appendChild(r);
+    const t = el("text", {x:x+w/2, y:top-7, "text-anchor":"middle",
+      "font-size":"12", "font-weight":"640", fill:"#0f172a"});
+    t.textContent = y.median + "d";
+    svg.appendChild(t);
+    const t2 = el("text", {x:x+w/2, y:top-20, "text-anchor":"middle",
+      "font-size":"10", fill:"#94a3b8"});
+    t2.textContent = "n=" + y.n;
+    svg.appendChild(t2);
+    const lb = el("text", {x:x+w/2, y:box.t+ih+18, "text-anchor":"middle"});
+    lb.textContent = y.year + (i === ys.length-1 ? " 至今" : "");
+    g.appendChild(lb);
+    const hit = el("rect", {x:box.l+i*bw, y:box.t, width:bw, height:ih, class:"hit"});
+    bindTip(hit, `<div class="t">${y.year} 年</div>
+      <div class="r">中位间隔 <b>${y.median}</b> 天（≈${d2m(y.median)}）</div>
+      <div class="r">平均 <b>${y.mean}</b> 天 · 样本 <b>${y.n}</b> 次</div>
+      <div class="r">范围 <b>${y.min}–${y.max}</b> 天</div>`);
+    svg.appendChild(hit);
+  });
+  svg.appendChild(g);
+  const yl = el("text", {x:box.l-8, y:box.t-6, "text-anchor":"end",
+    "font-size":"10", fill:"#94a3b8"});
+  yl.textContent = "天";
+  svg.appendChild(yl);
+}
+
+/* ---------- 迭代节奏：时间线散点 ---------- */
+function chartTL(){
+  const svg = document.getElementById("chartTL");
+  const box = {w:520, h:320, l:52, r:16, t:20, b:46};
+  const evs = CAD.iterEvents;
+  const x0 = ts(CAD.dateRange[0]), x1 = ts(CAD.dateRange[1]) + 30*864e5;
+  const y1 = Math.ceil(Math.max(...evs.map(e => e.gap)) / 60) * 60;
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  const sx = v => box.l + (v - x0) / (x1 - x0) * iw;
+  const sy = v => box.t + ih - v / y1 * ih;
+
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t+ih,
+    x2:box.l+iw, y2:box.t+ih}));
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t, x2:box.l, y2:box.t+ih}));
+  const g = el("g", {class:"axis"});
+  for (let v = 0; v <= y1; v += 60){
+    const y = sy(v);
+    g.appendChild(el("line", {class:"gl", x1:box.l, y1:y, x2:box.l+iw, y2:y}));
+    const t = el("text", {x:box.l-8, y:y+3.5, "text-anchor":"end"});
+    t.textContent = v; g.appendChild(t);
+  }
+  const d0 = new Date(x0).getUTCFullYear();
+  for (let yy = d0 + 1; yy <= new Date(x1).getUTCFullYear(); yy++){
+    const t = Date.UTC(yy, 0, 1);
+    if (t > x1 || t < x0) continue;
+    const lb = el("text", {x:sx(t), y:box.t+ih+18, "text-anchor":"middle"});
+    lb.textContent = yy; g.appendChild(lb);
+  }
+  // 中位参考线
+  const med = CAD.cadence.median;
+  svg.appendChild(el("line", {x1:box.l, y1:sy(med), x2:box.l+iw, y2:sy(med),
+    stroke:"#2563eb", "stroke-width":1.2, "stroke-dasharray":"5 4", opacity:.55}));
+  const mt = el("text", {x:box.l+iw-4, y:sy(med)-6, "text-anchor":"end",
+    "font-size":"10.5", fill:"#2563eb"});
+  mt.textContent = "中位 " + med + " 天";
+  svg.appendChild(mt);
+
+  evs.forEach(e => {
+    const x = sx(ts(e.to)), y = sy(e.gap);
+    const c = el("circle", {class:"dot", cx:x, cy:y, r:4.6,
+      fill:color(e.creator), opacity:.72, stroke:"#fff", "stroke-width":1});
+    svg.appendChild(c);
+    const hit = el("circle", {class:"hit", cx:x, cy:y, r:11});
+    bindTip(hit, `<div class="t">${e.creator}</div>
+      <div class="r">本次迭代间隔 <b>${e.gap}</b> 天（≈${d2m(e.gap)}）</div>
+      <div class="r">上一版 <b>${e.from}</b> → 新版 <b>${e.to}</b></div>`);
+    svg.appendChild(hit);
+  });
+  svg.appendChild(g);
+  const yl = el("text", {x:box.l-8, y:box.t-6, "text-anchor":"end",
+    "font-size":"10", fill:"#94a3b8"});
+  yl.textContent = "天";
+  svg.appendChild(yl);
+}
+
+/* ---------- 迭代节奏：表格 ---------- */
+function cadTables(){
+  const tb = document.querySelector("#tblCad tbody");
+  tb.innerHTML = CAD.byCreator.map(c => `<tr>
+      <td><span style="color:${color(c.creator)}">●</span> ${c.creator}</td>
+      <td class="num">${c.n}</td>
+      <td class="num">${c.median != null ? c.median + " 天" : "—"}</td>
+      <td class="num">${c.mean != null ? c.mean + " 天" : "—"}</td>
+      <td class="num">${c.min != null ? c.min : "—"}</td>
+      <td class="num">${c.max != null ? c.max : "—"}</td>
+      <td>${c.lastDate}</td>
+      <td class="num">${c.lastGap != null ? "+" + c.lastGap + "d" : "—"}</td>
+    </tr>`).join("");
+
+  const tc = document.querySelector("#tblChg tbody");
+  tc.innerHTML = CAD.changelog.slice().reverse().map(c => `<tr>
+      <td>${c.date}</td>
+      <td class="num">${c.gapDays != null ? c.gapDays + "d" : "—"}</td>
+      <td>${c.entered}</td>
+      <td><span style="color:${color(c.enteredCreator)}">●</span> ${c.enteredCreator}</td>
+      <td class="num">${fmtN(c.enteredIntel)}</td>
+      <td>${c.exited || '<span style="color:#94a3b8">—</span>'}</td>
+    </tr>`).join("");
+
+  const tt = document.querySelector("#tblTen tbody");
+  tt.innerHTML = CAD.tenures.map((t, i) => `<tr>
+      <td class="num">${i+1}</td>
+      <td>${t.name}</td>
+      <td><span style="color:${color(t.creator)}">●</span> ${t.creator}</td>
+      <td>${t.from}</td>
+      <td>${t.to || '<span style="color:#047857;font-weight:600">至今</span>'}</td>
+      <td class="num">${t.days} 天</td>
+    </tr>`).join("");
+}
+
+/* ---------- 月度迭代加速度 ---------- */
+function monthTitles(){
+  const y = CAD.startMonth.slice(0, 4);
+  const set = (id, t) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  set("mstart2", y + " 年");
+  set("mstart3", y);
+}
+function chartMonth(){
+  const svg = document.getElementById("chartMonth");
+  const box = {w:520, h:320, l:52, r:16, t:20, b:46};
+  const ms = CAD.monthly;
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  const maxG = Math.max(...ms.flatMap(m => m.events.map(e => e.gap)), 60);
+  const y1 = Math.ceil(maxG / 30) * 30;
+  const sx = i => box.l + (i + 0.5) * (iw / ms.length);
+  const sy = v => box.t + ih - v / y1 * ih;
+
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t+ih, x2:box.l+iw, y2:box.t+ih}));
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t, x2:box.l, y2:box.t+ih}));
+  const g = el("g", {class:"axis"});
+  const step = y1 > 120 ? 30 : 20;
+  for (let v = 0; v <= y1; v += step){
+    const y = sy(v);
+    g.appendChild(el("line", {class:"gl", x1:box.l, y1:y, x2:box.l+iw, y2:y}));
+    const t = el("text", {x:box.l-8, y:y+3.5, "text-anchor":"end"});
+    t.textContent = v; g.appendChild(t);
+  }
+  ms.forEach((m, i) => {
+    const isJan = m.month.slice(5) === "01";
+    const lb = el("text", {x:sx(i), y:box.t+ih+18, "text-anchor":"middle"});
+    lb.textContent = isJan ? m.month : (parseInt(m.month.slice(5), 10) + "月");
+    g.appendChild(lb);
+  });
+
+  // 滚动 3 月中位折线（遇空值断开）
+  let d = "", pen = false;
+  ms.forEach((m, i) => {
+    if (m.roll3 == null){ pen = false; return; }
+    d += (pen ? "L" : "M") + sx(i) + "," + sy(m.roll3);
+    pen = true;
+  });
+  svg.appendChild(el("path", {d:d, fill:"none", stroke:"#2563eb",
+    "stroke-width":2.4, "stroke-linejoin":"round"}));
+
+  ms.forEach((m, i) => {
+    if (m.roll3 != null){
+      svg.appendChild(el("circle", {cx:sx(i), cy:sy(m.roll3), r:3.6,
+        fill:"#2563eb", stroke:"#fff", "stroke-width":1.4}));
+      const t = el("text", {x:sx(i), y:sy(m.roll3)-9, "text-anchor":"middle",
+        "font-size":"10", fill:"#2563eb"});
+      t.textContent = m.roll3;
+      svg.appendChild(t);
+    }
+    // 单次迭代散点（同月内横向散开）
+    m.events.forEach((e, j) => {
+      const off = (j - (m.events.length - 1) / 2) * 9;
+      const x = sx(i) + off, y = sy(e.gap);
+      svg.appendChild(el("circle", {class:"dot", cx:x, cy:y, r:4,
+        fill:color(e.creator), opacity:.7, stroke:"#fff", "stroke-width":1}));
+      const hit = el("circle", {class:"hit", cx:x, cy:y, r:10});
+      bindTip(hit, `<div class="t">${e.creator}</div>
+        <div class="r">迭代间隔 <b>${e.gap}</b> 天（≈${d2m(e.gap)}）</div>
+        <div class="r">新版发布 <b>${e.to}</b></div>`);
+      svg.appendChild(hit);
+    });
+  });
+  svg.appendChild(g);
+  const yl = el("text", {x:box.l-8, y:box.t-6, "text-anchor":"end",
+    "font-size":"10", fill:"#94a3b8"});
+  yl.textContent = "天";
+  svg.appendChild(yl);
+}
+function chartMonth2(){
+  const svg = document.getElementById("chartMonth2");
+  const box = {w:520, h:320, l:52, r:44, t:20, b:46};
+  const ms = CAD.monthly;
+  const iw = box.w - box.l - box.r, ih = box.h - box.t - box.b;
+  const maxN = Math.max(1, ...ms.map(m => m.n));
+  const maxD = Math.max(1, ...ms.map(m => m.frontierDelta || 0));
+  const syN = v => box.t + ih - v / (maxN * 1.25) * ih;
+  const syD = v => box.t + ih - v / (maxD * 1.35) * ih;
+  const cw = iw / ms.length;
+
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:box.t+ih, x2:box.l+iw, y2:box.t+ih}));
+  const g = el("g", {class:"axis"});
+  for (let v = 0; v <= maxN; v++){
+    const y = syN(v);
+    const t = el("text", {x:box.l-8, y:y+3.5, "text-anchor":"end", fill:"#94a3b8"});
+    t.textContent = v; g.appendChild(t);
+  }
+  for (let k = 0; k <= 3; k++){
+    const v = maxD / 3 * k, y = syD(v);
+    const t = el("text", {x:box.l+iw+8, y:y+3.5, fill:"#d97757"});
+    t.textContent = "+" + v.toFixed(1); g.appendChild(t);
+  }
+  ms.forEach((m, i) => {
+    const x = box.l + i * cw + cw * 0.26, w = cw * 0.48;
+    const top = syN(m.n);
+    svg.appendChild(el("rect", {x:x, y:top, width:w, height:box.t+ih-top,
+      fill:"#2563eb", opacity:.22 + (m.n ? .5 : 0), rx:3}));
+    if (m.n){
+      const t = el("text", {x:x+w/2, y:top-5, "text-anchor":"middle",
+        "font-size":"10.5", "font-weight":"600", fill:"#2563eb"});
+      t.textContent = m.n; svg.appendChild(t);
+    }
+    const isJan = m.month.slice(5) === "01";
+    const lb = el("text", {x:box.l+i*cw+cw/2, y:box.t+ih+18, "text-anchor":"middle"});
+    lb.textContent = isJan ? m.month : (parseInt(m.month.slice(5), 10) + "月");
+    g.appendChild(lb);
+  });
+  // 前沿增量折线
+  let d = "";
+  ms.forEach((m, i) => {
+    const x = box.l + i*cw + cw/2, y = syD(m.frontierDelta || 0);
+    d += (i ? "L" : "M") + x + "," + y;
+  });
+  svg.appendChild(el("path", {d:d, fill:"none", stroke:"#d97757",
+    "stroke-width":2.2, "stroke-linejoin":"round"}));
+  ms.forEach((m, i) => {
+    const x = box.l + i*cw + cw/2, y = syD(m.frontierDelta || 0);
+    svg.appendChild(el("circle", {cx:x, cy:y, r:3.4, fill:"#d97757",
+      stroke:"#fff", "stroke-width":1.3}));
+    const hit = el("rect", {x:box.l+i*cw, y:box.t, width:cw, height:ih, class:"hit"});
+    const rf = m.refreshModels.length
+      ? m.refreshModels.map(r => `${r.name}（${r.creator}）`).join("、") : "无";
+    bindTip(hit, `<div class="t">${m.month}</div>
+      <div class="r">迭代次数 <b>${m.n}</b> · 前沿增量 <b>+${m.frontierDelta}</b></div>
+      <div class="r">月末前沿 <b>${m.frontierEnd}</b> · 刷新 <b>${m.refreshCount}</b> 次</div>
+      <div class="r">${rf}</div>`);
+    svg.appendChild(hit);
+  });
+  svg.appendChild(g);
+}
+function monthTable(){
+  const tb = document.querySelector("#tblMonth tbody");
+  tb.innerHTML = CAD.monthly.slice().reverse().map(m => {
+    const rf = m.refreshModels.length
+      ? m.refreshModels.map(r =>
+          `<span style="color:${color(r.creator)}">●</span> ${r.name}`).join("<br>")
+      : '<span style="color:#94a3b8">—</span>';
+    const dl = m.frontierDelta == null ? "—"
+      : (m.frontierDelta > 0
+          ? `<span class="up">+${m.frontierDelta}</span>`
+          : `<span style="color:#94a3b8">0</span>`);
+    return `<tr>
+      <td>${m.month}</td>
+      <td class="num">${m.n}</td>
+      <td class="num">${m.median != null ? m.median + " 天" : "—"}</td>
+      <td class="num"><b>${m.roll3 != null ? m.roll3 + " 天" : "—"}</b></td>
+      <td class="num">${dl}</td>
+      <td class="num">${m.frontierEnd}</td>
+      <td style="white-space:normal">${rf}</td>
+    </tr>`;
+  }).join("");
+}
+
+kpis(); chart1(); legend2(); chart2(); legend3(); chart3(); tables();
+cadKpis(); cadConcl(); cadDefs(); chartHist(); chartYear(); chartTL(); cadTables();
+monthTitles(); chartMonth(); chartMonth2(); monthTable();
+</script>
+</body>
+</html>
