@@ -4,6 +4,9 @@ on:
   schedule:
     # 每周一 09:00（北京时间）= 01:00 UTC
     - cron: '0 1 * * 1'
+  push:
+    # 首次推送代码时立即生成一次看板；后续本工作流自己的提交带 [skip ci]，不会循环触发
+    branches: [main]
   workflow_dispatch:   # 允许在 Actions 页面手动触发
 
 permissions:
@@ -39,6 +42,6 @@ jobs:
           if git diff --quiet --cached; then
             echo "数据无变化，跳过提交"
           else
-            git commit -m "chore: 周更前沿数据 $(date -u +%Y-%m-%d)"
+            git commit -m "chore: 周更前沿数据 $(date -u +%Y-%m-%d) [skip ci]"
             git push
           fi
