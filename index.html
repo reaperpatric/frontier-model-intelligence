@@ -210,6 +210,14 @@
   </div>
 
   <div class="card">
+    <h2>模型能力演进 × 发展阶段</h2>
+    <div class="note">「AI模型发展阶段」框架的数据实证版：纵轴为真实 AAII 前沿指数，横轴按<b>半年</b>划分阶段窗口，
+    每个窗口顶部的 <b>Δ</b> 是该阶段内前沿的真实增量。悬停数据点可查看刷新前沿的模型。概念图中「预训练 → 后训练/RL → RLHF → Coding 数据」等定性阶段
+    大致对应增量最大的窗口——可直接对照哪些阶段在真正推动前沿。</div>
+    <svg id="chartEvo" viewBox="0 0 1000 470" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="card">
     <h2>分厂商前沿对比</h2>
     <div class="note">各厂商自身的历史最高智能指数演进（点击图例可切换显示）。</div>
     <div class="legend" id="legend2"></div>
@@ -429,6 +437,82 @@ function chart1(){
   t2.textContent = fmtN(last.v) + " · " + last.date;
   tg.appendChild(t2);
   svg.appendChild(tg);
+}
+
+/* ---------- 图1b：能力演进 × 发展阶段（半年度窗口） ---------- */
+function chartEvo(){
+  const svg = document.getElementById("chartEvo");
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const box = {w:1000, h:470, l:54, r:24, t:56, b:46};
+  const steps = DATA.frontier.map(s => ({date:s.date, v:s.intelligenceIndex,
+    name:s.model, creator:s.creator, d:s.deltaVsPrevStep}));
+  const x0 = ts("2022-10-01"), x1 = ts(DATA.dateRange[1]) + 40*864e5;
+  const y1 = Math.ceil(steps[steps.length-1].v / 10) * 10;
+  const sc = makeScale(box, x0, x1, 0, y1);
+  drawAxes(svg, sc, box, 0, y1, x0, x1);
+
+  // 半年阶段窗口：[start, end, label]
+  const periods = [];
+  const endYear = new Date(x1).getUTCFullYear();
+  for (let yy = 2022; yy <= endYear; yy++){
+    periods.push({a:Date.UTC(yy,6,1), b:Date.UTC(yy+1,0,1), label:String(yy%100)+"H2"});
+    if (yy < endYear) periods.push({a:Date.UTC(yy+1,0,1), b:Date.UTC(yy+1,6,1), label:String((yy+1)%100)+"H1"});
+  }
+  // 每个窗口的前沿增量 Δ
+  const frontierBefore = t => {
+    let v = 0;
+    for (const s of steps) if (ts(s.date) < t) v = s.v;
+    return v;
+  };
+  periods.forEach((p, i) => {
+    if (p.b <= x0 || p.a > x1) return;
+    const enter = frontierBefore(p.a), exit = Math.max(enter, frontierBefore(p.b));
+    p.delta = exit - enter;
+    const xa = Math.max(sc.x(p.a), box.l), xb = Math.min(sc.x(p.b), box.l+sc.iw);
+    // 交替底色
+    if (i % 2 === 0) svg.appendChild(el("rect", {x:xa, y:box.t, width:xb-xa,
+      height:sc.ih, fill:"#f1f5f9", opacity:.55}));
+    // 阶段边界
+    if (p.a >= x0){
+      svg.appendChild(el("line", {x1:xa, y1:box.t, x2:xa, y2:box.t+sc.ih,
+        stroke:"#94a3b8", "stroke-width":1, "stroke-dasharray":"4 4"}));
+    }
+    // 窗口标签 + Δ
+    const cx = (xa+xb)/2;
+    const lb = el("text", {x:cx, y:box.t-22, "text-anchor":"middle",
+      "font-size":"11.5", "font-weight":"640", fill:"#334155"});
+    lb.textContent = p.label; svg.appendChild(lb);
+    const dv = el("text", {x:cx, y:box.t-7, "text-anchor":"middle",
+      "font-size":"11", "font-weight":"640",
+      fill:p.delta > 0 ? "#2563eb" : "#94a3b8"});
+    dv.textContent = p.delta > 0 ? "Δ +" + fmtN(p.delta) : "Δ 0";
+    svg.appendChild(dv);
+  });
+
+  // 面积 + 阶梯曲线
+  let area = `M${sc.x(ts(steps[0].date))},${sc.y(0)}`;
+  area += `L${sc.x(ts(steps[0].date))},${sc.y(steps[0].v)}`;
+  steps.forEach((p,i) => {
+    if (i === 0) return;
+    const x = sc.x(ts(p.date));
+    area += `L${x},${sc.y(steps[i-1].v)}L${x},${sc.y(p.v)}`;
+  });
+  area += `L${sc.x(ts(steps[steps.length-1].date))},${sc.y(0)}Z`;
+  svg.appendChild(el("path", {d:area, fill:"#2563eb", opacity:.07}));
+  svg.appendChild(el("path", {d:stepPath(steps, sc), fill:"none",
+    stroke:"#2563eb", "stroke-width":2.4, "stroke-linejoin":"round"}));
+
+  steps.forEach(p => {
+    const x = sc.x(ts(p.date)), y = sc.y(p.v);
+    const c = el("circle", {class:"dot", cx:x, cy:y, r:4.2,
+      fill:"#fff", stroke:"#2563eb", "stroke-width":2.2});
+    svg.appendChild(c);
+    const hit = el("circle", {class:"hit", cx:x, cy:y, r:13});
+    bindTip(hit, `<div class="t">${p.name}</div>
+      <div class="r">厂商 <b>${p.creator}</b> · 智能指数 <b>${fmtN(p.v)}</b></div>
+      <div class="r">发布 <b>${p.date}</b>${p.d != null ? ` · 较上一级 <b>+${fmtN(p.d)}</b>` : ""}</div>`);
+    svg.appendChild(hit);
+  });
 }
 
 /* ---------- 图2：分厂商 ---------- */
@@ -1004,7 +1088,7 @@ function monthTable(){
   }).join("");
 }
 
-kpis(); chart1(); legend2(); chart2(); legend3(); chart3(); tables();
+kpis(); chart1(); chartEvo(); legend2(); chart2(); legend3(); chart3(); tables();
 cadKpis(); cadConcl(); cadDefs(); chartHist(); chartYear(); chartTL(); cadTables();
 monthTitles(); chartMonth(); chartMonth2(); monthTable();
 </script>
