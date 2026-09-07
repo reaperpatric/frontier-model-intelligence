@@ -211,10 +211,12 @@
 
   <div class="card">
     <h2>模型能力演进 × 发展阶段</h2>
-    <div class="note">「AI模型发展阶段」框架的数据实证版：纵轴为真实 AAII 前沿指数，横轴按<b>半年</b>划分阶段窗口，
-    每个窗口顶部的 <b>Δ</b> 是该阶段内前沿的真实增量。悬停数据点可查看刷新前沿的模型。概念图中「预训练 → 后训练/RL → RLHF → Coding 数据」等定性阶段
-    大致对应增量最大的窗口——可直接对照哪些阶段在真正推动前沿。</div>
-    <svg id="chartEvo" viewBox="0 0 1000 470" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="note">「AI模型发展阶段」框架的数据实证版。上：前沿能力曲线经<b>单调三次 Hermite 平滑</b>（保持单调递增、不产生过冲），
+    按<b>局部加速度</b>着色——<span style="color:#2563eb;font-weight:600">蓝色为加速段（加速度 &gt; +2 点/年²）</span>、
+    <span style="color:#f59e0b;font-weight:600">琥珀为减速段（加速度 &lt; −2 点/年²）</span>、
+    <span style="color:#94a3b8;font-weight:600">灰色为平稳段（加速度在 ±2 点/年² 内）</span>；灰色虚线为首尾连线，曲线位于其上方即整体处于加速通道。
+    下：半年窗口的<b>月均增速</b>（AAII 点 / 月），柱上 ▲▼ 表示较上一窗口是加速还是减速。悬停数据点可查看刷新前沿的模型及其瞬时增速。</div>
+    <svg id="chartEvo" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet"></svg>
   </div>
 
   <div class="card">
@@ -439,80 +441,230 @@ function chart1(){
   svg.appendChild(tg);
 }
 
-/* ---------- 图1b：能力演进 × 发展阶段（半年度窗口） ---------- */
+/* ---------- 图1b：能力演进 × 发展阶段（平滑曲线 + 二阶导） ---------- */
+/* 单调三次 Hermite（Fritsch-Carlson）：保持单调递增、无过冲，适合前沿这种只升不降的序列 */
+function monoHermite(pts){
+  const n = pts.length, dx = [], m = [];
+  for (let i = 0; i < n-1; i++){
+    dx[i] = pts[i+1].t - pts[i].t;
+    m[i]  = (pts[i+1].v - pts[i].v) / dx[i];
+  }
+  const tan = new Array(n).fill(0);
+  tan[0] = m[0]; tan[n-1] = m[n-2];
+  for (let i = 1; i < n-1; i++){
+    if (m[i-1] * m[i] <= 0) tan[i] = 0;
+    else {
+      const w1 = 2*dx[i] + dx[i-1], w2 = dx[i] + 2*dx[i-1];
+      tan[i] = (w1 + w2) / (w1/m[i-1] + w2/m[i]);
+    }
+  }
+  return tan;
+}
+function segIndex(pts, t){
+  let lo = 0, hi = pts.length - 2;
+  while (lo < hi){ const mid = (lo + hi + 1) >> 1; if (pts[mid].t <= t) lo = mid; else hi = mid - 1; }
+  return lo;
+}
+function hermiteV(pts, tan, i, t){
+  const h = pts[i+1].t - pts[i].t, s = (t - pts[i].t)/h, s2 = s*s, s3 = s2*s;
+  return (2*s3 - 3*s2 + 1)*pts[i].v + (s3 - 2*s2 + s)*h*tan[i]
+       + (-2*s3 + 3*s2)*pts[i+1].v + (s3 - s2)*h*tan[i+1];
+}
+/* 一阶导（点/毫秒 → 调用处换算为 点/月） */
+function hermiteD1(pts, tan, i, t){
+  const h = pts[i+1].t - pts[i].t, s = (t - pts[i].t)/h;
+  return ((6*s*s - 6*s)*pts[i].v + (3*s*s - 4*s + 1)*h*tan[i]
+       + (-6*s*s + 6*s)*pts[i+1].v + (3*s*s - 2*s)*h*tan[i+1]) / h;
+}
+/* 二阶导：曲率符号即加速 / 减速 */
+function hermiteD2(pts, tan, i, t){
+  const h = pts[i+1].t - pts[i].t, s = (t - pts[i].t)/h;
+  return ((12*s - 6)*pts[i].v + (6*s - 4)*h*tan[i]
+       + (-12*s + 6)*pts[i+1].v + (6*s - 2)*h*tan[i+1]) / (h*h);
+}
+
 function chartEvo(){
   const svg = document.getElementById("chartEvo");
   while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const box = {w:1000, h:470, l:54, r:24, t:56, b:46};
+  const H = 560;
+  const box = {w:1000, h:H, l:54, r:24, t:56, b:46};
   const steps = DATA.frontier.map(s => ({date:s.date, v:s.intelligenceIndex,
     name:s.model, creator:s.creator, d:s.deltaVsPrevStep}));
   const x0 = ts("2022-10-01"), x1 = ts(DATA.dateRange[1]) + 40*864e5;
   const y1 = Math.ceil(steps[steps.length-1].v / 10) * 10;
-  const sc = makeScale(box, x0, x1, 0, y1);
-  drawAxes(svg, sc, box, 0, y1, x0, x1);
 
-  // 半年阶段窗口：[start, end, label]
+  /* ===== 面板 A：能力曲线 ===== */
+  const boxA = {w:1000, h:H, l:54, r:24, t:56, b:H - 306};
+  const scA = makeScale(boxA, x0, x1, 0, y1);
+  drawAxes(svg, scA, boxA, 0, y1, x0, x1);
+
+  // 半年阶段窗口
   const periods = [];
   const endYear = new Date(x1).getUTCFullYear();
   for (let yy = 2022; yy <= endYear; yy++){
     periods.push({a:Date.UTC(yy,6,1), b:Date.UTC(yy+1,0,1), label:String(yy%100)+"H2"});
     if (yy < endYear) periods.push({a:Date.UTC(yy+1,0,1), b:Date.UTC(yy+1,6,1), label:String((yy+1)%100)+"H1"});
   }
-  // 每个窗口的前沿增量 Δ
-  const frontierBefore = t => {
-    let v = 0;
-    for (const s of steps) if (ts(s.date) < t) v = s.v;
-    return v;
-  };
+  const frontierBefore = t => { let v = 0; for (const s of steps) if (ts(s.date) < t) v = s.v; return v; };
   periods.forEach((p, i) => {
     if (p.b <= x0 || p.a > x1) return;
     const enter = frontierBefore(p.a), exit = Math.max(enter, frontierBefore(p.b));
     p.delta = exit - enter;
-    const xa = Math.max(sc.x(p.a), box.l), xb = Math.min(sc.x(p.b), box.l+sc.iw);
-    // 交替底色
-    if (i % 2 === 0) svg.appendChild(el("rect", {x:xa, y:box.t, width:xb-xa,
-      height:sc.ih, fill:"#f1f5f9", opacity:.55}));
-    // 阶段边界
-    if (p.a >= x0){
-      svg.appendChild(el("line", {x1:xa, y1:box.t, x2:xa, y2:box.t+sc.ih,
-        stroke:"#94a3b8", "stroke-width":1, "stroke-dasharray":"4 4"}));
-    }
-    // 窗口标签 + Δ
-    const cx = (xa+xb)/2;
-    const lb = el("text", {x:cx, y:box.t-22, "text-anchor":"middle",
+    const xEnd = ts(DATA.dateRange[1]);
+    const months = (Math.min(p.b, xEnd) - Math.max(p.a, x0)) / 2.6298e9;   // 30.44 天/月
+    p.months = months;
+    p.rate = months > 0.8 ? p.delta / months : null;
+    const xa = Math.max(scA.x(p.a), box.l), xb = Math.min(scA.x(p.b), box.l + scA.iw);
+    if (i % 2 === 0) svg.appendChild(el("rect", {x:xa, y:boxA.t, width:xb-xa,
+      height:scA.ih, fill:"#f1f5f9", opacity:.55}));
+    if (p.a >= x0) svg.appendChild(el("line", {x1:xa, y1:boxA.t, x2:xa, y2:boxA.t+scA.ih,
+      stroke:"#94a3b8", "stroke-width":1, "stroke-dasharray":"4 4"}));
+    const cx = (xa + xb) / 2;
+    const lb = el("text", {x:cx, y:boxA.t-22, "text-anchor":"middle",
       "font-size":"11.5", "font-weight":"640", fill:"#334155"});
     lb.textContent = p.label; svg.appendChild(lb);
-    const dv = el("text", {x:cx, y:box.t-7, "text-anchor":"middle",
-      "font-size":"11", "font-weight":"640",
-      fill:p.delta > 0 ? "#2563eb" : "#94a3b8"});
+    const dv = el("text", {x:cx, y:boxA.t-7, "text-anchor":"middle",
+      "font-size":"11", "font-weight":"640", fill:p.delta > 0 ? "#2563eb" : "#94a3b8"});
     dv.textContent = p.delta > 0 ? "Δ +" + fmtN(p.delta) : "Δ 0";
     svg.appendChild(dv);
   });
 
-  // 面积 + 阶梯曲线
-  let area = `M${sc.x(ts(steps[0].date))},${sc.y(0)}`;
-  area += `L${sc.x(ts(steps[0].date))},${sc.y(steps[0].v)}`;
-  steps.forEach((p,i) => {
-    if (i === 0) return;
-    const x = sc.x(ts(p.date));
-    area += `L${x},${sc.y(steps[i-1].v)}L${x},${sc.y(p.v)}`;
-  });
-  area += `L${sc.x(ts(steps[steps.length-1].date))},${sc.y(0)}Z`;
-  svg.appendChild(el("path", {d:area, fill:"#2563eb", opacity:.07}));
-  svg.appendChild(el("path", {d:stepPath(steps, sc), fill:"none",
-    stroke:"#2563eb", "stroke-width":2.4, "stroke-linejoin":"round"}));
+  // 平滑曲线 + 二阶导
+  const P = steps.map(s => ({t:ts(s.date), v:s.v}));
+  const tan = monoHermite(P);
+  const N = 480, S = [];
+  const tA = P[0].t, tB = P[P.length-1].t;
+  for (let k = 0; k <= N; k++){
+    const t = tA + (tB - tA) * k / N, i = segIndex(P, t);
+    S.push({t, v:hermiteV(P, tan, i, t), d2:hermiteD2(P, tan, i, t)});
+  }
+  // 平滑后的速度 / 加速度（±0.5 年中心差分），比逐点二阶导稳健：阶梯数据下不会出尖刺
+  const YR = 3.15576e10, MO = 2.6298e9;
+  const valAt = t => {
+    if (t <= tA) return P[0].v;
+    if (t >= tB) return P[P.length-1].v;
+    return hermiteV(P, tan, segIndex(P, t), t);
+  };
+  const rateAt = t => {                       // 点/月（±0.25 年 ≈ 半年窗口）
+    const hi = Math.min(t + 0.25*YR, tB), lo = Math.max(t - 0.25*YR, tA);
+    return (valAt(hi) - valAt(lo)) / ((hi - lo) / MO);
+  };
+  const accAt = t => {                        // 点/年²（±0.25 年差分）
+    const hi = Math.min(t + 0.25*YR, tB), lo = Math.max(t - 0.25*YR, tA);
+    const dt = (hi - lo) / YR;
+    return dt > 0 ? (rateAt(hi) - rateAt(lo)) * 12 / dt : 0;
+  };
+  S.forEach(s => { s.rate = rateAt(s.t); s.acc = accAt(s.t); });
 
+  // 面积
+  let area = `M${scA.x(S[0].t)},${scA.y(0)}`;
+  S.forEach(s => { area += `L${scA.x(s.t)},${scA.y(s.v)}`; });
+  area += `L${scA.x(S[S.length-1].t)},${scA.y(0)}Z`;
+  svg.appendChild(el("path", {d:area, fill:"#2563eb", opacity:.06}));
+
+  // 首尾连线（弦）：曲线在其上方 = 整体加速
+  svg.appendChild(el("line", {x1:scA.x(tA), y1:scA.y(P[0].v), x2:scA.x(tB), y2:scA.y(P[P.length-1].v),
+    stroke:"#94a3b8", "stroke-width":1.2, "stroke-dasharray":"6 5"}));
+
+  // 按曲率分段着色（含死区：曲率≈0 视为平稳）
+  const YR2 = Math.pow(3.15576e10, 2);          // ms² → 年²
+  const THR = 2.0;                              // 死区：±2 点/年²
+  const zone = acc => acc > THR ? 1 : (acc < -THR ? -1 : 0);
+  const strokeOf = z => z > 0 ? "#2563eb" : (z < 0 ? "#f59e0b" : "#94a3b8");
+  const runs = [];
+  let cur = {z:zone(S[0].acc), pts:[S[0]]};
+  for (let k = 1; k < S.length; k++){
+    const z = zone(S[k].acc);
+    if (z !== cur.z){ cur.pts.push(S[k]); runs.push(cur); cur = {z, pts:[S[k]]}; }
+    else cur.pts.push(S[k]);
+  }
+  runs.push(cur);
+  // 合并过短的过渡段（< 15px），避免视觉碎片
+  const widthOf = r => Math.abs(scA.x(r.pts[r.pts.length-1].t) - scA.x(r.pts[0].t));
+  const mg = [runs[0]];
+  for (let i = 1; i < runs.length; i++){
+    if (widthOf(runs[i]) < 15) mg[mg.length-1].pts = mg[mg.length-1].pts.concat(runs[i].pts.slice(1));
+    else mg.push(runs[i]);
+  }
+  if (mg.length > 1 && widthOf(mg[0]) < 15){
+    mg[1].pts = mg[0].pts.concat(mg[1].pts.slice(1)); mg.shift();
+  }
+  mg.forEach(r => {
+    let d = "";
+    r.pts.forEach((s, i) => { d += (i ? "L" : "M") + scA.x(s.t) + "," + scA.y(s.v); });
+    svg.appendChild(el("path", {d, fill:"none", stroke:strokeOf(r.z),
+      "stroke-width":2.8, "stroke-linecap":"round", "stroke-linejoin":"round"}));
+  });
+
+  // 数据点：悬停看瞬时增速
   steps.forEach(p => {
-    const x = sc.x(ts(p.date)), y = sc.y(p.v);
-    const c = el("circle", {class:"dot", cx:x, cy:y, r:4.2,
-      fill:"#fff", stroke:"#2563eb", "stroke-width":2.2});
-    svg.appendChild(c);
+    const x = scA.x(ts(p.date)), y = scA.y(p.v);
+    const i = segIndex(P, ts(p.date));
+    const rate = hermiteD1(P, tan, i, ts(p.date)) * 2.6298e9;   // 点/月
+    svg.appendChild(el("circle", {class:"dot", cx:x, cy:y, r:3.8,
+      fill:"#fff", stroke:strokeOf(zone(accAt(ts(p.date)))), "stroke-width":2}));
     const hit = el("circle", {class:"hit", cx:x, cy:y, r:13});
     bindTip(hit, `<div class="t">${p.name}</div>
       <div class="r">厂商 <b>${p.creator}</b> · 智能指数 <b>${fmtN(p.v)}</b></div>
-      <div class="r">发布 <b>${p.date}</b>${p.d != null ? ` · 较上一级 <b>+${fmtN(p.d)}</b>` : ""}</div>`);
+      <div class="r">发布 <b>${p.date}</b>${p.d != null ? ` · 较上一级 <b>+${fmtN(p.d)}</b>` : ""}</div>
+      <div class="r">局部增速 <b>${fmtN(rate)}</b> 点/月 · 加速度 <b>${fmtN(accAt(ts(p.date)))}</b> 点/年²</div>`);
     svg.appendChild(hit);
   });
+
+  /* ===== 面板 B：半年月均增速 ===== */
+  const Btop = 366;
+  const boxB = {w:1000, h:H, l:54, r:24, t:Btop, b:46};
+  const scB = makeScale(boxB, x0, x1, 0, 1);
+  const vis = periods.filter(p => p.rate != null && p.b > x0 && p.a <= x1);
+  const rmax = Math.max(0.5, Math.ceil(Math.max.apply(null, vis.map(p => p.rate)) * 2) / 2);
+  const yB = v => boxB.t + scB.ih - (v / rmax) * scB.ih;
+
+  // 标题 + 基线
+  const bt = el("text", {x:box.l, y:Btop-14, "font-size":"11.5", "font-weight":"640", fill:"#334155"});
+  bt.textContent = "月均增速（AAII 点 / 月）　柱上 ▲▼ 为较上一阶段的加减速度";
+  svg.appendChild(bt);
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:boxB.t+scB.ih,
+    x2:box.l+scB.iw, y2:boxB.t+scB.ih}));
+  svg.appendChild(el("line", {class:"axline", x1:box.l, y1:boxB.t, x2:box.l, y2:boxB.t+scB.ih}));
+  [0, rmax/2, rmax].forEach(v => {
+    const yy = yB(v);
+    svg.appendChild(el("line", {class:"gl", x1:box.l, y1:yy, x2:box.l+scB.iw, y2:yy}));
+    const t = el("text", {class:"axis", x:box.l-9, y:yy+3.5, "text-anchor":"end"});
+    t.textContent = v.toFixed(1); svg.appendChild(t);
+  });
+
+  let prev = null;
+  vis.forEach(p => {
+    const xa = Math.max(scB.x(p.a), box.l), xb = Math.min(scB.x(p.b), box.l+scB.iw);
+    const bw = Math.max(6, xb - xa - 10), bx = xa + (xb - xa - bw) / 2;
+    const up = prev == null ? null : p.rate >= prev;
+    const fill = up == null ? "#94a3b8" : (up ? "#2563eb" : "#f59e0b");
+    svg.appendChild(el("rect", {x:bx, y:yB(p.rate), width:bw,
+      height:boxB.t+scB.ih-yB(p.rate), fill, opacity:.85, rx:2}));
+    const vt = el("text", {x:bx+bw/2, y:yB(p.rate)-6, "text-anchor":"middle",
+      "font-size":"11", "font-weight":"640", fill:"#334155"});
+    vt.textContent = p.rate.toFixed(2) + (up == null ? "" : (up ? " ▲" : " ▼"));
+    svg.appendChild(vt);
+    prev = p.rate;
+  });
+
+  // 共享 X 轴月份刻度
+  const d0 = new Date(x0), d1 = new Date(x1);
+  let yy0 = d0.getUTCFullYear(); if (d0.getUTCMonth() > 6) yy0 += 1;
+  for (let yy = yy0; ; yy++){
+    for (const mm of [0, 6]){
+      const t = Date.UTC(yy, mm, 1);
+      if (t > x1) break;
+      if (t >= x0){
+        const x = scB.x(t);
+        const lb = el("text", {class:"axis", x:x, y:boxB.t+scB.ih+18, "text-anchor":"middle"});
+        lb.textContent = yy + "-" + String(mm+1).padStart(2,"0");
+        svg.appendChild(lb);
+      }
+    }
+    if (Date.UTC(yy, 6, 1) > x1) break;
+    if (yy > d1.getUTCFullYear() + 1) break;
+  }
 }
 
 /* ---------- 图2：分厂商 ---------- */
