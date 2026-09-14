@@ -8,7 +8,7 @@
    "median": null,
    "mean": null,
    "roll3": null,
-   "frontierEnd": 34.95,
+   "frontierEnd": 30.45,
    "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
@@ -16,23 +16,18 @@
   },
   {
    "month": "2026-02",
-   "n": 3,
-   "median": 85,
-   "mean": 78.0,
-   "roll3": 85,
-   "frontierEnd": 38.47,
-   "frontierDelta": 3.515,
-   "refreshCount": 2,
+   "n": 2,
+   "median": 70.5,
+   "mean": 70.5,
+   "roll3": 70.5,
+   "frontierEnd": 32.5,
+   "frontierDelta": 2.055,
+   "refreshCount": 1,
    "refreshModels": [
     {
      "name": "GPT-5.3 Codex (xhigh)",
      "creator": "OpenAI",
-     "intel": 36.94
-    },
-    {
-     "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 38.47
+     "intel": 32.5
     }
    ],
    "events": [
@@ -45,11 +40,6 @@
      "creator": "Anthropic",
      "gap": 85,
      "to": "2026-02-17"
-    },
-    {
-     "creator": "Google",
-     "gap": 93,
-     "to": "2026-02-19"
     }
    ]
   },
@@ -58,15 +48,15 @@
    "n": 1,
    "median": 28,
    "mean": 28.0,
-   "roll3": 70.5,
-   "frontierEnd": 42.83,
-   "frontierDelta": 4.358,
+   "roll3": 56,
+   "frontierEnd": 38.98,
+   "frontierDelta": 6.473,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "GPT-5.4 (xhigh)",
      "creator": "OpenAI",
-     "intel": 42.83
+     "intel": 38.98
     }
    ],
    "events": [
@@ -82,20 +72,15 @@
    "n": 2,
    "median": 53.5,
    "mean": 53.5,
-   "roll3": 57.0,
-   "frontierEnd": 45.62,
-   "frontierDelta": 2.792,
-   "refreshCount": 2,
+   "roll3": 56,
+   "frontierEnd": 40.69,
+   "frontierDelta": 1.714,
+   "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 44.29
-    },
-    {
-     "name": "GPT-5.5 (xhigh)",
-     "creator": "OpenAI",
-     "intel": 45.62
+     "intel": 40.69
     }
    ],
    "events": [
@@ -117,14 +102,14 @@
    "median": 42,
    "mean": 42.0,
    "roll3": 45.5,
-   "frontierEnd": 47.78,
-   "frontierDelta": 2.162,
+   "frontierEnd": 41.99,
+   "frontierDelta": 1.302,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 47.78
+     "intel": 41.99
     }
    ],
    "events": [
@@ -141,14 +126,14 @@
    "median": 12,
    "mean": 12.0,
    "roll3": 45.5,
-   "frontierEnd": 53.19,
-   "frontierDelta": 5.412,
+   "frontierEnd": 49.7,
+   "frontierDelta": 7.708,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.19
+     "intel": 49.7
     }
    ],
    "events": [
@@ -165,14 +150,14 @@
    "median": 61.0,
    "mean": 61.0,
    "roll3": 43.5,
-   "frontierEnd": 54.05,
-   "frontierDelta": 0.863,
+   "frontierEnd": 50.7,
+   "frontierDelta": 1.001,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 54.05
+     "intel": 50.7
     }
    ],
    "events": [
@@ -194,7 +179,7 @@
    "median": null,
    "mean": null,
    "roll3": 45,
-   "frontierEnd": 54.05,
+   "frontierEnd": 50.7,
    "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
@@ -206,14 +191,14 @@
    "median": 47.5,
    "mean": 47.5,
    "roll3": 50.5,
-   "frontierEnd": 56.76,
-   "frontierDelta": 2.704,
+   "frontierEnd": 53.37,
+   "frontierDelta": 2.674,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 56.76
+     "intel": 53.37
     }
    ],
    "events": [
@@ -230,32 +215,32 @@
    ]
   }
  ],
- "versionCount": 471,
+ "versionCount": 479,
  "dateRange": [
   "2022-11-30",
-  "2026-09-03"
+  "2026-09-11"
  ],
  "cadence": {
-  "n": 36,
-  "median": 58.0,
-  "mean": 91.6,
-  "p25": 47,
-  "p75": 104,
+  "n": 37,
+  "median": 77,
+  "mean": 110.8,
+  "p25": 49,
+  "p75": 125,
   "min": 12,
-  "max": 515
+  "max": 475
  },
  "cadenceHistogram": [
   {
    "label": "≤1 个月",
    "lo": 0,
    "hi": 30,
-   "count": 4
+   "count": 3
   },
   {
    "label": "1–2 个月",
    "lo": 31,
    "hi": 60,
-   "count": 15
+   "count": 13
   },
   {
    "label": "2–3 个月",
@@ -273,39 +258,39 @@
    "label": "4–6 个月",
    "lo": 121,
    "hi": 180,
-   "count": 3
+   "count": 4
   },
   {
    "label": ">6 个月",
    "lo": 181,
    "hi": 1000000,
-   "count": 4
+   "count": 7
   }
  ],
  "seat": {
-  "n": 43,
-  "median": 22,
-  "mean": 31.9,
-  "p25": 7,
-  "p75": 39,
+  "n": 45,
+  "median": 30,
+  "mean": 30.5,
+  "p25": 8,
+  "p75": 42,
   "min": 2,
-  "max": 237
+  "max": 111
  },
  "leader": {
-  "n": 25,
-  "median": 39,
-  "mean": 54.8,
-  "p25": 16,
-  "p75": 56,
+  "n": 23,
+  "median": 42,
+  "mean": 59.6,
+  "p25": 19,
+  "p75": 81,
   "min": 2,
   "max": 237
  },
  "byYear": [
   {
    "year": 2023,
-   "n": 2,
-   "median": 170.5,
-   "mean": 170.5,
+   "n": 4,
+   "median": 177.0,
+   "mean": 173.8,
    "p25": 104,
    "p75": 237,
    "min": 104,
@@ -313,33 +298,33 @@
   },
   {
    "year": 2024,
-   "n": 7,
-   "median": 109,
-   "mean": 163.1,
-   "p25": 37,
-   "p75": 189,
+   "n": 8,
+   "median": 116.0,
+   "mean": 154.4,
+   "p25": 84,
+   "p75": 237,
    "min": 37,
-   "max": 515
+   "max": 371
   },
   {
    "year": 2025,
-   "n": 15,
-   "median": 57,
-   "mean": 78.2,
-   "p25": 47,
-   "p75": 87,
-   "min": 25,
-   "max": 238
+   "n": 14,
+   "median": 75.0,
+   "mean": 115.9,
+   "p25": 51,
+   "p75": 125,
+   "min": 28,
+   "max": 475
   },
   {
    "year": 2026,
-   "n": 12,
-   "median": 52.5,
-   "mean": 53.3,
-   "p25": 39,
-   "p75": 77,
+   "n": 11,
+   "median": 49,
+   "mean": 49.7,
+   "p25": 28,
+   "p75": 58,
    "min": 12,
-   "max": 93
+   "max": 85
   }
  ],
  "byCreator": [
@@ -376,20 +361,20 @@
   {
    "creator": "Anthropic",
    "n": 13,
-   "median": 58,
-   "mean": 70.1,
+   "median": 85,
+   "mean": 88.3,
    "min": 12,
-   "max": 125,
+   "max": 237,
    "lastDate": "2026-09-01",
    "lastGap": 39,
    "gaps": [
+    237,
     109,
     123,
     125,
     87,
     75,
-    55,
-    56,
+    111,
     85,
     58,
     42,
@@ -400,29 +385,31 @@
   },
   {
    "creator": "Google",
-   "n": 2,
-   "median": 165.5,
-   "mean": 165.5,
-   "min": 93,
-   "max": 238,
-   "lastDate": "2026-02-19",
-   "lastGap": 93,
+   "n": 3,
+   "median": 238,
+   "mean": 307.7,
+   "min": 210,
+   "max": 475,
+   "lastDate": "2025-11-18",
+   "lastGap": 238,
    "gaps": [
-    238,
-    93
+    210,
+    475,
+    238
    ]
   },
   {
    "creator": "Meta",
-   "n": 1,
-   "median": 515,
-   "mean": 515.0,
-   "min": 515,
-   "max": 515,
+   "n": 2,
+   "median": 257.5,
+   "mean": 257.5,
+   "min": 144,
+   "max": 371,
    "lastDate": "2024-07-23",
-   "lastGap": 515,
+   "lastGap": 371,
    "gaps": [
-    515
+    144,
+    371
    ]
   },
   {
@@ -439,17 +426,26 @@
    ]
   },
   {
+   "creator": "Upstage",
+   "n": 0,
+   "median": null,
+   "mean": null,
+   "min": null,
+   "max": null,
+   "lastDate": "2024-01-25",
+   "lastGap": null,
+   "gaps": []
+  },
+  {
    "creator": "DeepSeek",
-   "n": 1,
-   "median": 25,
-   "mean": 25.0,
-   "min": 25,
-   "max": 25,
+   "n": 0,
+   "median": null,
+   "mean": null,
+   "min": null,
+   "max": null,
    "lastDate": "2025-01-20",
-   "lastGap": 25,
-   "gaps": [
-    25
-   ]
+   "lastGap": null,
+   "gaps": []
   },
   {
    "creator": "Perplexity",
@@ -482,9 +478,27 @@
    "gap": 104
   },
   {
+   "creator": "Meta",
+   "from": "2023-02-24",
+   "to": "2023-07-18",
+   "gap": 144
+  },
+  {
    "creator": "OpenAI",
    "from": "2023-03-14",
    "to": "2023-11-06",
+   "gap": 237
+  },
+  {
+   "creator": "Google",
+   "from": "2023-05-10",
+   "to": "2023-12-06",
+   "gap": 210
+  },
+  {
+   "creator": "Anthropic",
+   "from": "2023-07-11",
+   "to": "2024-03-04",
    "gap": 237
   },
   {
@@ -501,9 +515,9 @@
   },
   {
    "creator": "Meta",
-   "from": "2023-02-24",
+   "from": "2023-07-18",
    "to": "2024-07-23",
-   "gap": 515
+   "gap": 371
   },
   {
    "creator": "OpenAI",
@@ -530,12 +544,6 @@
    "gap": 84
   },
   {
-   "creator": "DeepSeek",
-   "from": "2024-12-26",
-   "to": "2025-01-20",
-   "gap": 25
-  },
-  {
    "creator": "OpenAI",
    "from": "2024-12-05",
    "to": "2025-01-31",
@@ -546,6 +554,12 @@
    "from": "2024-10-22",
    "to": "2025-02-24",
    "gap": 125
+  },
+  {
+   "creator": "Google",
+   "from": "2023-12-06",
+   "to": "2025-03-25",
+   "gap": 475
   },
   {
    "creator": "OpenAI",
@@ -590,12 +604,6 @@
    "gap": 47
   },
   {
-   "creator": "Anthropic",
-   "from": "2025-08-05",
-   "to": "2025-09-29",
-   "gap": 55
-  },
-  {
    "creator": "OpenAI",
    "from": "2025-09-23",
    "to": "2025-11-13",
@@ -609,9 +617,9 @@
   },
   {
    "creator": "Anthropic",
-   "from": "2025-09-29",
+   "from": "2025-08-05",
    "to": "2025-11-24",
-   "gap": 56
+   "gap": 111
   },
   {
    "creator": "OpenAI",
@@ -630,12 +638,6 @@
    "from": "2025-11-24",
    "to": "2026-02-17",
    "gap": 85
-  },
-  {
-   "creator": "Google",
-   "from": "2025-11-18",
-   "to": "2026-02-19",
-   "gap": 93
   },
   {
    "creator": "OpenAI",
@@ -697,7 +699,7 @@
    "date": "2022-11-30",
    "entered": "GPT-3.5 Turbo",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 1.0,
+   "enteredIntel": 5.4856,
    "exited": null,
    "exitedCreator": null,
    "gapDays": null
@@ -706,7 +708,7 @@
    "date": "2023-02-24",
    "entered": "Llama 65B",
    "enteredCreator": "Meta",
-   "enteredIntel": 1.0,
+   "enteredIntel": 5.035,
    "exited": null,
    "exitedCreator": null,
    "gapDays": 86
@@ -715,34 +717,79 @@
    "date": "2023-03-14",
    "entered": "GPT-4",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 1.4565,
+   "enteredIntel": 6.7016,
    "exited": null,
    "exitedCreator": null,
    "gapDays": 18
   },
   {
+   "date": "2023-05-10",
+   "entered": "PALM-2",
+   "enteredCreator": "Google",
+   "enteredIntel": 5.3692,
+   "exited": "Llama 65B",
+   "exitedCreator": "Meta",
+   "gapDays": 57
+  },
+  {
+   "date": "2023-07-11",
+   "entered": "Claude 2.0",
+   "enteredCreator": "Anthropic",
+   "enteredIntel": 5.5061,
+   "exited": "PALM-2",
+   "exitedCreator": "Google",
+   "gapDays": 62
+  },
+  {
+   "date": "2023-07-18",
+   "entered": "Llama 2 Chat 7B",
+   "enteredCreator": "Meta",
+   "enteredIntel": 5.7118,
+   "exited": "GPT-3.5 Turbo",
+   "exitedCreator": "OpenAI",
+   "gapDays": 7
+  },
+  {
    "date": "2023-11-06",
    "entered": "GPT-4 Turbo",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 2.2921,
-   "exited": "GPT-3.5 Turbo",
-   "exitedCreator": "OpenAI",
-   "gapDays": 237
+   "enteredIntel": 7.0435,
+   "exited": "Claude 2.0",
+   "exitedCreator": "Anthropic",
+   "gapDays": 111
+  },
+  {
+   "date": "2023-12-06",
+   "entered": "Gemini 1.0 Ultra",
+   "enteredCreator": "Google",
+   "enteredIntel": 5.8384,
+   "exited": "Llama 2 Chat 7B",
+   "exitedCreator": "Meta",
+   "gapDays": 30
+  },
+  {
+   "date": "2024-01-25",
+   "entered": "Solar Mini",
+   "enteredCreator": "Upstage",
+   "enteredIntel": 6.4088,
+   "exited": "Gemini 1.0 Ultra",
+   "exitedCreator": "Google",
+   "gapDays": 50
   },
   {
    "date": "2024-03-04",
    "entered": "Claude 3 Opus",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 6.0178,
-   "exited": "Llama 65B",
-   "exitedCreator": "Meta",
-   "gapDays": 119
+   "enteredIntel": 8.724,
+   "exited": "Solar Mini",
+   "exitedCreator": "Upstage",
+   "gapDays": 39
   },
   {
    "date": "2024-05-13",
    "entered": "GPT-4o (May '24)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 2.9731,
+   "enteredIntel": 7.3317,
    "exited": "GPT-4",
    "exitedCreator": "OpenAI",
    "gapDays": 70
@@ -751,7 +798,7 @@
    "date": "2024-06-21",
    "entered": "Claude 3.5 Sonnet (June '24)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 2.6877,
+   "enteredIntel": 7.2099,
    "exited": "GPT-4 Turbo",
    "exitedCreator": "OpenAI",
    "gapDays": 39
@@ -760,7 +807,7 @@
    "date": "2024-07-23",
    "entered": "Llama 3.1 Instruct 405B",
    "enteredCreator": "Meta",
-   "enteredIntel": 2.8743,
+   "enteredIntel": 7.2893,
    "exited": "Claude 3.5 Sonnet (June '24)",
    "exitedCreator": "Anthropic",
    "gapDays": 32
@@ -769,7 +816,7 @@
    "date": "2024-08-06",
    "entered": "GPT-4o (Aug '24)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 3.9049,
+   "enteredIntel": 7.7397,
    "exited": "Llama 3.1 Instruct 405B",
    "exitedCreator": "Meta",
    "gapDays": 14
@@ -778,7 +825,7 @@
    "date": "2024-09-12",
    "entered": "o1-preview",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 11.0114,
+   "enteredIntel": 11.3759,
    "exited": "GPT-4o (May '24)、GPT-4o (Aug '24)",
    "exitedCreator": "OpenAI、OpenAI",
    "gapDays": 37
@@ -787,7 +834,7 @@
    "date": "2024-10-22",
    "entered": "Claude 3.5 Haiku",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 6.456,
+   "enteredIntel": 8.9384,
    "exited": "Claude 3 Opus",
    "exitedCreator": "Anthropic",
    "gapDays": 40
@@ -796,34 +843,25 @@
    "date": "2024-12-05",
    "entered": "o1",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 17.1033,
+   "enteredIntel": 15.2309,
    "exited": "Claude 3.5 Haiku",
    "exitedCreator": "Anthropic",
    "gapDays": 44
   },
   {
-   "date": "2024-12-26",
-   "entered": "DeepSeek V3 (Dec '24)",
-   "enteredCreator": "DeepSeek",
-   "enteredIntel": 8.2728,
-   "exited": "o1-mini",
-   "exitedCreator": "OpenAI",
-   "gapDays": 21
-  },
-  {
    "date": "2025-01-20",
    "entered": "DeepSeek R1 (Jan '25)",
    "enteredCreator": "DeepSeek",
-   "enteredIntel": 12.0136,
-   "exited": "DeepSeek V3 (Dec '24)",
-   "exitedCreator": "DeepSeek",
-   "gapDays": 25
+   "enteredIntel": 11.411,
+   "exited": "o1-mini",
+   "exitedCreator": "OpenAI",
+   "gapDays": 46
   },
   {
    "date": "2025-01-28",
    "entered": "Sonar Reasoning Pro",
    "enteredCreator": "Perplexity",
-   "enteredIntel": 11.775,
+   "enteredIntel": 11.8218,
    "exited": "o1-preview",
    "exitedCreator": "OpenAI",
    "gapDays": 8
@@ -832,25 +870,25 @@
    "date": "2025-01-31",
    "entered": "o3-mini",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 12.8551,
-   "exited": "Sonar Reasoning Pro",
-   "exitedCreator": "Perplexity",
+   "enteredIntel": 12.4708,
+   "exited": "DeepSeek R1 (Jan '25)",
+   "exitedCreator": "DeepSeek",
    "gapDays": 3
   },
   {
    "date": "2025-02-19",
    "entered": "Grok 3 mini Reasoning (high)",
    "enteredCreator": "SpaceXAI",
-   "enteredIntel": 16.2074,
-   "exited": "DeepSeek R1 (Jan '25)",
-   "exitedCreator": "DeepSeek",
+   "enteredIntel": 14.6213,
+   "exited": "Sonar Reasoning Pro",
+   "exitedCreator": "Perplexity",
    "gapDays": 19
   },
   {
    "date": "2025-02-24",
    "entered": "Claude 3.7 Sonnet (Reasoning)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 20.5469,
+   "enteredIntel": 17.7114,
    "exited": "o3-mini",
    "exitedCreator": "OpenAI",
    "gapDays": 5
@@ -859,7 +897,7 @@
    "date": "2025-03-25",
    "entered": "Gemini 2.5 Pro Preview (Mar' 25)",
    "enteredCreator": "Google",
-   "enteredIntel": 16.7093,
+   "enteredIntel": 14.961,
    "exited": "Grok 3 mini Reasoning (high)",
    "exitedCreator": "SpaceXAI",
    "gapDays": 29
@@ -868,7 +906,7 @@
    "date": "2025-04-16",
    "entered": "o3",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 23.7336,
+   "enteredIntel": 20.2008,
    "exited": "Gemini 2.5 Pro Preview (Mar' 25)、o1",
    "exitedCreator": "Google、OpenAI",
    "gapDays": 22
@@ -877,7 +915,7 @@
    "date": "2025-05-22",
    "entered": "Claude 4 Opus (Reasoning)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 24.2779,
+   "enteredIntel": 20.6446,
    "exited": "o4-mini (high)、Claude 3.7 Sonnet (Reasoning)",
    "exitedCreator": "OpenAI、Anthropic",
    "gapDays": 36
@@ -886,7 +924,7 @@
    "date": "2025-06-10",
    "entered": "o3-pro",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 25.7473,
+   "enteredIntel": 21.87,
    "exited": "Claude 4 Sonnet (Reasoning)",
    "exitedCreator": "Anthropic",
    "gapDays": 19
@@ -895,7 +933,7 @@
    "date": "2025-07-10",
    "entered": "Grok 4",
    "enteredCreator": "SpaceXAI",
-   "enteredIntel": 26.4695,
+   "enteredIntel": 22.4867,
    "exited": "o3",
    "exitedCreator": "OpenAI",
    "gapDays": 30
@@ -904,7 +942,7 @@
    "date": "2025-08-05",
    "entered": "Claude 4.1 Opus (Reasoning)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 26.8865,
+   "enteredIntel": 22.8472,
    "exited": "Claude 4 Opus (Reasoning)",
    "exitedCreator": "Anthropic",
    "gapDays": 26
@@ -913,7 +951,7 @@
    "date": "2025-08-07",
    "entered": "GPT-5 (high)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 27.0852,
+   "enteredIntel": 22.9828,
    "exited": "o3-pro",
    "exitedCreator": "OpenAI",
    "gapDays": 2
@@ -922,43 +960,34 @@
    "date": "2025-09-23",
    "entered": "GPT-5 Codex (high)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 29.1745,
+   "enteredIntel": 24.8819,
    "exited": "Grok 4",
    "exitedCreator": "SpaceXAI",
    "gapDays": 47
   },
   {
-   "date": "2025-09-29",
-   "entered": "Claude 4.5 Sonnet (Reasoning)",
-   "enteredCreator": "Anthropic",
-   "enteredIntel": 28.9956,
-   "exited": "Claude 4.1 Opus (Reasoning)",
-   "exitedCreator": "Anthropic",
-   "gapDays": 6
-  },
-  {
    "date": "2025-11-13",
    "entered": "GPT-5.1 (high)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 29.0522,
-   "exited": "GPT-5 (high)",
-   "exitedCreator": "OpenAI",
-   "gapDays": 45
+   "enteredIntel": 24.7358,
+   "exited": "Claude 4.1 Opus (Reasoning)、GPT-5 (high)",
+   "exitedCreator": "Anthropic、OpenAI",
+   "gapDays": 51
   },
   {
    "date": "2025-11-18",
    "entered": "Gemini 3 Pro Preview (high)",
    "enteredCreator": "Google",
-   "enteredIntel": 32.4459,
-   "exited": "Claude 4.5 Sonnet (Reasoning)",
-   "exitedCreator": "Anthropic",
+   "enteredIntel": 27.958,
+   "exited": "GPT-5.1 Codex (high)",
+   "exitedCreator": "OpenAI",
    "gapDays": 5
   },
   {
    "date": "2025-11-24",
    "entered": "Claude Opus 4.5 (Reasoning)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 33.6055,
+   "enteredIntel": 29.0955,
    "exited": "GPT-5.1 (high)",
    "exitedCreator": "OpenAI",
    "gapDays": 6
@@ -967,7 +996,7 @@
    "date": "2025-12-11",
    "entered": "GPT-5.2 (xhigh)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 34.9528,
+   "enteredIntel": 30.4482,
    "exited": "GPT-5 Codex (high)、Gemini 3 Pro Preview (high)",
    "exitedCreator": "OpenAI、Google",
    "gapDays": 17
@@ -976,7 +1005,7 @@
    "date": "2026-02-05",
    "entered": "GPT-5.3 Codex (xhigh)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 36.9388,
+   "enteredIntel": 32.5028,
    "exited": "GPT-5.2 Codex (xhigh)、Claude Opus 4.5 (Reasoning)",
    "exitedCreator": "OpenAI、Anthropic",
    "gapDays": 56
@@ -985,53 +1014,44 @@
    "date": "2026-02-17",
    "entered": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 38.4674,
+   "enteredIntel": 30.4529,
    "exited": "GPT-5.2 (xhigh)",
    "exitedCreator": "OpenAI",
    "gapDays": 12
   },
   {
-   "date": "2026-02-19",
-   "entered": "Gemini 3.1 Pro Preview",
-   "enteredCreator": "Google",
-   "enteredIntel": 36.6542,
-   "exited": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
-   "exitedCreator": "Anthropic",
-   "gapDays": 2
-  },
-  {
    "date": "2026-03-05",
    "entered": "GPT-5.4 (xhigh)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 42.8257,
-   "exited": "Gemini 3.1 Pro Preview",
-   "exitedCreator": "Google",
-   "gapDays": 14
+   "enteredIntel": 38.9756,
+   "exited": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+   "exitedCreator": "Anthropic",
+   "gapDays": 16
   },
   {
    "date": "2026-04-16",
    "entered": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 44.2905,
-   "exited": "GPT-5.3 Codex (xhigh)",
-   "exitedCreator": "OpenAI",
+   "enteredIntel": 40.6898,
+   "exited": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
+   "exitedCreator": "Anthropic",
    "gapDays": 42
   },
   {
    "date": "2026-04-23",
    "entered": "GPT-5.5 (xhigh)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 45.6173,
-   "exited": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-   "exitedCreator": "Anthropic",
+   "enteredIntel": 38.6292,
+   "exited": "GPT-5.3 Codex (xhigh)",
+   "exitedCreator": "OpenAI",
    "gapDays": 7
   },
   {
    "date": "2026-05-28",
    "entered": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 47.7797,
-   "exited": "GPT-5.4 (xhigh)",
+   "enteredIntel": 41.9916,
+   "exited": "GPT-5.5 (xhigh)",
    "exitedCreator": "OpenAI",
    "gapDays": 35
   },
@@ -1039,34 +1059,34 @@
    "date": "2026-06-09",
    "entered": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 53.1913,
-   "exited": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
-   "exitedCreator": "Anthropic",
+   "enteredIntel": 49.6994,
+   "exited": "GPT-5.4 (xhigh)",
+   "exitedCreator": "OpenAI",
    "gapDays": 12
   },
   {
    "date": "2026-07-09",
    "entered": "GPT-5.6 Sol (max)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 51.2552,
-   "exited": "GPT-5.5 (xhigh)",
-   "exitedCreator": "OpenAI",
+   "enteredIntel": 47.0614,
+   "exited": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)、Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+   "exitedCreator": "Anthropic、Anthropic",
    "gapDays": 30
   },
   {
    "date": "2026-07-16",
    "entered": "Kimi K3 (max)",
    "enteredCreator": "Kimi",
-   "enteredIntel": 50.2337,
-   "exited": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
-   "exitedCreator": "Anthropic",
+   "enteredIntel": 43.7842,
+   "exited": "GPT-5.6 Terra (max)",
+   "exitedCreator": "OpenAI",
    "gapDays": 7
   },
   {
    "date": "2026-07-24",
    "entered": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 54.0539,
+   "enteredIntel": 50.7002,
    "exited": "Kimi K3 (max)",
    "exitedCreator": "Kimi",
    "gapDays": 8
@@ -1075,7 +1095,7 @@
    "date": "2026-09-01",
    "entered": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 56.7581,
+   "enteredIntel": 53.3738,
    "exited": "GPT-5.6 Sol (max)",
    "exitedCreator": "OpenAI",
    "gapDays": 39
@@ -1084,7 +1104,7 @@
    "date": "2026-09-03",
    "entered": "GPT-6 Astra (max)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 54.6573,
+   "enteredIntel": 52.8141,
    "exited": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
    "exitedCreator": "Anthropic",
    "gapDays": 2
@@ -1094,26 +1114,26 @@
   {
    "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "creator": "Anthropic",
-   "intel": 56.7581
+   "intel": 53.3738
   },
   {
    "name": "GPT-6 Astra (max)",
    "creator": "OpenAI",
-   "intel": 54.6573
+   "intel": 52.8141
   },
   {
    "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
    "creator": "Anthropic",
-   "intel": 54.0539
+   "intel": 50.7002
   }
  ],
  "tenure": {
-  "n": 49,
-  "median": 55,
-  "mean": 80.2,
-  "p25": 24,
-  "p75": 85,
-  "min": 0,
+  "n": 53,
+  "median": 58,
+  "mean": 74.6,
+  "p25": 23,
+  "p75": 87,
+  "min": 5,
   "max": 426
  },
  "tenures": [
@@ -1125,20 +1145,6 @@
    "days": 426
   },
   {
-   "name": "Llama 65B",
-   "creator": "Meta",
-   "from": "2023-02-24",
-   "to": "2024-03-04",
-   "days": 374
-  },
-  {
-   "name": "GPT-3.5 Turbo",
-   "creator": "OpenAI",
-   "from": "2022-11-30",
-   "to": "2023-11-06",
-   "days": 341
-  },
-  {
    "name": "Claude 3 Opus",
    "creator": "Anthropic",
    "from": "2024-03-04",
@@ -1146,11 +1152,25 @@
    "days": 232
   },
   {
+   "name": "GPT-3.5 Turbo",
+   "creator": "OpenAI",
+   "from": "2022-11-30",
+   "to": "2023-07-18",
+   "days": 230
+  },
+  {
    "name": "GPT-4 Turbo",
    "creator": "OpenAI",
    "from": "2023-11-06",
    "to": "2024-06-21",
    "days": 228
+  },
+  {
+   "name": "Llama 2 Chat 7B",
+   "creator": "Meta",
+   "from": "2023-07-18",
+   "to": "2023-12-06",
+   "days": 141
   },
   {
    "name": "o1-preview",
@@ -1167,6 +1187,13 @@
    "days": 132
   },
   {
+   "name": "o1-mini",
+   "creator": "OpenAI",
+   "from": "2024-09-12",
+   "to": "2025-01-20",
+   "days": 130
+  },
+  {
    "name": "GPT-4o (May '24)",
    "creator": "OpenAI",
    "from": "2024-05-13",
@@ -1174,11 +1201,18 @@
    "days": 122
   },
   {
-   "name": "o1-mini",
-   "creator": "OpenAI",
-   "from": "2024-09-12",
-   "to": "2024-12-26",
-   "days": 105
+   "name": "Claude 2.0",
+   "creator": "Anthropic",
+   "from": "2023-07-11",
+   "to": "2023-11-06",
+   "days": 118
+  },
+  {
+   "name": "Claude 4.1 Opus (Reasoning)",
+   "creator": "Anthropic",
+   "from": "2025-08-05",
+   "to": "2025-11-13",
+   "days": 100
   },
   {
    "name": "GPT-5 (high)",
@@ -1186,6 +1220,13 @@
    "from": "2025-08-07",
    "to": "2025-11-13",
    "days": 98
+  },
+  {
+   "name": "GPT-5.4 (xhigh)",
+   "creator": "OpenAI",
+   "from": "2026-03-05",
+   "to": "2026-06-09",
+   "days": 96
   },
   {
    "name": "Claude 3.7 Sonnet (Reasoning)",
@@ -1209,10 +1250,10 @@
    "days": 85
   },
   {
-   "name": "GPT-5.4 (xhigh)",
-   "creator": "OpenAI",
-   "from": "2026-03-05",
-   "to": "2026-05-28",
+   "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+   "creator": "Anthropic",
+   "from": "2026-04-16",
+   "to": "2026-07-09",
    "days": 84
   },
   {
@@ -1223,11 +1264,18 @@
    "days": 79
   },
   {
-   "name": "GPT-5.5 (xhigh)",
+   "name": "GPT-5.3 Codex (xhigh)",
    "creator": "OpenAI",
-   "from": "2026-04-23",
-   "to": "2026-07-09",
+   "from": "2026-02-05",
+   "to": "2026-04-23",
    "days": 77
+  },
+  {
+   "name": "Llama 65B",
+   "creator": "Meta",
+   "from": "2023-02-24",
+   "to": "2023-05-10",
+   "days": 75
   },
   {
    "name": "Claude 4 Opus (Reasoning)",
@@ -1251,8 +1299,8 @@
    "days": 73
   },
   {
-   "name": "GPT-5.3 Codex (xhigh)",
-   "creator": "OpenAI",
+   "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
+   "creator": "Anthropic",
    "from": "2026-02-05",
    "to": "2026-04-16",
    "days": 70
@@ -1265,11 +1313,11 @@
    "days": 68
   },
   {
-   "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "from": "2026-02-17",
-   "to": "2026-04-23",
-   "days": 65
+   "name": "PALM-2",
+   "creator": "Google",
+   "from": "2023-05-10",
+   "to": "2023-07-11",
+   "days": 62
   },
   {
    "name": "o3-pro",
@@ -1286,20 +1334,6 @@
    "days": 56
   },
   {
-   "name": "Claude 4.1 Opus (Reasoning)",
-   "creator": "Anthropic",
-   "from": "2025-08-05",
-   "to": "2025-09-29",
-   "days": 55
-  },
-  {
-   "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "from": "2026-04-16",
-   "to": "2026-06-09",
-   "days": 54
-  },
-  {
    "name": "GPT-5.6 Sol (max)",
    "creator": "OpenAI",
    "from": "2026-07-09",
@@ -1307,18 +1341,19 @@
    "days": 54
   },
   {
-   "name": "Claude 4.5 Sonnet (Reasoning)",
-   "creator": "Anthropic",
-   "from": "2025-09-29",
-   "to": "2025-11-18",
+   "name": "Gemini 1.0 Ultra",
+   "creator": "Google",
+   "from": "2023-12-06",
+   "to": "2024-01-25",
    "days": 50
   },
   {
-   "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
    "creator": "Anthropic",
-   "from": "2026-05-28",
-   "to": "2026-07-16",
-   "days": 49
+   "from": "2026-07-24",
+   "to": null,
+   "days": 49,
+   "current": true
   },
   {
    "name": "Claude 3.5 Haiku",
@@ -1328,12 +1363,18 @@
    "days": 44
   },
   {
-   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+   "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
    "creator": "Anthropic",
-   "from": "2026-07-24",
-   "to": null,
-   "days": 41,
-   "current": true
+   "from": "2026-05-28",
+   "to": "2026-07-09",
+   "days": 42
+  },
+  {
+   "name": "Solar Mini",
+   "creator": "Upstage",
+   "from": "2024-01-25",
+   "to": "2024-03-04",
+   "days": 39
   },
   {
    "name": "GPT-4o (Aug '24)",
@@ -1350,6 +1391,13 @@
    "days": 36
   },
   {
+   "name": "GPT-5.5 (xhigh)",
+   "creator": "OpenAI",
+   "from": "2026-04-23",
+   "to": "2026-05-28",
+   "days": 35
+  },
+  {
    "name": "Grok 3 mini Reasoning (high)",
    "creator": "SpaceXAI",
    "from": "2025-02-19",
@@ -1362,20 +1410,6 @@
    "from": "2024-06-21",
    "to": "2024-07-23",
    "days": 32
-  },
-  {
-   "name": "DeepSeek R1 (Jan '25)",
-   "creator": "DeepSeek",
-   "from": "2025-01-20",
-   "to": "2025-02-19",
-   "days": 30
-  },
-  {
-   "name": "DeepSeek V3 (Dec '24)",
-   "creator": "DeepSeek",
-   "from": "2024-12-26",
-   "to": "2025-01-20",
-   "days": 25
   },
   {
    "name": "o3-mini",
@@ -1392,6 +1426,13 @@
    "days": 23
   },
   {
+   "name": "Sonar Reasoning Pro",
+   "creator": "Perplexity",
+   "from": "2025-01-28",
+   "to": "2025-02-19",
+   "days": 22
+  },
+  {
    "name": "Gemini 2.5 Pro Preview (Mar' 25)",
    "creator": "Google",
    "from": "2025-03-25",
@@ -1406,6 +1447,13 @@
    "days": 19
   },
   {
+   "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+   "creator": "Anthropic",
+   "from": "2026-02-17",
+   "to": "2026-03-05",
+   "days": 16
+  },
+  {
    "name": "Llama 3.1 Instruct 405B",
    "creator": "Meta",
    "from": "2024-07-23",
@@ -1413,18 +1461,11 @@
    "days": 14
   },
   {
-   "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "from": "2026-02-05",
-   "to": "2026-02-19",
-   "days": 14
-  },
-  {
-   "name": "Gemini 3.1 Pro Preview",
-   "creator": "Google",
-   "from": "2026-02-19",
-   "to": "2026-03-05",
-   "days": 14
+   "name": "DeepSeek R1 (Jan '25)",
+   "creator": "DeepSeek",
+   "from": "2025-01-20",
+   "to": "2025-01-31",
+   "days": 11
   },
   {
    "name": "GPT-5.1 (high)",
@@ -1434,6 +1475,14 @@
    "days": 11
   },
   {
+   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-01",
+   "to": null,
+   "days": 10,
+   "current": true
+  },
+  {
    "name": "Kimi K3 (max)",
    "creator": "Kimi",
    "from": "2026-07-16",
@@ -1441,27 +1490,26 @@
    "days": 8
   },
   {
-   "name": "Sonar Reasoning Pro",
-   "creator": "Perplexity",
-   "from": "2025-01-28",
-   "to": "2025-01-31",
-   "days": 3
-  },
-  {
-   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-01",
-   "to": null,
-   "days": 2,
-   "current": true
-  },
-  {
    "name": "GPT-6 Astra (max)",
    "creator": "OpenAI",
    "from": "2026-09-03",
    "to": null,
-   "days": 0,
+   "days": 8,
    "current": true
+  },
+  {
+   "name": "GPT-5.6 Terra (max)",
+   "creator": "OpenAI",
+   "from": "2026-07-09",
+   "to": "2026-07-16",
+   "days": 7
+  },
+  {
+   "name": "GPT-5.1 Codex (high)",
+   "creator": "OpenAI",
+   "from": "2025-11-13",
+   "to": "2025-11-18",
+   "days": 5
   }
  ],
  "snaps": [
@@ -1471,7 +1519,7 @@
     {
      "name": "GPT-3.5 Turbo",
      "creator": "OpenAI",
-     "intel": 1.0
+     "intel": 5.4856
     }
    ]
   },
@@ -1481,12 +1529,12 @@
     {
      "name": "GPT-3.5 Turbo",
      "creator": "OpenAI",
-     "intel": 1.0
+     "intel": 5.4856
     },
     {
      "name": "Llama 65B",
      "creator": "Meta",
-     "intel": 1.0
+     "intel": 5.035
     }
    ]
   },
@@ -1496,17 +1544,77 @@
     {
      "name": "GPT-4",
      "creator": "OpenAI",
-     "intel": 1.4565
+     "intel": 6.7016
     },
     {
      "name": "GPT-3.5 Turbo",
      "creator": "OpenAI",
-     "intel": 1.0
+     "intel": 5.4856
     },
     {
      "name": "Llama 65B",
      "creator": "Meta",
-     "intel": 1.0
+     "intel": 5.035
+    }
+   ]
+  },
+  {
+   "date": "2023-05-10",
+   "top": [
+    {
+     "name": "GPT-4",
+     "creator": "OpenAI",
+     "intel": 6.7016
+    },
+    {
+     "name": "GPT-3.5 Turbo",
+     "creator": "OpenAI",
+     "intel": 5.4856
+    },
+    {
+     "name": "PALM-2",
+     "creator": "Google",
+     "intel": 5.3692
+    }
+   ]
+  },
+  {
+   "date": "2023-07-11",
+   "top": [
+    {
+     "name": "GPT-4",
+     "creator": "OpenAI",
+     "intel": 6.7016
+    },
+    {
+     "name": "Claude 2.0",
+     "creator": "Anthropic",
+     "intel": 5.5061
+    },
+    {
+     "name": "GPT-3.5 Turbo",
+     "creator": "OpenAI",
+     "intel": 5.4856
+    }
+   ]
+  },
+  {
+   "date": "2023-07-18",
+   "top": [
+    {
+     "name": "GPT-4",
+     "creator": "OpenAI",
+     "intel": 6.7016
+    },
+    {
+     "name": "Llama 2 Chat 7B",
+     "creator": "Meta",
+     "intel": 5.7118
+    },
+    {
+     "name": "Claude 2.0",
+     "creator": "Anthropic",
+     "intel": 5.5061
     }
    ]
   },
@@ -1516,17 +1624,57 @@
     {
      "name": "GPT-4 Turbo",
      "creator": "OpenAI",
-     "intel": 2.2921
+     "intel": 7.0435
     },
     {
      "name": "GPT-4",
      "creator": "OpenAI",
-     "intel": 1.4565
+     "intel": 6.7016
     },
     {
-     "name": "Llama 65B",
+     "name": "Llama 2 Chat 7B",
      "creator": "Meta",
-     "intel": 1.0
+     "intel": 5.7118
+    }
+   ]
+  },
+  {
+   "date": "2023-12-06",
+   "top": [
+    {
+     "name": "GPT-4 Turbo",
+     "creator": "OpenAI",
+     "intel": 7.0435
+    },
+    {
+     "name": "GPT-4",
+     "creator": "OpenAI",
+     "intel": 6.7016
+    },
+    {
+     "name": "Gemini 1.0 Ultra",
+     "creator": "Google",
+     "intel": 5.8384
+    }
+   ]
+  },
+  {
+   "date": "2024-01-25",
+   "top": [
+    {
+     "name": "GPT-4 Turbo",
+     "creator": "OpenAI",
+     "intel": 7.0435
+    },
+    {
+     "name": "GPT-4",
+     "creator": "OpenAI",
+     "intel": 6.7016
+    },
+    {
+     "name": "Solar Mini",
+     "creator": "Upstage",
+     "intel": 6.4088
     }
    ]
   },
@@ -1536,17 +1684,17 @@
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     },
     {
      "name": "GPT-4 Turbo",
      "creator": "OpenAI",
-     "intel": 2.2921
+     "intel": 7.0435
     },
     {
      "name": "GPT-4",
      "creator": "OpenAI",
-     "intel": 1.4565
+     "intel": 6.7016
     }
    ]
   },
@@ -1556,17 +1704,17 @@
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     },
     {
      "name": "GPT-4o (May '24)",
      "creator": "OpenAI",
-     "intel": 2.9731
+     "intel": 7.3317
     },
     {
      "name": "GPT-4 Turbo",
      "creator": "OpenAI",
-     "intel": 2.2921
+     "intel": 7.0435
     }
    ]
   },
@@ -1576,17 +1724,17 @@
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     },
     {
      "name": "GPT-4o (May '24)",
      "creator": "OpenAI",
-     "intel": 2.9731
+     "intel": 7.3317
     },
     {
      "name": "Claude 3.5 Sonnet (June '24)",
      "creator": "Anthropic",
-     "intel": 2.6877
+     "intel": 7.2099
     }
    ]
   },
@@ -1596,17 +1744,17 @@
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     },
     {
      "name": "GPT-4o (May '24)",
      "creator": "OpenAI",
-     "intel": 2.9731
+     "intel": 7.3317
     },
     {
      "name": "Llama 3.1 Instruct 405B",
      "creator": "Meta",
-     "intel": 2.8743
+     "intel": 7.2893
     }
    ]
   },
@@ -1616,17 +1764,17 @@
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     },
     {
      "name": "GPT-4o (Aug '24)",
      "creator": "OpenAI",
-     "intel": 3.9049
+     "intel": 7.7397
     },
     {
      "name": "GPT-4o (May '24)",
      "creator": "OpenAI",
-     "intel": 2.9731
+     "intel": 7.3317
     }
    ]
   },
@@ -1636,17 +1784,17 @@
     {
      "name": "o1-preview",
      "creator": "OpenAI",
-     "intel": 11.0114
+     "intel": 11.3759
     },
     {
      "name": "o1-mini",
      "creator": "OpenAI",
-     "intel": 8.0932
+     "intel": 9.7706
     },
     {
      "name": "Claude 3 Opus",
      "creator": "Anthropic",
-     "intel": 6.0178
+     "intel": 8.724
     }
    ]
   },
@@ -1656,17 +1804,17 @@
     {
      "name": "o1-preview",
      "creator": "OpenAI",
-     "intel": 11.0114
+     "intel": 11.3759
     },
     {
      "name": "o1-mini",
      "creator": "OpenAI",
-     "intel": 8.0932
+     "intel": 9.7706
     },
     {
      "name": "Claude 3.5 Haiku",
      "creator": "Anthropic",
-     "intel": 6.456
+     "intel": 8.9384
     }
    ]
   },
@@ -1676,37 +1824,17 @@
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "o1-preview",
      "creator": "OpenAI",
-     "intel": 11.0114
+     "intel": 11.3759
     },
     {
      "name": "o1-mini",
      "creator": "OpenAI",
-     "intel": 8.0932
-    }
-   ]
-  },
-  {
-   "date": "2024-12-26",
-   "top": [
-    {
-     "name": "o1",
-     "creator": "OpenAI",
-     "intel": 17.1033
-    },
-    {
-     "name": "o1-preview",
-     "creator": "OpenAI",
-     "intel": 11.0114
-    },
-    {
-     "name": "DeepSeek V3 (Dec '24)",
-     "creator": "DeepSeek",
-     "intel": 8.2728
+     "intel": 9.7706
     }
    ]
   },
@@ -1716,17 +1844,17 @@
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "DeepSeek R1 (Jan '25)",
      "creator": "DeepSeek",
-     "intel": 12.0136
+     "intel": 11.411
     },
     {
      "name": "o1-preview",
      "creator": "OpenAI",
-     "intel": 11.0114
+     "intel": 11.3759
     }
    ]
   },
@@ -1736,17 +1864,17 @@
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
-    },
-    {
-     "name": "DeepSeek R1 (Jan '25)",
-     "creator": "DeepSeek",
-     "intel": 12.0136
+     "intel": 15.2309
     },
     {
      "name": "Sonar Reasoning Pro",
      "creator": "Perplexity",
-     "intel": 11.775
+     "intel": 11.8218
+    },
+    {
+     "name": "DeepSeek R1 (Jan '25)",
+     "creator": "DeepSeek",
+     "intel": 11.411
     }
    ]
   },
@@ -1756,17 +1884,17 @@
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "o3-mini",
      "creator": "OpenAI",
-     "intel": 12.8551
+     "intel": 12.4708
     },
     {
-     "name": "DeepSeek R1 (Jan '25)",
-     "creator": "DeepSeek",
-     "intel": 12.0136
+     "name": "Sonar Reasoning Pro",
+     "creator": "Perplexity",
+     "intel": 11.8218
     }
    ]
   },
@@ -1776,17 +1904,17 @@
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "Grok 3 mini Reasoning (high)",
      "creator": "SpaceXAI",
-     "intel": 16.2074
+     "intel": 14.6213
     },
     {
      "name": "o3-mini",
      "creator": "OpenAI",
-     "intel": 12.8551
+     "intel": 12.4708
     }
    ]
   },
@@ -1796,17 +1924,17 @@
     {
      "name": "Claude 3.7 Sonnet (Reasoning)",
      "creator": "Anthropic",
-     "intel": 20.5469
+     "intel": 17.7114
     },
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "Grok 3 mini Reasoning (high)",
      "creator": "SpaceXAI",
-     "intel": 16.2074
+     "intel": 14.6213
     }
    ]
   },
@@ -1816,17 +1944,17 @@
     {
      "name": "Claude 3.7 Sonnet (Reasoning)",
      "creator": "Anthropic",
-     "intel": 20.5469
+     "intel": 17.7114
     },
     {
      "name": "o1",
      "creator": "OpenAI",
-     "intel": 17.1033
+     "intel": 15.2309
     },
     {
      "name": "Gemini 2.5 Pro Preview (Mar' 25)",
      "creator": "Google",
-     "intel": 16.7093
+     "intel": 14.961
     }
    ]
   },
@@ -1836,17 +1964,17 @@
     {
      "name": "o3",
      "creator": "OpenAI",
-     "intel": 23.7336
+     "intel": 20.2008
     },
     {
      "name": "Claude 3.7 Sonnet (Reasoning)",
      "creator": "Anthropic",
-     "intel": 20.5469
+     "intel": 17.7114
     },
     {
      "name": "o4-mini (high)",
      "creator": "OpenAI",
-     "intel": 19.1144
+     "intel": 16.6531
     }
    ]
   },
@@ -1856,17 +1984,17 @@
     {
      "name": "Claude 4 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 24.2779
+     "intel": 20.6446
     },
     {
      "name": "o3",
      "creator": "OpenAI",
-     "intel": 23.7336
+     "intel": 20.2008
     },
     {
      "name": "Claude 4 Sonnet (Reasoning)",
      "creator": "Anthropic",
-     "intel": 22.1557
+     "intel": 18.9183
     }
    ]
   },
@@ -1876,17 +2004,17 @@
     {
      "name": "o3-pro",
      "creator": "OpenAI",
-     "intel": 25.7473
+     "intel": 21.87
     },
     {
      "name": "Claude 4 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 24.2779
+     "intel": 20.6446
     },
     {
      "name": "o3",
      "creator": "OpenAI",
-     "intel": 23.7336
+     "intel": 20.2008
     }
    ]
   },
@@ -1896,17 +2024,17 @@
     {
      "name": "Grok 4",
      "creator": "SpaceXAI",
-     "intel": 26.4695
+     "intel": 22.4867
     },
     {
      "name": "o3-pro",
      "creator": "OpenAI",
-     "intel": 25.7473
+     "intel": 21.87
     },
     {
      "name": "Claude 4 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 24.2779
+     "intel": 20.6446
     }
    ]
   },
@@ -1916,17 +2044,17 @@
     {
      "name": "Claude 4.1 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 26.8865
+     "intel": 22.8472
     },
     {
      "name": "Grok 4",
      "creator": "SpaceXAI",
-     "intel": 26.4695
+     "intel": 22.4867
     },
     {
      "name": "o3-pro",
      "creator": "OpenAI",
-     "intel": 25.7473
+     "intel": 21.87
     }
    ]
   },
@@ -1936,17 +2064,17 @@
     {
      "name": "GPT-5 (high)",
      "creator": "OpenAI",
-     "intel": 27.0852
+     "intel": 22.9828
     },
     {
      "name": "Claude 4.1 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 26.8865
+     "intel": 22.8472
     },
     {
      "name": "Grok 4",
      "creator": "SpaceXAI",
-     "intel": 26.4695
+     "intel": 22.4867
     }
    ]
   },
@@ -1956,37 +2084,17 @@
     {
      "name": "GPT-5 Codex (high)",
      "creator": "OpenAI",
-     "intel": 29.1745
+     "intel": 24.8819
     },
     {
      "name": "GPT-5 (high)",
      "creator": "OpenAI",
-     "intel": 27.0852
+     "intel": 22.9828
     },
     {
      "name": "Claude 4.1 Opus (Reasoning)",
      "creator": "Anthropic",
-     "intel": 26.8865
-    }
-   ]
-  },
-  {
-   "date": "2025-09-29",
-   "top": [
-    {
-     "name": "GPT-5 Codex (high)",
-     "creator": "OpenAI",
-     "intel": 29.1745
-    },
-    {
-     "name": "Claude 4.5 Sonnet (Reasoning)",
-     "creator": "Anthropic",
-     "intel": 28.9956
-    },
-    {
-     "name": "GPT-5 (high)",
-     "creator": "OpenAI",
-     "intel": 27.0852
+     "intel": 22.8472
     }
    ]
   },
@@ -1996,17 +2104,17 @@
     {
      "name": "GPT-5 Codex (high)",
      "creator": "OpenAI",
-     "intel": 29.1745
+     "intel": 24.8819
     },
     {
      "name": "GPT-5.1 (high)",
      "creator": "OpenAI",
-     "intel": 29.0522
+     "intel": 24.7358
     },
     {
-     "name": "Claude 4.5 Sonnet (Reasoning)",
-     "creator": "Anthropic",
-     "intel": 28.9956
+     "name": "GPT-5.1 Codex (high)",
+     "creator": "OpenAI",
+     "intel": 23.6973
     }
    ]
   },
@@ -2016,17 +2124,17 @@
     {
      "name": "Gemini 3 Pro Preview (high)",
      "creator": "Google",
-     "intel": 32.4459
+     "intel": 27.958
     },
     {
      "name": "GPT-5 Codex (high)",
      "creator": "OpenAI",
-     "intel": 29.1745
+     "intel": 24.8819
     },
     {
      "name": "GPT-5.1 (high)",
      "creator": "OpenAI",
-     "intel": 29.0522
+     "intel": 24.7358
     }
    ]
   },
@@ -2036,17 +2144,17 @@
     {
      "name": "Claude Opus 4.5 (Reasoning)",
      "creator": "Anthropic",
-     "intel": 33.6055
+     "intel": 29.0955
     },
     {
      "name": "Gemini 3 Pro Preview (high)",
      "creator": "Google",
-     "intel": 32.4459
+     "intel": 27.958
     },
     {
      "name": "GPT-5 Codex (high)",
      "creator": "OpenAI",
-     "intel": 29.1745
+     "intel": 24.8819
     }
    ]
   },
@@ -2056,17 +2164,17 @@
     {
      "name": "GPT-5.2 (xhigh)",
      "creator": "OpenAI",
-     "intel": 34.9528
+     "intel": 30.4482
     },
     {
      "name": "Claude Opus 4.5 (Reasoning)",
      "creator": "Anthropic",
-     "intel": 33.6055
+     "intel": 29.0955
     },
     {
      "name": "GPT-5.2 Codex (xhigh)",
      "creator": "OpenAI",
-     "intel": 33.0033
+     "intel": 28.5017
     }
    ]
   },
@@ -2076,17 +2184,17 @@
     {
      "name": "GPT-5.3 Codex (xhigh)",
      "creator": "OpenAI",
-     "intel": 36.9388
+     "intel": 32.5028
     },
     {
      "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 36.4072
+     "intel": 31.9457
     },
     {
      "name": "GPT-5.2 (xhigh)",
      "creator": "OpenAI",
-     "intel": 34.9528
+     "intel": 30.4482
     }
    ]
   },
@@ -2094,39 +2202,19 @@
    "date": "2026-02-17",
    "top": [
     {
-     "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 38.4674
-    },
-    {
      "name": "GPT-5.3 Codex (xhigh)",
      "creator": "OpenAI",
-     "intel": 36.9388
+     "intel": 32.5028
     },
     {
      "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 36.4072
-    }
-   ]
-  },
-  {
-   "date": "2026-02-19",
-   "top": [
+     "intel": 31.9457
+    },
     {
      "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 38.4674
-    },
-    {
-     "name": "GPT-5.3 Codex (xhigh)",
-     "creator": "OpenAI",
-     "intel": 36.9388
-    },
-    {
-     "name": "Gemini 3.1 Pro Preview",
-     "creator": "Google",
-     "intel": 36.6542
+     "intel": 30.4529
     }
    ]
   },
@@ -2136,17 +2224,17 @@
     {
      "name": "GPT-5.4 (xhigh)",
      "creator": "OpenAI",
-     "intel": 42.8257
-    },
-    {
-     "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 38.4674
+     "intel": 38.9756
     },
     {
      "name": "GPT-5.3 Codex (xhigh)",
      "creator": "OpenAI",
-     "intel": 36.9388
+     "intel": 32.5028
+    },
+    {
+     "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
+     "creator": "Anthropic",
+     "intel": 31.9457
     }
    ]
   },
@@ -2156,17 +2244,17 @@
     {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 44.2905
+     "intel": 40.6898
     },
     {
      "name": "GPT-5.4 (xhigh)",
      "creator": "OpenAI",
-     "intel": 42.8257
+     "intel": 38.9756
     },
     {
-     "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 38.4674
+     "name": "GPT-5.3 Codex (xhigh)",
+     "creator": "OpenAI",
+     "intel": 32.5028
     }
    ]
   },
@@ -2174,19 +2262,19 @@
    "date": "2026-04-23",
    "top": [
     {
-     "name": "GPT-5.5 (xhigh)",
-     "creator": "OpenAI",
-     "intel": 45.6173
-    },
-    {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 44.2905
+     "intel": 40.6898
     },
     {
      "name": "GPT-5.4 (xhigh)",
      "creator": "OpenAI",
-     "intel": 42.8257
+     "intel": 38.9756
+    },
+    {
+     "name": "GPT-5.5 (xhigh)",
+     "creator": "OpenAI",
+     "intel": 38.6292
     }
    ]
   },
@@ -2196,17 +2284,17 @@
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 47.7797
-    },
-    {
-     "name": "GPT-5.5 (xhigh)",
-     "creator": "OpenAI",
-     "intel": 45.6173
+     "intel": 41.9916
     },
     {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 44.2905
+     "intel": 40.6898
+    },
+    {
+     "name": "GPT-5.4 (xhigh)",
+     "creator": "OpenAI",
+     "intel": 38.9756
     }
    ]
   },
@@ -2216,17 +2304,17 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.1913
+     "intel": 49.6994
     },
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 47.7797
+     "intel": 41.9916
     },
     {
-     "name": "GPT-5.5 (xhigh)",
-     "creator": "OpenAI",
-     "intel": 45.6173
+     "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+     "creator": "Anthropic",
+     "intel": 40.6898
     }
    ]
   },
@@ -2236,17 +2324,17 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.1913
+     "intel": 49.6994
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 51.2552
+     "intel": 47.0614
     },
     {
-     "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 47.7797
+     "name": "GPT-5.6 Terra (max)",
+     "creator": "OpenAI",
+     "intel": 42.2515
     }
    ]
   },
@@ -2256,17 +2344,17 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.1913
+     "intel": 49.6994
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 51.2552
+     "intel": 47.0614
     },
     {
      "name": "Kimi K3 (max)",
      "creator": "Kimi",
-     "intel": 50.2337
+     "intel": 43.7842
     }
    ]
   },
@@ -2276,17 +2364,17 @@
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 54.0539
+     "intel": 50.7002
     },
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.1913
+     "intel": 49.6994
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 51.2552
+     "intel": 47.0614
     }
    ]
   },
@@ -2296,17 +2384,17 @@
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 56.7581
+     "intel": 53.3738
     },
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 54.0539
+     "intel": 50.7002
     },
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 53.1913
+     "intel": 49.6994
     }
    ]
   },
@@ -2316,17 +2404,17 @@
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 56.7581
+     "intel": 53.3738
     },
     {
      "name": "GPT-6 Astra (max)",
      "creator": "OpenAI",
-     "intel": 54.6573
+     "intel": 52.8141
     },
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 54.0539
+     "intel": 50.7002
     }
    ]
   }
@@ -2334,10 +2422,11 @@
  "seatCount": {
   "OpenAI": 19,
   "Anthropic": 14,
-  "Google": 3,
-  "Meta": 2,
-  "DeepSeek": 2,
+  "Google": 4,
+  "Meta": 3,
   "SpaceXAI": 2,
+  "Upstage": 1,
+  "DeepSeek": 1,
   "Perplexity": 1,
   "Kimi": 1
  },
@@ -2364,16 +2453,22 @@
     56
    ],
    "Meta": [
-    515
+    144,
+    371
+   ],
+   "Google": [
+    210,
+    475,
+    238
    ],
    "Anthropic": [
+    237,
     109,
     123,
     125,
     87,
     75,
-    55,
-    56,
+    111,
     85,
     58,
     42,
@@ -2381,24 +2476,24 @@
     45,
     39
    ],
-   "DeepSeek": [
-    25
-   ],
+   "Upstage": [],
+   "DeepSeek": [],
    "Perplexity": [],
    "SpaceXAI": [
     141
-   ],
-   "Google": [
-    238,
-    93
    ],
    "Kimi": []
   },
   "seatGaps": [
    86,
    18,
-   237,
-   119,
+   57,
+   62,
+   7,
+   111,
+   30,
+   50,
+   39,
    70,
    39,
    32,
@@ -2406,8 +2501,7 @@
    37,
    40,
    44,
-   21,
-   25,
+   46,
    8,
    3,
    19,
@@ -2420,15 +2514,13 @@
    26,
    2,
    47,
-   6,
-   45,
+   51,
    5,
    6,
    17,
    56,
    12,
-   2,
-   14,
+   16,
    42,
    7,
    35,
@@ -2457,11 +2549,9 @@
    6,
    17,
    56,
-   12,
-   16,
+   28,
    42,
-   7,
-   35,
+   42,
    12,
    45,
    39
