@@ -16,10 +16,10 @@
   },
   {
    "month": "2026-02",
-   "n": 2,
-   "median": 70.5,
-   "mean": 70.5,
-   "roll3": 70.5,
+   "n": 1,
+   "median": 56,
+   "mean": 56.0,
+   "roll3": 56,
    "frontierEnd": 32.5,
    "frontierDelta": 2.055,
    "refreshCount": 1,
@@ -35,11 +35,6 @@
      "creator": "OpenAI",
      "gap": 56,
      "to": "2026-02-05"
-    },
-    {
-     "creator": "Anthropic",
-     "gap": 85,
-     "to": "2026-02-17"
     }
    ]
   },
@@ -48,7 +43,7 @@
    "n": 1,
    "median": 28,
    "mean": 28.0,
-   "roll3": 56,
+   "roll3": 42.0,
    "frontierEnd": 38.98,
    "frontierDelta": 6.473,
    "refreshCount": 1,
@@ -70,9 +65,9 @@
   {
    "month": "2026-04",
    "n": 2,
-   "median": 53.5,
-   "mean": 53.5,
-   "roll3": 56,
+   "median": 96.0,
+   "mean": 96.0,
+   "roll3": 52.5,
    "frontierEnd": 40.69,
    "frontierDelta": 1.714,
    "refreshCount": 1,
@@ -86,7 +81,7 @@
    "events": [
     {
      "creator": "Anthropic",
-     "gap": 58,
+     "gap": 143,
      "to": "2026-04-16"
     },
     {
@@ -102,14 +97,14 @@
    "median": 42,
    "mean": 42.0,
    "roll3": 45.5,
-   "frontierEnd": 41.99,
-   "frontierDelta": 1.302,
+   "frontierEnd": 41.79,
+   "frontierDelta": 1.1,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 41.99
+     "intel": 41.79
     }
    ],
    "events": [
@@ -126,14 +121,14 @@
    "median": 12,
    "mean": 12.0,
    "roll3": 45.5,
-   "frontierEnd": 49.7,
-   "frontierDelta": 7.708,
+   "frontierEnd": 49.63,
+   "frontierDelta": 7.836,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.7
+     "intel": 49.63
     }
    ],
    "events": [
@@ -150,14 +145,14 @@
    "median": 61.0,
    "mean": 61.0,
    "roll3": 43.5,
-   "frontierEnd": 50.7,
-   "frontierDelta": 1.001,
+   "frontierEnd": 50.78,
+   "frontierDelta": 1.151,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 50.7
+     "intel": 50.78
     }
    ],
    "events": [
@@ -179,7 +174,7 @@
    "median": null,
    "mean": null,
    "roll3": 45,
-   "frontierEnd": 50.7,
+   "frontierEnd": 50.78,
    "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
@@ -191,14 +186,14 @@
    "median": 47.5,
    "mean": 47.5,
    "roll3": 50.5,
-   "frontierEnd": 53.37,
-   "frontierDelta": 2.674,
+   "frontierEnd": 53.35,
+   "frontierDelta": 2.578,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 53.37
+     "intel": 53.35
     }
    ],
    "events": [
@@ -215,17 +210,17 @@
    ]
   }
  ],
- "versionCount": 479,
+ "versionCount": 481,
  "dateRange": [
   "2022-11-30",
-  "2026-09-11"
+  "2026-09-18"
  ],
  "cadence": {
-  "n": 37,
-  "median": 77,
-  "mean": 110.8,
+  "n": 36,
+  "median": 80.5,
+  "mean": 113.9,
   "p25": 49,
-  "p75": 125,
+  "p75": 143,
   "min": 12,
   "max": 475
  },
@@ -240,13 +235,13 @@
    "label": "1–2 个月",
    "lo": 31,
    "hi": 60,
-   "count": 13
+   "count": 12
   },
   {
    "label": "2–3 个月",
    "lo": 61,
    "hi": 90,
-   "count": 7
+   "count": 6
   },
   {
    "label": "3–4 个月",
@@ -258,7 +253,7 @@
    "label": "4–6 个月",
    "lo": 121,
    "hi": 180,
-   "count": 4
+   "count": 5
   },
   {
    "label": ">6 个月",
@@ -268,11 +263,11 @@
   }
  ],
  "seat": {
-  "n": 45,
-  "median": 30,
-  "mean": 30.5,
+  "n": 44,
+  "median": 30.0,
+  "mean": 31.2,
   "p25": 8,
-  "p75": 42,
+  "p75": 44,
   "min": 2,
   "max": 111
  },
@@ -318,13 +313,13 @@
   },
   {
    "year": 2026,
-   "n": 11,
-   "median": 49,
-   "mean": 49.7,
+   "n": 10,
+   "median": 47.0,
+   "mean": 54.7,
    "p25": 28,
-   "p75": 58,
+   "p75": 56,
    "min": 12,
-   "max": 85
+   "max": 143
   }
  ],
  "byCreator": [
@@ -360,9 +355,9 @@
   },
   {
    "creator": "Anthropic",
-   "n": 13,
-   "median": 85,
-   "mean": 88.3,
+   "n": 12,
+   "median": 98.0,
+   "mean": 95.7,
    "min": 12,
    "max": 237,
    "lastDate": "2026-09-01",
@@ -375,8 +370,7 @@
     87,
     75,
     111,
-    85,
-    58,
+    143,
     42,
     12,
     45,
@@ -634,12 +628,6 @@
    "gap": 56
   },
   {
-   "creator": "Anthropic",
-   "from": "2025-11-24",
-   "to": "2026-02-17",
-   "gap": 85
-  },
-  {
    "creator": "OpenAI",
    "from": "2026-02-05",
    "to": "2026-03-05",
@@ -647,9 +635,9 @@
   },
   {
    "creator": "Anthropic",
-   "from": "2026-02-17",
+   "from": "2025-11-24",
    "to": "2026-04-16",
-   "gap": 58
+   "gap": 143
   },
   {
    "creator": "OpenAI",
@@ -1011,22 +999,13 @@
    "gapDays": 56
   },
   {
-   "date": "2026-02-17",
-   "entered": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-   "enteredCreator": "Anthropic",
-   "enteredIntel": 30.4529,
-   "exited": "GPT-5.2 (xhigh)",
-   "exitedCreator": "OpenAI",
-   "gapDays": 12
-  },
-  {
    "date": "2026-03-05",
    "entered": "GPT-5.4 (xhigh)",
    "enteredCreator": "OpenAI",
    "enteredIntel": 38.9756,
-   "exited": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-   "exitedCreator": "Anthropic",
-   "gapDays": 16
+   "exited": "GPT-5.2 (xhigh)",
+   "exitedCreator": "OpenAI",
+   "gapDays": 28
   },
   {
    "date": "2026-04-16",
@@ -1041,7 +1020,7 @@
    "date": "2026-04-23",
    "entered": "GPT-5.5 (xhigh)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 38.6292,
+   "enteredIntel": 38.3556,
    "exited": "GPT-5.3 Codex (xhigh)",
    "exitedCreator": "OpenAI",
    "gapDays": 7
@@ -1050,7 +1029,7 @@
    "date": "2026-05-28",
    "entered": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 41.9916,
+   "enteredIntel": 41.7899,
    "exited": "GPT-5.5 (xhigh)",
    "exitedCreator": "OpenAI",
    "gapDays": 35
@@ -1059,7 +1038,7 @@
    "date": "2026-06-09",
    "entered": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 49.6994,
+   "enteredIntel": 49.6258,
    "exited": "GPT-5.4 (xhigh)",
    "exitedCreator": "OpenAI",
    "gapDays": 12
@@ -1068,7 +1047,7 @@
    "date": "2026-07-09",
    "entered": "GPT-5.6 Sol (max)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 47.0614,
+   "enteredIntel": 46.9727,
    "exited": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)、Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
    "exitedCreator": "Anthropic、Anthropic",
    "gapDays": 30
@@ -1077,7 +1056,7 @@
    "date": "2026-07-16",
    "entered": "Kimi K3 (max)",
    "enteredCreator": "Kimi",
-   "enteredIntel": 43.7842,
+   "enteredIntel": 43.5938,
    "exited": "GPT-5.6 Terra (max)",
    "exitedCreator": "OpenAI",
    "gapDays": 7
@@ -1086,7 +1065,7 @@
    "date": "2026-07-24",
    "entered": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 50.7002,
+   "enteredIntel": 50.7771,
    "exited": "Kimi K3 (max)",
    "exitedCreator": "Kimi",
    "gapDays": 8
@@ -1095,7 +1074,7 @@
    "date": "2026-09-01",
    "entered": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 53.3738,
+   "enteredIntel": 53.3549,
    "exited": "GPT-5.6 Sol (max)",
    "exitedCreator": "OpenAI",
    "gapDays": 39
@@ -1104,7 +1083,7 @@
    "date": "2026-09-03",
    "entered": "GPT-6 Astra (max)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 52.8141,
+   "enteredIntel": 52.6737,
    "exited": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
    "exitedCreator": "Anthropic",
    "gapDays": 2
@@ -1114,25 +1093,25 @@
   {
    "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "creator": "Anthropic",
-   "intel": 53.3738
+   "intel": 53.3549
   },
   {
    "name": "GPT-6 Astra (max)",
    "creator": "OpenAI",
-   "intel": 52.8141
+   "intel": 52.6737
   },
   {
    "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
    "creator": "Anthropic",
-   "intel": 50.7002
+   "intel": 50.7771
   }
  ],
  "tenure": {
-  "n": 53,
-  "median": 58,
-  "mean": 74.6,
-  "p25": 23,
-  "p75": 87,
+  "n": 52,
+  "median": 60.0,
+  "mean": 76.4,
+  "p25": 24,
+  "p75": 96,
   "min": 5,
   "max": 426
  },
@@ -1250,6 +1229,13 @@
    "days": 85
   },
   {
+   "name": "GPT-5.2 (xhigh)",
+   "creator": "OpenAI",
+   "from": "2025-12-11",
+   "to": "2026-03-05",
+   "days": 84
+  },
+  {
    "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
    "creator": "Anthropic",
    "from": "2026-04-16",
@@ -1306,13 +1292,6 @@
    "days": 70
   },
   {
-   "name": "GPT-5.2 (xhigh)",
-   "creator": "OpenAI",
-   "from": "2025-12-11",
-   "to": "2026-02-17",
-   "days": 68
-  },
-  {
    "name": "PALM-2",
    "creator": "Google",
    "from": "2023-05-10",
@@ -1334,6 +1313,14 @@
    "days": 56
   },
   {
+   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+   "creator": "Anthropic",
+   "from": "2026-07-24",
+   "to": null,
+   "days": 56,
+   "current": true
+  },
+  {
    "name": "GPT-5.6 Sol (max)",
    "creator": "OpenAI",
    "from": "2026-07-09",
@@ -1346,14 +1333,6 @@
    "from": "2023-12-06",
    "to": "2024-01-25",
    "days": 50
-  },
-  {
-   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "from": "2026-07-24",
-   "to": null,
-   "days": 49,
-   "current": true
   },
   {
    "name": "Claude 3.5 Haiku",
@@ -1447,11 +1426,20 @@
    "days": 19
   },
   {
-   "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "creator": "Anthropic",
-   "from": "2026-02-17",
-   "to": "2026-03-05",
-   "days": 16
+   "from": "2026-09-01",
+   "to": null,
+   "days": 17,
+   "current": true
+  },
+  {
+   "name": "GPT-6 Astra (max)",
+   "creator": "OpenAI",
+   "from": "2026-09-03",
+   "to": null,
+   "days": 15,
+   "current": true
   },
   {
    "name": "Llama 3.1 Instruct 405B",
@@ -1475,27 +1463,11 @@
    "days": 11
   },
   {
-   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-01",
-   "to": null,
-   "days": 10,
-   "current": true
-  },
-  {
    "name": "Kimi K3 (max)",
    "creator": "Kimi",
    "from": "2026-07-16",
    "to": "2026-07-24",
    "days": 8
-  },
-  {
-   "name": "GPT-6 Astra (max)",
-   "creator": "OpenAI",
-   "from": "2026-09-03",
-   "to": null,
-   "days": 8,
-   "current": true
   },
   {
    "name": "GPT-5.6 Terra (max)",
@@ -2199,26 +2171,6 @@
    ]
   },
   {
-   "date": "2026-02-17",
-   "top": [
-    {
-     "name": "GPT-5.3 Codex (xhigh)",
-     "creator": "OpenAI",
-     "intel": 32.5028
-    },
-    {
-     "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 31.9457
-    },
-    {
-     "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
-     "creator": "Anthropic",
-     "intel": 30.4529
-    }
-   ]
-  },
-  {
    "date": "2026-03-05",
    "top": [
     {
@@ -2274,7 +2226,7 @@
     {
      "name": "GPT-5.5 (xhigh)",
      "creator": "OpenAI",
-     "intel": 38.6292
+     "intel": 38.3556
     }
    ]
   },
@@ -2284,7 +2236,7 @@
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 41.9916
+     "intel": 41.7899
     },
     {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
@@ -2304,12 +2256,12 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6994
+     "intel": 49.6258
     },
     {
      "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 41.9916
+     "intel": 41.7899
     },
     {
      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
@@ -2324,17 +2276,17 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6994
+     "intel": 49.6258
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 47.0614
+     "intel": 46.9727
     },
     {
      "name": "GPT-5.6 Terra (max)",
      "creator": "OpenAI",
-     "intel": 42.2515
+     "intel": 42.0829
     }
    ]
   },
@@ -2344,17 +2296,17 @@
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6994
+     "intel": 49.6258
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 47.0614
+     "intel": 46.9727
     },
     {
      "name": "Kimi K3 (max)",
      "creator": "Kimi",
-     "intel": 43.7842
+     "intel": 43.5938
     }
    ]
   },
@@ -2364,17 +2316,17 @@
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 50.7002
+     "intel": 50.7771
     },
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6994
+     "intel": 49.6258
     },
     {
      "name": "GPT-5.6 Sol (max)",
      "creator": "OpenAI",
-     "intel": 47.0614
+     "intel": 46.9727
     }
    ]
   },
@@ -2384,17 +2336,17 @@
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 53.3738
+     "intel": 53.3549
     },
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 50.7002
+     "intel": 50.7771
     },
     {
      "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6994
+     "intel": 49.6258
     }
    ]
   },
@@ -2404,24 +2356,24 @@
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 53.3738
+     "intel": 53.3549
     },
     {
      "name": "GPT-6 Astra (max)",
      "creator": "OpenAI",
-     "intel": 52.8141
+     "intel": 52.6737
     },
     {
      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
      "creator": "Anthropic",
-     "intel": 50.7002
+     "intel": 50.7771
     }
    ]
   }
  ],
  "seatCount": {
   "OpenAI": 19,
-  "Anthropic": 14,
+  "Anthropic": 13,
   "Google": 4,
   "Meta": 3,
   "SpaceXAI": 2,
@@ -2469,8 +2421,7 @@
     87,
     75,
     111,
-    85,
-    58,
+    143,
     42,
     12,
     45,
@@ -2519,8 +2470,7 @@
    6,
    17,
    56,
-   12,
-   16,
+   28,
    42,
    7,
    35,

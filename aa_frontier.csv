@@ -19,7 +19,7 @@
 2026-02-05,32.5028,2.0546,GPT-5.3 Codex (xhigh),gpt-5-3-codex,OpenAI,False,True
 2026-03-05,38.9756,6.4728,GPT-5.4 (xhigh),gpt-5-4,OpenAI,False,True
 2026-04-16,40.6898,1.7142,"Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",claude-opus-4-7,Anthropic,False,True
-2026-05-28,41.9916,1.3018,"Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",claude-opus-4-8,Anthropic,False,True
-2026-06-09,49.6994,7.7078,"Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",claude-fable-5,Anthropic,False,True
-2026-07-24,50.7002,1.0008,"Claude Opus 5 (Adaptive Reasoning, Max Effort)",claude-opus-5,Anthropic,False,True
-2026-09-01,53.3738,2.6736,"Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-fable-5-1,Anthropic,False,True
+2026-05-28,41.7899,1.1001,"Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",claude-opus-4-8,Anthropic,False,True
+2026-06-09,49.6258,7.8359,"Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",claude-fable-5,Anthropic,False,True
+2026-07-24,50.7771,1.1513,"Claude Opus 5 (Adaptive Reasoning, Max Effort)",claude-opus-5,Anthropic,False,True
+2026-09-01,53.3549,2.5778,"Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-fable-5-1,Anthropic,False,True
