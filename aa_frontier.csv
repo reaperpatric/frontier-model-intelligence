@@ -23,3 +23,4 @@
 2026-06-09,49.6258,7.8359,"Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",claude-fable-5,Anthropic,False,True
 2026-07-24,50.7771,1.1513,"Claude Opus 5 (Adaptive Reasoning, Max Effort)",claude-opus-5,Anthropic,False,True
 2026-09-01,53.3549,2.5778,"Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-fable-5-1,Anthropic,False,True
+2026-09-22,57.6224,4.2675,"Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-opus-5-5,Anthropic,False,True

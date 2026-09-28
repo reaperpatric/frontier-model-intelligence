@@ -14,6 +14,7 @@ Anthropic,2026-05-28,41.7899,1.1001,"Claude Opus 4.8 (Adaptive Reasoning, Max Ef
 Anthropic,2026-06-09,49.6258,7.8359,"Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",claude-fable-5,False,True
 Anthropic,2026-07-24,50.7771,1.1513,"Claude Opus 5 (Adaptive Reasoning, Max Effort)",claude-opus-5,False,True
 Anthropic,2026-09-01,53.3549,2.5778,"Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-fable-5-1,False,True
+Anthropic,2026-09-22,57.6224,4.2675,"Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",claude-opus-5-5,False,True
 OpenAI,2022-11-30,5.4856,,GPT-3.5 Turbo,gpt-35-turbo,False,False
 OpenAI,2023-03-14,6.7016,1.216,GPT-4,gpt-4,False,False
 OpenAI,2023-11-06,7.0435,0.3419,GPT-4 Turbo,gpt-4-turbo,False,False
@@ -39,6 +40,20 @@ Meta,2026-04-08,31.2991,21.3085,Muse Spark,muse-spark,False,True
 Meta,2026-07-09,33.7298,2.4307,Muse Spark 1.1 (xhigh),muse-spark-1-1,False,True
 Meta,2026-08-05,39.5759,5.8461,Muse Spark 1.2 (xhigh),muse-spark-1-2,False,True
 Meta,2026-09-02,48.0923,8.5164,Muse Spark 1.3 (max),muse-spark-1-3,False,True
+SpaceXAI,2024-03-17,6.3379,,Grok-1,grok-1,True,False
+SpaceXAI,2024-08-13,6.8877,0.5498,Grok Beta,grok-beta,False,False
+SpaceXAI,2024-12-12,7.1056,0.2179,Grok 2 (Dec '24),grok-2-1212,True,False
+SpaceXAI,2025-02-19,14.6213,7.5157,Grok 3 mini Reasoning (high),grok-3-mini-reasoning,False,True
+SpaceXAI,2025-07-10,22.4867,7.8654,Grok 4,grok-4,False,True
+SpaceXAI,2026-03-10,25.2163,2.7296,Grok 4.20 0309 (Reasoning),grok-4-20-0309,False,True
+SpaceXAI,2026-04-07,25.655,0.4387,Grok 4.20 0309 v2 (Reasoning),grok-4-20,False,True
+SpaceXAI,2026-06-16,27.1714,1.5164,Grok Build 0.1 0616,grok-build-0-1-06-16,False,True
+SpaceXAI,2026-07-08,38.8121,11.6407,Grok 4.5 (high),grok-4-5,False,True
+SpaceXAI,2026-08-12,44.3113,5.4992,Grok 4.6 (high),grok-4-6,False,True
+SpaceXAI,2026-09-21,46.4466,2.1353,Grok 4.7 (xhigh),grok-4-7,False,True
+Xiaomi,2025-12-16,22.4406,,MiMo-V2-Flash (Feb 2026),mimo-v2-0206,True,True
+Xiaomi,2026-03-18,28.6442,6.2036,MiMo-V2-Pro,mimo-v2-pro,False,True
+Xiaomi,2026-09-21,46.3242,17.68,MiMo-V2.6-Pro,mimo-v2-6-pro,True,True
 Alibaba,2023-09-25,5.035,,Qwen Chat 14B,qwen-chat-14b,True,False
 Alibaba,2023-11-30,5.4364,0.4014,Qwen Chat 72B,qwen-chat-72b,True,False
 Alibaba,2024-04-25,5.6536,0.2172,Qwen1.5 Chat 110B,qwen1.5-110b-chat,True,False
@@ -65,16 +80,6 @@ Z AI,2025-12-22,22.2403,3.7106,GLM-4.7 (Reasoning),glm-4-7,True,True
 Z AI,2026-02-11,27.9112,5.6709,GLM-5 (Reasoning),glm-5,True,True
 Z AI,2026-06-16,33.7055,5.7943,GLM-5.2 (max),glm-5-2,True,True
 Z AI,2026-08-18,44.7774,11.0719,GLM-5.3 (max),glm-5-3,True,True
-SpaceXAI,2024-03-17,6.3379,,Grok-1,grok-1,True,False
-SpaceXAI,2024-08-13,6.8877,0.5498,Grok Beta,grok-beta,False,False
-SpaceXAI,2024-12-12,7.1056,0.2179,Grok 2 (Dec '24),grok-2-1212,True,False
-SpaceXAI,2025-02-19,14.6213,7.5157,Grok 3 mini Reasoning (high),grok-3-mini-reasoning,False,True
-SpaceXAI,2025-07-10,22.4867,7.8654,Grok 4,grok-4,False,True
-SpaceXAI,2026-03-10,25.2163,2.7296,Grok 4.20 0309 (Reasoning),grok-4-20-0309,False,True
-SpaceXAI,2026-04-07,25.655,0.4387,Grok 4.20 0309 v2 (Reasoning),grok-4-20,False,True
-SpaceXAI,2026-06-16,27.1714,1.5164,Grok Build 0.1 0616,grok-build-0-1-06-16,False,True
-SpaceXAI,2026-07-08,38.8121,11.6407,Grok 4.5 (high),grok-4-5,False,True
-SpaceXAI,2026-08-12,44.3113,5.4992,Grok 4.6 (high),grok-4-6,False,True
 StepFun,2026-01-20,7.6939,,Step3 VL 10B,step-3-vl-10b,True,True
 StepFun,2026-02-02,16.6169,8.923,Step 3.5 Flash,step-3-5-flash-0202,True,True
 StepFun,2026-04-02,16.9641,0.3472,Step 3.5 Flash 2603,step-3-5-flash,False,True
@@ -117,9 +122,6 @@ DeepSeek,2026-04-24,30.4497,8.9629,"DeepSeek V4 Pro 0424 (Reasoning, Max Effort)
 DeepSeek,2026-07-31,34.3305,3.8808,"DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",deepseek-v4-flash,True,True
 DeepSeek,2026-08-13,35.9968,1.6663,"DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",deepseek-v4-pro,True,True
 DeepSeek,2026-09-10,39.4562,3.4594,"DeepSeek V4.1 Flash (Reasoning, Max Effort)",deepseek-v4-1-flash,True,True
-Sapiens AI,2026-07-24,26.7728,,Agnes 2.5 Pro Alpha,agnes-2-5-pro-alpha,True,True
-Sapiens AI,2026-08-26,35.2413,8.4685,Agnes 2.5 Pro Beta,agnes-2-5-pro-beta,False,True
-Sapiens AI,2026-09-11,35.5,0.2587,Agnes 3.0 Flash,agnes-3-0-flash,False,True
 Motif Technologies,2025-12-04,9.1875,,Motif-2-12.7B-Reasoning,motif-2-12-7b,False,True
 Motif Technologies,2026-07-14,32.3147,23.1272,Motif 3 (Beta),motif-0714,False,True
 Motif Technologies,2026-08-12,33.5666,1.2519,Motif 3,motif-3,True,True
@@ -131,8 +133,6 @@ MiniMax,2025-10-26,18.6257,6.9004,MiniMax-M2,minimax-m2,True,True
 MiniMax,2025-12-23,20.9453,2.3196,MiniMax-M2.1,minimax-m2-1,True,True
 MiniMax,2026-02-12,22.7966,1.8513,MiniMax-M2.5,minimax-m2-5,True,True
 MiniMax,2026-06-01,29.2203,6.4237,MiniMax-M3,minimax-m3,True,True
-Xiaomi,2025-12-16,22.4406,,MiMo-V2-Flash (Feb 2026),mimo-v2-0206,True,True
-Xiaomi,2026-03-18,28.6442,6.2036,MiMo-V2-Pro,mimo-v2-pro,False,True
 Upstage,2024-01-25,6.4088,,Solar Mini,solar-mini,True,False
 Upstage,2025-05-20,9.07,2.6612,Solar Pro 2 (Preview) (Reasoning),solar-pro-2-preview-reasoning,False,True
 Upstage,2025-12-17,10.3644,1.2944,Solar Open 100B (Reasoning),solar-open-100b-reasoning,True,True
@@ -198,7 +198,7 @@ OpenBMB,2026-05-25,8.7966,3.1063,MiniCPM5-1B (Reasoning),minicpm5-1b,True,True
 OpenBMB,2026-09-07,12.4634,3.6668,MiniCPM5-2B,minicpm5-2b,True,True
 Perplexity,2025-01-21,7.7097,,Sonar,sonar,False,False
 Perplexity,2025-01-28,11.8218,4.1121,Sonar Reasoning Pro,sonar-reasoning-pro,False,True
-Sarvam,2025-05-23,5.3107,,Sarvam M (Reasoning),sarvam-m-reasoning,True,True
+Sarvam,2025-05-23,5.3107,,"Sarvam M (Reasoning, based on Mistral Small 3.1)",sarvam-m-reasoning,True,True
 Sarvam,2026-03-06,8.7906,3.4799,Sarvam 105B (high),sarvam-105b,True,True
 Liquid AI,2024-09-30,5.418,,LFM 40B,lfm-40b,False,False
 Liquid AI,2026-02-25,5.9475,0.5295,LFM2 24B A2B,lfm2-24b-a2b,True,False

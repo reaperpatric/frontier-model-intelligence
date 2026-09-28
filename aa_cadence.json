@@ -182,18 +182,23 @@
   },
   {
    "month": "2026-09",
-   "n": 2,
-   "median": 47.5,
-   "mean": 47.5,
-   "roll3": 50.5,
-   "frontierEnd": 53.35,
-   "frontierDelta": 2.578,
-   "refreshCount": 1,
+   "n": 3,
+   "median": 39,
+   "mean": 38.7,
+   "roll3": 45,
+   "frontierEnd": 57.62,
+   "frontierDelta": 6.845,
+   "refreshCount": 2,
    "refreshModels": [
     {
      "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
      "creator": "Anthropic",
      "intel": 53.35
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 57.62
     }
    ],
    "events": [
@@ -206,21 +211,26 @@
      "creator": "OpenAI",
      "gap": 56,
      "to": "2026-09-03"
+    },
+    {
+     "creator": "Anthropic",
+     "gap": 21,
+     "to": "2026-09-22"
     }
    ]
   }
  ],
- "versionCount": 481,
+ "versionCount": 485,
  "dateRange": [
   "2022-11-30",
-  "2026-09-18"
+  "2026-09-22"
  ],
  "cadence": {
-  "n": 36,
-  "median": 80.5,
-  "mean": 113.9,
-  "p25": 49,
-  "p75": 143,
+  "n": 37,
+  "median": 77,
+  "mean": 111.4,
+  "p25": 47,
+  "p75": 141,
   "min": 12,
   "max": 475
  },
@@ -229,7 +239,7 @@
    "label": "≤1 个月",
    "lo": 0,
    "hi": 30,
-   "count": 3
+   "count": 4
   },
   {
    "label": "1–2 个月",
@@ -263,19 +273,19 @@
   }
  ],
  "seat": {
-  "n": 44,
-  "median": 30.0,
-  "mean": 31.2,
+  "n": 45,
+  "median": 30,
+  "mean": 30.9,
   "p25": 8,
-  "p75": 44,
+  "p75": 42,
   "min": 2,
   "max": 111
  },
  "leader": {
-  "n": 23,
-  "median": 42,
-  "mean": 59.6,
-  "p25": 19,
+  "n": 24,
+  "median": 42.0,
+  "mean": 58.0,
+  "p25": 21,
   "p75": 81,
   "min": 2,
   "max": 237
@@ -313,10 +323,10 @@
   },
   {
    "year": 2026,
-   "n": 10,
-   "median": 47.0,
-   "mean": 54.7,
-   "p25": 28,
+   "n": 11,
+   "median": 45,
+   "mean": 51.6,
+   "p25": 21,
    "p75": 56,
    "min": 12,
    "max": 143
@@ -355,13 +365,13 @@
   },
   {
    "creator": "Anthropic",
-   "n": 12,
-   "median": 98.0,
-   "mean": 95.7,
+   "n": 13,
+   "median": 87,
+   "mean": 89.9,
    "min": 12,
    "max": 237,
-   "lastDate": "2026-09-01",
-   "lastGap": 39,
+   "lastDate": "2026-09-22",
+   "lastGap": 21,
    "gaps": [
     237,
     109,
@@ -374,7 +384,8 @@
     42,
     12,
     45,
-    39
+    39,
+    21
    ]
   },
   {
@@ -680,6 +691,12 @@
    "from": "2026-07-09",
    "to": "2026-09-03",
    "gap": 56
+  },
+  {
+   "creator": "Anthropic",
+   "from": "2026-09-01",
+   "to": "2026-09-22",
+   "gap": 21
   }
  ],
  "changelog": [
@@ -1087,9 +1104,23 @@
    "exited": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
    "exitedCreator": "Anthropic",
    "gapDays": 2
+  },
+  {
+   "date": "2026-09-22",
+   "entered": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+   "enteredCreator": "Anthropic",
+   "enteredIntel": 57.6224,
+   "exited": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+   "exitedCreator": "Anthropic",
+   "gapDays": 19
   }
  ],
  "finalTop": [
+  {
+   "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+   "creator": "Anthropic",
+   "intel": 57.6224
+  },
   {
    "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
    "creator": "Anthropic",
@@ -1099,20 +1130,15 @@
    "name": "GPT-6 Astra (max)",
    "creator": "OpenAI",
    "intel": 52.6737
-  },
-  {
-   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "intel": 50.7771
   }
  ],
  "tenure": {
-  "n": 52,
-  "median": 60.0,
-  "mean": 76.4,
-  "p25": 24,
-  "p75": 96,
-  "min": 5,
+  "n": 53,
+  "median": 60,
+  "mean": 75.2,
+  "p25": 23,
+  "p75": 87,
+  "min": 0,
   "max": 426
  },
  "tenures": [
@@ -1299,6 +1325,13 @@
    "days": 62
   },
   {
+   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+   "creator": "Anthropic",
+   "from": "2026-07-24",
+   "to": "2026-09-22",
+   "days": 60
+  },
+  {
    "name": "o3-pro",
    "creator": "OpenAI",
    "from": "2025-06-10",
@@ -1311,14 +1344,6 @@
    "from": "2025-12-11",
    "to": "2026-02-05",
    "days": 56
-  },
-  {
-   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
-   "creator": "Anthropic",
-   "from": "2026-07-24",
-   "to": null,
-   "days": 56,
-   "current": true
   },
   {
    "name": "GPT-5.6 Sol (max)",
@@ -1419,6 +1444,14 @@
    "days": 22
   },
   {
+   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-01",
+   "to": null,
+   "days": 21,
+   "current": true
+  },
+  {
    "name": "Claude 4 Sonnet (Reasoning)",
    "creator": "Anthropic",
    "from": "2025-05-22",
@@ -1426,19 +1459,11 @@
    "days": 19
   },
   {
-   "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-01",
-   "to": null,
-   "days": 17,
-   "current": true
-  },
-  {
    "name": "GPT-6 Astra (max)",
    "creator": "OpenAI",
    "from": "2026-09-03",
    "to": null,
-   "days": 15,
+   "days": 19,
    "current": true
   },
   {
@@ -1482,6 +1507,14 @@
    "from": "2025-11-13",
    "to": "2025-11-18",
    "days": 5
+  },
+  {
+   "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": null,
+   "days": 0,
+   "current": true
   }
  ],
  "snaps": [
@@ -2369,11 +2402,31 @@
      "intel": 50.7771
     }
    ]
+  },
+  {
+   "date": "2026-09-22",
+   "top": [
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 57.6224
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 53.3549
+    },
+    {
+     "name": "GPT-6 Astra (max)",
+     "creator": "OpenAI",
+     "intel": 52.6737
+    }
+   ]
   }
  ],
  "seatCount": {
   "OpenAI": 19,
-  "Anthropic": 13,
+  "Anthropic": 14,
   "Google": 4,
   "Meta": 3,
   "SpaceXAI": 2,
@@ -2425,7 +2478,8 @@
     42,
     12,
     45,
-    39
+    39,
+    21
    ],
    "Upstage": [],
    "DeepSeek": [],
@@ -2479,7 +2533,8 @@
    7,
    8,
    39,
-   2
+   2,
+   19
   ],
   "leaderGaps": [
    104,
@@ -2504,7 +2559,8 @@
    42,
    12,
    45,
-   39
+   39,
+   21
   ]
  }
 }
