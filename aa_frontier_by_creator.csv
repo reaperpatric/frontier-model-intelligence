@@ -114,7 +114,7 @@ InclusionAI,2025-10-13,10.8975,1.7254,Ring-1T,ring-1t,True,True
 InclusionAI,2026-04-23,17.0002,6.1027,Ling-2.6-1T,ling-2-6-1t,True,False
 InclusionAI,2026-08-04,20.1333,3.1331,Ling 3.0 Flash,ling-3-0-flash,True,True
 InclusionAI,2026-09-10,24.5693,4.436,Ling-3.0-flash-VL,ling-3-0-flash-vl,True,True
-InclusionAI,2026-10-01,41.0906,16.5213,Ling 3.1 Flash,ling-3-1-flash,True,True
+InclusionAI,2026-10-01,41.0906,16.5213,Ling 3.1 Flash,ling-3-1-flash,False,True
 DeepSeek,2023-11-29,5.3045,,DeepSeek LLM 67B Chat (V1),deepseek-llm-67b-chat,True,False
 DeepSeek,2024-05-06,5.5061,0.2016,DeepSeek-V2-Chat,deepseek-v2,True,False
 DeepSeek,2024-06-17,5.9843,0.4782,DeepSeek-Coder-V2,deepseek-coder-v2,True,False
@@ -131,6 +131,17 @@ DeepSeek,2026-04-24,30.4497,8.9629,DeepSeek V4 Pro 0424 (Max),deepseek-v4-pro-04
 DeepSeek,2026-07-31,34.3305,3.8808,DeepSeek V4 Flash 0731 (Max),deepseek-v4-flash,True,True
 DeepSeek,2026-08-13,35.9968,1.6663,DeepSeek V4 Pro 0813 (Max),deepseek-v4-pro,True,True
 DeepSeek,2026-09-10,39.4562,3.4594,DeepSeek V4.1 Flash (Max),deepseek-v4-1-flash,True,True
+Mistral,2023-09-27,5.035,,Mistral 7B Instruct,mistral-7b-instruct,True,False
+Mistral,2023-12-11,5.4919,0.4569,Mistral Medium,mistral-medium,False,False
+Mistral,2024-02-26,5.7644,0.2725,Mistral Large (Feb '24),mistral-large,False,False
+Mistral,2024-07-24,6.7995,1.0351,Mistral Large 2 (Jul '24),mistral-large-2407,True,False
+Mistral,2024-11-18,7.5556,0.7561,Mistral Large 2 (Nov '24),mistral-large-2,True,False
+Mistral,2025-05-07,9.0476,1.492,Mistral Medium 3,mistral-medium-3,False,False
+Mistral,2025-06-10,9.0539,0.0063,Magistral Medium 1,magistral-medium,False,True
+Mistral,2025-08-12,9.1844,0.1305,Mistral Medium 3.1,mistral-medium-3-1,False,False
+Mistral,2025-09-18,11.8255,2.6411,Magistral Medium 1.2,magistral-medium-2509,False,True
+Mistral,2026-04-29,14.1889,2.3634,Mistral Medium 3.5,mistral-medium-3-5,True,True
+Mistral,2026-10-06,38.377,24.1881,Mistral Large 4 Preview,mistral-large-4,False,True
 China Mobile,2026-04-15,12.2118,,JT-MINI,jt-mini,False,False
 China Mobile,2026-05-14,18.6626,6.4508,JT-35B-Flash,jt-35b-flash,False,False
 China Mobile,2026-07-09,33.9173,15.2547,JT-4.1 Flash 236B A21B (Reasoning),jt-4-1-flash-236b-a21b,False,True
@@ -171,22 +182,8 @@ LongCat,2026-01-28,11.4709,,LongCat Flash Lite,longcat-flash-lite,True,False
 LongCat,2026-06-29,19.1123,7.6414,LongCat 2.0,longcat-2-0,True,True
 ByteDance Seed,2025-08-20,12.0993,,Seed-OSS-36B-Instruct,seed-oss-36b-instruct,True,True
 ByteDance Seed,2025-11-11,16.9468,4.8475,Doubao Seed Code,doubao-seed-code,False,True
-IBM,2025-04-16,4.9216,,Granite 3.3 8B (Non-reasoning),granite-3-3-8b-instruct,True,False
-IBM,2025-09-22,6.0493,1.1277,Granite 4.0 H Small,granite-4-0-h-small,True,False
-IBM,2026-04-29,7.4369,1.3876,Granite 4.1 30B,granite-4-1-30b,True,False
-IBM,2026-08-25,14.8312,7.3943,Granite 4.2 30B,granite-4-2-30b,True,True
 Baidu,2025-06-30,7.5045,,ERNIE 4.5 300B A47B,ernie-4-5-300b-a47b,True,False
 Baidu,2025-11-13,14.2552,6.7507,ERNIE 5.0 Thinking Preview,ernie-5-0-thinking-preview,False,True
-Mistral,2023-09-27,5.035,,Mistral 7B Instruct,mistral-7b-instruct,True,False
-Mistral,2023-12-11,5.4919,0.4569,Mistral Medium,mistral-medium,False,False
-Mistral,2024-02-26,5.7644,0.2725,Mistral Large (Feb '24),mistral-large,False,False
-Mistral,2024-07-24,6.7995,1.0351,Mistral Large 2 (Jul '24),mistral-large-2407,True,False
-Mistral,2024-11-18,7.5556,0.7561,Mistral Large 2 (Nov '24),mistral-large-2,True,False
-Mistral,2025-05-07,9.0476,1.492,Mistral Medium 3,mistral-medium-3,False,False
-Mistral,2025-06-10,9.0539,0.0063,Magistral Medium 1,magistral-medium,False,True
-Mistral,2025-08-12,9.1844,0.1305,Mistral Medium 3.1,mistral-medium-3-1,False,False
-Mistral,2025-09-18,11.8255,2.6411,Magistral Medium 1.2,magistral-medium-2509,False,True
-Mistral,2026-04-29,14.1889,2.3634,Mistral Medium 3.5,mistral-medium-3-5,True,True
 Amazon,2024-12-03,6.9583,,Nova Pro,nova-pro,False,False
 Amazon,2025-04-30,9.1591,2.2008,Nova Premier,nova-premier,False,False
 Amazon,2025-10-29,13.3741,4.215,Nova 2.0 Lite (High),nova-2-0-lite-reasoning,False,True
@@ -196,6 +193,10 @@ Cohere,2024-03-12,5.035,,Command-R (Mar '24),command-r-03-2024,True,False
 Cohere,2024-04-04,5.2982,0.2632,Command-R+ (Apr '24),command-r-plus-04-2024,True,False
 Cohere,2025-03-13,6.9582,1.66,Command A,command-a,True,False
 Cohere,2026-05-20,13.1335,6.1753,Command A+,command-a-plus,True,True
+IBM,2025-04-16,4.9216,,Granite 3.3 8B (Non-reasoning),granite-3-3-8b-instruct,True,False
+IBM,2025-09-22,6.0493,1.1277,Granite 4.0 H Small,granite-4-0-h-small,True,False
+IBM,2026-04-29,7.4369,1.3876,Granite 4.1 30B,granite-4-1-30b,True,False
+IBM,2026-08-25,12.6832,5.2463,Granite 4.2 30B,granite-4-2-30b,True,True
 OpenBMB,2026-05-11,5.6903,,MiniCPM-V 4.6 1.3B,minicpm-v4-6-1-3b,True,False
 OpenBMB,2026-05-25,8.7966,3.1063,MiniCPM5-1B (Reasoning),minicpm5-1b,True,True
 OpenBMB,2026-09-07,12.4634,3.6668,MiniCPM5-2B,minicpm5-2b,True,True

@@ -237,10 +237,10 @@
    "events": []
   }
  ],
- "versionCount": 490,
+ "versionCount": 492,
  "dateRange": [
   "2022-11-30",
-  "2026-10-01"
+  "2026-10-07"
  ],
  "cadence": {
   "n": 38,
@@ -1168,10 +1168,10 @@
  "tenure": {
   "n": 54,
   "median": 59.0,
-  "mean": 74.3,
+  "mean": 74.6,
   "p25": 24,
   "p75": 87,
-  "min": 3,
+  "min": 5,
   "max": 426
  },
  "tenures": [
@@ -1428,6 +1428,14 @@
    "days": 36
   },
   {
+   "name": "Claude Fable 5.1 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-01",
+   "to": null,
+   "days": 36,
+   "current": true
+  },
+  {
    "name": "GPT-5.5 (Xhigh)",
    "creator": "OpenAI",
    "from": "2026-04-23",
@@ -1447,14 +1455,6 @@
    "from": "2024-06-21",
    "to": "2024-07-23",
    "days": 32
-  },
-  {
-   "name": "Claude Fable 5.1 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-01",
-   "to": null,
-   "days": 30,
-   "current": true
   },
   {
    "name": "GPT-6 Astra (Max)",
@@ -1499,6 +1499,14 @@
    "days": 19
   },
   {
+   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": null,
+   "days": 15,
+   "current": true
+  },
+  {
    "name": "Llama 3.1 Instruct 405B",
    "creator": "Meta",
    "from": "2024-07-23",
@@ -1520,9 +1528,9 @@
    "days": 11
   },
   {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
-   "from": "2026-09-22",
+   "from": "2026-09-28",
    "to": null,
    "days": 9,
    "current": true
@@ -1547,14 +1555,6 @@
    "from": "2025-11-13",
    "to": "2025-11-18",
    "days": 5
-  },
-  {
-   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-28",
-   "to": null,
-   "days": 3,
-   "current": true
   }
  ],
  "snaps": [
