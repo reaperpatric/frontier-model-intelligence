@@ -226,30 +226,36 @@
   },
   {
    "month": "2026-10",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "roll3": 30.0,
+   "n": 1,
+   "median": 811,
+   "mean": 811.0,
+   "roll3": 39,
    "frontierEnd": 57.62,
    "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
-   "events": []
+   "events": [
+    {
+     "creator": "Meta",
+     "gap": 811,
+     "to": "2026-10-12"
+    }
+   ]
   }
  ],
- "versionCount": 492,
+ "versionCount": 500,
  "dateRange": [
   "2022-11-30",
-  "2026-10-07"
+  "2026-10-17"
  ],
  "cadence": {
-  "n": 38,
-  "median": 76.0,
-  "mean": 108.6,
+  "n": 39,
+  "median": 77,
+  "mean": 126.6,
   "p25": 45,
-  "p75": 141,
+  "p75": 143,
   "min": 6,
-  "max": 475
+  "max": 811
  },
  "cadenceHistogram": [
   {
@@ -286,13 +292,13 @@
    "label": ">6 个月",
    "lo": 181,
    "hi": 1000000,
-   "count": 7
+   "count": 8
   }
  ],
  "seat": {
-  "n": 46,
-  "median": 29.5,
-  "mean": 30.4,
+  "n": 47,
+  "median": 29,
+  "mean": 30.0,
   "p25": 8,
   "p75": 42,
   "min": 2,
@@ -340,13 +346,13 @@
   },
   {
    "year": 2026,
-   "n": 12,
-   "median": 43.5,
-   "mean": 47.8,
+   "n": 13,
+   "median": 45,
+   "mean": 106.5,
    "p25": 21,
    "p75": 56,
    "min": 6,
-   "max": 143
+   "max": 811
   }
  ],
  "byCreator": [
@@ -407,6 +413,21 @@
    ]
   },
   {
+   "creator": "Meta",
+   "n": 3,
+   "median": 371,
+   "mean": 442.0,
+   "min": 144,
+   "max": 811,
+   "lastDate": "2026-10-12",
+   "lastGap": 811,
+   "gaps": [
+    144,
+    371,
+    811
+   ]
+  },
+  {
    "creator": "Google",
    "n": 3,
    "median": 238,
@@ -419,20 +440,6 @@
     210,
     475,
     238
-   ]
-  },
-  {
-   "creator": "Meta",
-   "n": 2,
-   "median": 257.5,
-   "mean": 257.5,
-   "min": 144,
-   "max": 371,
-   "lastDate": "2024-07-23",
-   "lastGap": 371,
-   "gaps": [
-    144,
-    371
    ]
   },
   {
@@ -721,6 +728,12 @@
    "from": "2026-09-22",
    "to": "2026-09-28",
    "gap": 6
+  },
+  {
+   "creator": "Meta",
+   "from": "2024-07-23",
+   "to": "2026-10-12",
+   "gap": 811
   }
  ],
  "changelog": [
@@ -1146,6 +1159,15 @@
    "exited": "GPT-6 Astra (Max)",
    "exitedCreator": "OpenAI",
    "gapDays": 6
+  },
+  {
+   "date": "2026-10-12",
+   "entered": "Muse Wonder Full (Max)",
+   "enteredCreator": "Meta",
+   "enteredIntel": 55.8021,
+   "exited": "Claude Fable 5.1 (Max, Default Fallback)",
+   "exitedCreator": "Anthropic",
+   "gapDays": 14
   }
  ],
  "finalTop": [
@@ -1160,15 +1182,15 @@
    "intel": 56.0001
   },
   {
-   "name": "Claude Fable 5.1 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "intel": 53.3549
+   "name": "Muse Wonder Full (Max)",
+   "creator": "Meta",
+   "intel": 55.8021
   }
  ],
  "tenure": {
-  "n": 54,
-  "median": 59.0,
-  "mean": 74.6,
+  "n": 55,
+  "median": 58,
+  "mean": 73.8,
   "p25": 24,
   "p75": 87,
   "min": 5,
@@ -1407,6 +1429,13 @@
    "days": 42
   },
   {
+   "name": "Claude Fable 5.1 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-01",
+   "to": "2026-10-12",
+   "days": 41
+  },
+  {
    "name": "Solar Mini",
    "creator": "Upstage",
    "from": "2024-01-25",
@@ -1426,14 +1455,6 @@
    "from": "2025-04-16",
    "to": "2025-05-22",
    "days": 36
-  },
-  {
-   "name": "Claude Fable 5.1 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-01",
-   "to": null,
-   "days": 36,
-   "current": true
   },
   {
    "name": "GPT-5.5 (Xhigh)",
@@ -1462,6 +1483,14 @@
    "from": "2026-09-03",
    "to": "2026-09-28",
    "days": 25
+  },
+  {
+   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": null,
+   "days": 25,
+   "current": true
   },
   {
    "name": "o3-mini",
@@ -1499,11 +1528,11 @@
    "days": 19
   },
   {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
-   "from": "2026-09-22",
+   "from": "2026-09-28",
    "to": null,
-   "days": 15,
+   "days": 19,
    "current": true
   },
   {
@@ -1528,14 +1557,6 @@
    "days": 11
   },
   {
-   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-28",
-   "to": null,
-   "days": 9,
-   "current": true
-  },
-  {
    "name": "Kimi K3 (Max)",
    "creator": "Kimi",
    "from": "2026-07-16",
@@ -1555,6 +1576,14 @@
    "from": "2025-11-13",
    "to": "2025-11-18",
    "days": 5
+  },
+  {
+   "name": "Muse Wonder Full (Max)",
+   "creator": "Meta",
+   "from": "2026-10-12",
+   "to": null,
+   "days": 5,
+   "current": true
   }
  ],
  "snaps": [
@@ -2482,13 +2511,33 @@
      "intel": 53.3549
     }
    ]
+  },
+  {
+   "date": "2026-10-12",
+   "top": [
+    {
+     "name": "Claude Opus 5.5 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 57.6224
+    },
+    {
+     "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 56.0001
+    },
+    {
+     "name": "Muse Wonder Full (Max)",
+     "creator": "Meta",
+     "intel": 55.8021
+    }
+   ]
   }
  ],
  "seatCount": {
   "OpenAI": 19,
   "Anthropic": 15,
+  "Meta": 4,
   "Google": 4,
-  "Meta": 3,
   "SpaceXAI": 2,
   "Upstage": 1,
   "DeepSeek": 1,
@@ -2519,7 +2568,8 @@
    ],
    "Meta": [
     144,
-    371
+    371,
+    811
    ],
    "Google": [
     210,
@@ -2596,7 +2646,8 @@
    39,
    2,
    19,
-   6
+   6,
+   14
   ],
   "leaderGaps": [
    104,
