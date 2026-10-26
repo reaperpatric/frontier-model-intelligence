@@ -243,10 +243,10 @@
    ]
   }
  ],
- "versionCount": 500,
+ "versionCount": 503,
  "dateRange": [
   "2022-11-30",
-  "2026-10-17"
+  "2026-10-23"
  ],
  "cadence": {
   "n": 39,
@@ -1190,8 +1190,8 @@
  "tenure": {
   "n": 55,
   "median": 58,
-  "mean": 73.8,
-  "p25": 24,
+  "mean": 74.2,
+  "p25": 25,
   "p75": 87,
   "min": 5,
   "max": 426
@@ -1478,6 +1478,14 @@
    "days": 32
   },
   {
+   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": null,
+   "days": 31,
+   "current": true
+  },
+  {
    "name": "GPT-6 Astra (Max)",
    "creator": "OpenAI",
    "from": "2026-09-03",
@@ -1485,9 +1493,9 @@
    "days": 25
   },
   {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
-   "from": "2026-09-22",
+   "from": "2026-09-28",
    "to": null,
    "days": 25,
    "current": true
@@ -1528,14 +1536,6 @@
    "days": 19
   },
   {
-   "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-28",
-   "to": null,
-   "days": 19,
-   "current": true
-  },
-  {
    "name": "Llama 3.1 Instruct 405B",
    "creator": "Meta",
    "from": "2024-07-23",
@@ -1557,6 +1557,14 @@
    "days": 11
   },
   {
+   "name": "Muse Wonder Full (Max)",
+   "creator": "Meta",
+   "from": "2026-10-12",
+   "to": null,
+   "days": 11,
+   "current": true
+  },
+  {
    "name": "Kimi K3 (Max)",
    "creator": "Kimi",
    "from": "2026-07-16",
@@ -1576,14 +1584,6 @@
    "from": "2025-11-13",
    "to": "2025-11-18",
    "days": 5
-  },
-  {
-   "name": "Muse Wonder Full (Max)",
-   "creator": "Meta",
-   "from": "2026-10-12",
-   "to": null,
-   "days": 5,
-   "current": true
   }
  ],
  "snaps": [

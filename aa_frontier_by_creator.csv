@@ -25,6 +25,13 @@ Meta,2026-07-09,33.7298,2.4307,Muse Spark 1.1 (Xhigh),muse-spark-1-1,False,True
 Meta,2026-08-05,39.5759,5.8461,Muse Spark 1.2 (Xhigh),muse-spark-1-2,False,True
 Meta,2026-09-02,48.0923,8.5164,Muse Spark 1.3 (Max),muse-spark-1-3,False,True
 Meta,2026-10-12,55.8021,7.7098,Muse Wonder Full (Max),muse-wonder-full,False,True
+Kimi,2025-07-11,12.7155,,Kimi K2,kimi-k2,True,False
+Kimi,2025-09-05,15.2942,2.5787,Kimi K2 0905,kimi-k2-0905,True,False
+Kimi,2025-11-06,22.02,6.7258,Kimi K2 Thinking,kimi-k2-thinking,True,True
+Kimi,2026-01-27,23.4585,1.4385,Kimi K2.5 (Reasoning),kimi-k2-5,True,True
+Kimi,2026-04-20,26.9792,3.5207,Kimi K2.6 (Reasoning),kimi-k2-6,True,True
+Kimi,2026-07-16,43.5938,16.6146,Kimi K3 (Max),kimi-k3,True,True
+Kimi,2026-10-23,55.0869,11.4931,Kimi K3.1 Pro,kimi-k3-1-pro,False,True
 OpenAI,2022-11-30,5.4856,,GPT-3.5 Turbo,gpt-35-turbo,False,False
 OpenAI,2023-03-14,6.7016,1.216,GPT-4,gpt-4,False,False
 OpenAI,2023-11-06,7.0435,0.3419,GPT-4 Turbo,gpt-4-turbo,False,False
@@ -114,17 +121,6 @@ Z AI,2025-12-22,22.2403,3.7106,GLM-4.7 (Reasoning),glm-4-7,True,True
 Z AI,2026-02-11,27.9112,5.6709,GLM-5 (Reasoning),glm-5,True,True
 Z AI,2026-06-16,33.7055,5.7943,GLM-5.2 (Max),glm-5-2,True,True
 Z AI,2026-08-18,44.7774,11.0719,GLM-5.3 (Max),glm-5-3,True,True
-StepFun,2026-01-20,7.6939,,Step3 VL 10B,step-3-vl-10b,True,True
-StepFun,2026-02-02,16.6169,8.923,Step 3.5 Flash,step-3-5-flash-0202,True,True
-StepFun,2026-04-02,16.9641,0.3472,Step 3.5 Flash 2603,step-3-5-flash,False,True
-StepFun,2026-05-29,19.4813,2.5172,Step 3.7 Flash,step-3-7-flash,True,True
-StepFun,2026-09-18,43.7343,24.253,Step 5 Preview,step-5,True,True
-Kimi,2025-07-11,12.7155,,Kimi K2,kimi-k2,True,False
-Kimi,2025-09-05,15.2942,2.5787,Kimi K2 0905,kimi-k2-0905,True,False
-Kimi,2025-11-06,22.02,6.7258,Kimi K2 Thinking,kimi-k2-thinking,True,True
-Kimi,2026-01-27,23.4585,1.4385,Kimi K2.5 (Reasoning),kimi-k2-5,True,True
-Kimi,2026-04-20,26.9792,3.5207,Kimi K2.6 (Reasoning),kimi-k2-6,True,True
-Kimi,2026-07-16,43.5938,16.6146,Kimi K3 (Max),kimi-k3,True,True
 InclusionAI,2025-09-09,5.5439,,Ling-mini-2.0,ling-mini-2-0,True,False
 InclusionAI,2025-09-17,7.8075,2.2636,Ling-flash-2.0,ling-flash-2-0,True,False
 InclusionAI,2025-10-08,9.1721,1.3646,Ling-1T,ling-1t,True,False
@@ -133,6 +129,18 @@ InclusionAI,2026-04-23,17.0002,6.1027,Ling-2.6-1T,ling-2-6-1t,True,False
 InclusionAI,2026-08-04,20.1333,3.1331,Ling 3.0 Flash,ling-3-0-flash,True,True
 InclusionAI,2026-09-10,24.5693,4.436,Ling-3.0-flash-VL,ling-3-0-flash-vl,True,True
 InclusionAI,2026-10-01,41.0906,16.5213,Ling 3.1 Flash,ling-3-1-flash,True,True
+InclusionAI,2026-10-22,43.8974,2.8068,Ling 3.1 Flash 1019,ling-3-1-flash-1019,False,True
+StepFun,2026-01-20,7.6939,,Step3 VL 10B,step-3-vl-10b,True,True
+StepFun,2026-02-02,16.6169,8.923,Step 3.5 Flash,step-3-5-flash-0202,True,True
+StepFun,2026-04-02,16.9641,0.3472,Step 3.5 Flash 2603,step-3-5-flash,False,True
+StepFun,2026-05-29,19.4813,2.5172,Step 3.7 Flash,step-3-7-flash,True,True
+StepFun,2026-09-18,43.7343,24.253,Step 5 Preview,step-5,True,True
+MiniMax,2025-06-17,11.7253,,MiniMax M1 80k,minimax-m1-80k,True,True
+MiniMax,2025-10-26,18.6257,6.9004,MiniMax-M2,minimax-m2,True,True
+MiniMax,2025-12-23,20.9453,2.3196,MiniMax-M2.1,minimax-m2-1,True,True
+MiniMax,2026-02-12,22.7966,1.8513,MiniMax-M2.5,minimax-m2-5,True,True
+MiniMax,2026-06-01,29.2203,6.4237,MiniMax-M3,minimax-m3,True,True
+MiniMax,2026-10-19,42.7057,13.4854,MiniMax-M3.1-Flash,minimax-m3-1-flash,False,True
 Mistral,2023-09-27,5.035,,Mistral 7B Instruct,mistral-7b-instruct,True,False
 Mistral,2023-12-11,5.4919,0.4569,Mistral Medium,mistral-medium,False,False
 Mistral,2024-02-26,5.7644,0.2725,Mistral Large (Feb '24),mistral-large,False,False
@@ -153,11 +161,6 @@ Motif Technologies,2026-08-12,33.5666,1.2519,Motif 3,motif-3,True,True
 Institute of Foundation Models,2025-12-05,9.8739,,K2-V2 (High),k2-v2,True,True
 Institute of Foundation Models,2025-12-15,11.4957,1.6218,K2 Think V2,k2-think-v2,True,True
 Institute of Foundation Models,2026-09-03,30.5015,19.0058,K2 Horizon 375B A23B,k2-horizon-375b-a23b,True,True
-MiniMax,2025-06-17,11.7253,,MiniMax M1 80k,minimax-m1-80k,True,True
-MiniMax,2025-10-26,18.6257,6.9004,MiniMax-M2,minimax-m2,True,True
-MiniMax,2025-12-23,20.9453,2.3196,MiniMax-M2.1,minimax-m2-1,True,True
-MiniMax,2026-02-12,22.7966,1.8513,MiniMax-M2.5,minimax-m2-5,True,True
-MiniMax,2026-06-01,29.2203,6.4237,MiniMax-M3,minimax-m3,True,True
 Multiverse Computing,2026-05-26,11.738,,"HyperNova 60B 2605 (High, Based on gpt-oss-120b)",hypernova-60b,True,True
 Multiverse Computing,2026-08-10,26.7373,14.9993,"Quasar 438B (Max, Based on GLM-5.2)",quasar-438b,False,True
 Upstage,2024-01-25,6.4088,,Solar Mini,solar-mini,True,False
