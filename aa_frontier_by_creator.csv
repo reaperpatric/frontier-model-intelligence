@@ -1,226 +1,26 @@
 ﻿creator,date,intelligenceIndex,deltaVsPrevStep,model,slug,isOpenWeights,isReasoning
-Anthropic,2023-03-14,5.035,,Claude Instant,claude-instant,False,False
-Anthropic,2023-07-11,5.5061,0.4711,Claude 2.0,claude-2,False,False
-Anthropic,2023-11-21,5.5858,0.0797,Claude 2.1,claude-21,False,False
-Anthropic,2024-03-04,8.724,3.1382,Claude 3 Opus,claude-3-opus,False,False
-Anthropic,2024-10-22,8.9384,0.2144,Claude 3.5 Haiku,claude-3-5-haiku,False,False
-Anthropic,2025-02-24,17.7114,8.773,Claude 3.7 Sonnet (Reasoning),claude-3-7-sonnet-thinking,False,True
-Anthropic,2025-05-22,20.6446,2.9332,Claude 4 Opus (Reasoning),claude-4-opus-thinking,False,True
-Anthropic,2025-08-05,22.8472,2.2026,Claude 4.1 Opus (Reasoning),claude-4-1-opus-thinking,False,True
-Anthropic,2025-11-24,29.0955,6.2483,Claude Opus 4.5 (Reasoning),claude-opus-4-5-thinking,False,True
-Anthropic,2026-02-05,31.9457,2.8502,Claude Opus 4.6 (Max),claude-opus-4-6-adaptive,False,True
-Anthropic,2026-04-16,40.6898,8.7441,Claude Opus 4.7 (Max),claude-opus-4-7,False,True
-Anthropic,2026-05-28,41.7899,1.1001,Claude Opus 4.8 (Max),claude-opus-4-8,False,True
-Anthropic,2026-06-09,49.6258,7.8359,"Claude Fable 5 (Max, Opus 4.8 Fallback)",claude-fable-5,False,True
-Anthropic,2026-07-24,50.7771,1.1513,Claude Opus 5 (Max),claude-opus-5,False,True
-Anthropic,2026-09-01,53.3549,2.5778,"Claude Fable 5.1 (Max, Default Fallback)",claude-fable-5-1,False,True
-Anthropic,2026-09-22,57.6224,4.2675,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,False,True
-Meta,2023-02-24,5.035,,Llama 65B,llama-65b,True,False
-Meta,2023-07-18,5.7118,0.6768,Llama 2 Chat 7B,llama-2-chat-7b,True,False
-Meta,2024-07-23,7.2893,1.5775,Llama 3.1 Instruct 405B,llama-3-1-instruct-405b,True,False
-Meta,2024-12-06,7.6638,0.3745,Llama 3.3 Instruct 70B,llama-3-3-instruct-70b,True,False
-Meta,2025-04-05,9.299,1.6352,Llama 4 Maverick,llama-4-maverick,True,False
-Meta,2026-04-08,31.2991,22.0001,Muse Spark,muse-spark,False,True
-Meta,2026-07-09,33.7298,2.4307,Muse Spark 1.1 (Xhigh),muse-spark-1-1,False,True
-Meta,2026-08-05,39.5759,5.8461,Muse Spark 1.2 (Xhigh),muse-spark-1-2,False,True
-Meta,2026-09-02,48.0923,8.5164,Muse Spark 1.3 (Max),muse-spark-1-3,False,True
-Meta,2026-10-12,55.8021,7.7098,Muse Wonder Full (Max),muse-wonder-full,False,True
-Kimi,2025-07-11,12.7155,,Kimi K2,kimi-k2,True,False
-Kimi,2025-09-05,15.2942,2.5787,Kimi K2 0905,kimi-k2-0905,True,False
-Kimi,2025-11-06,22.02,6.7258,Kimi K2 Thinking,kimi-k2-thinking,True,True
-Kimi,2026-01-27,23.4585,1.4385,Kimi K2.5 (Reasoning),kimi-k2-5,True,True
-Kimi,2026-04-20,26.9792,3.5207,Kimi K2.6 (Reasoning),kimi-k2-6,True,True
-Kimi,2026-07-16,43.5938,16.6146,Kimi K3 (Max),kimi-k3,True,True
-Kimi,2026-10-23,55.0869,11.4931,Kimi K3.1 Pro,kimi-k3-1-pro,False,True
-OpenAI,2022-11-30,5.4856,,GPT-3.5 Turbo,gpt-35-turbo,False,False
-OpenAI,2023-03-14,6.7016,1.216,GPT-4,gpt-4,False,False
-OpenAI,2023-11-06,7.0435,0.3419,GPT-4 Turbo,gpt-4-turbo,False,False
-OpenAI,2024-05-13,7.3317,0.2882,GPT-4o (May '24),gpt-4o-2024-05-13,False,False
-OpenAI,2024-08-06,7.7397,0.408,GPT-4o (Aug '24),gpt-4o-2024-08-06,False,False
-OpenAI,2024-09-12,11.3759,3.6362,o1-preview,o1-preview,False,True
-OpenAI,2024-12-05,15.2309,3.855,o1,o1,False,True
-OpenAI,2025-04-16,20.2008,4.9699,o3,o3,False,True
-OpenAI,2025-06-10,21.87,1.6692,o3-pro,o3-pro,False,True
-OpenAI,2025-08-07,22.9828,1.1128,GPT-5 (High),gpt-5,False,True
-OpenAI,2025-09-23,24.8819,1.8991,GPT-5 Codex (High),gpt-5-codex,False,True
-OpenAI,2025-12-11,30.4482,5.5663,GPT-5.2 (Xhigh),gpt-5-2,False,True
-OpenAI,2026-02-05,32.5028,2.0546,GPT-5.3 Codex (Xhigh),gpt-5-3-codex,False,True
-OpenAI,2026-03-05,38.9756,6.4728,GPT-5.4 (Xhigh),gpt-5-4,False,True
-OpenAI,2026-07-09,46.9727,7.9971,GPT-5.6 Sol (Max),gpt-5-6-sol,False,True
-OpenAI,2026-09-03,52.6737,5.701,GPT-6 Astra (Max),gpt-6-astra,False,True
-Google,2023-05-10,5.3692,,PALM-2,palm-2,False,False
-Google,2023-12-06,5.8384,0.4692,Gemini 1.0 Ultra,gemini-1-0-ultra,False,False
-Google,2024-05-14,5.9375,0.0991,Gemini 1.5 Flash (May '24),gemini-1-5-flash-may-2024,False,False
-Google,2024-05-15,6.4407,0.5032,Gemini 1.5 Pro (May '24),gemini-1-5-pro-may-2024,False,False
-Google,2024-09-24,7.9055,1.4648,Gemini 1.5 Pro (Sep '24),gemini-1-5-pro,False,False
-Google,2024-12-11,8.2173,0.3118,Gemini 2.0 Flash (experimental),gemini-2-0-flash-experimental,False,False
-Google,2025-01-21,9.4181,1.2008,Gemini 2.0 Flash Thinking Experimental (Jan '25),gemini-2-0-flash-thinking-exp-0121,False,True
-Google,2025-03-25,14.961,5.5429,Gemini 2.5 Pro Preview (Mar' 25),gemini-2-5-pro-03-25,False,True
-Google,2025-06-05,16.0779,1.1169,Gemini 2.5 Pro,gemini-2-5-pro,False,True
-Google,2025-11-18,27.958,11.8801,Gemini 3 Pro Preview (High),gemini-3-pro,False,True
-Google,2026-02-19,29.7186,1.7606,Gemini 3.1 Pro Preview,gemini-3-1-pro-preview,False,True
-Google,2026-05-19,33.6326,3.914,Gemini 3.5 Flash (Medium),gemini-3-5-flash-medium,False,True
-Google,2026-07-21,33.9786,0.346,Gemini 3.6 Flash (High),gemini-3-6-flash,False,True
-Google,2026-08-13,39.6178,5.6392,Gemini 3.7 Flash (Medium),gemini-3-7-flash-medium,False,True
-Google,2026-09-02,40.9262,1.3084,Gemini 3.8 Flash (High),gemini-3-8-flash,False,True
-Google,2026-09-30,52.5606,11.6344,Gemini 4 Argon (High),gemini-4-argon,False,True
-SpaceXAI,2024-03-17,6.3379,,Grok-1,grok-1,True,False
-SpaceXAI,2024-08-13,6.8877,0.5498,Grok Beta,grok-beta,False,False
-SpaceXAI,2024-12-12,7.1056,0.2179,Grok 2 (Dec '24),grok-2-1212,True,False
-SpaceXAI,2025-02-19,14.6213,7.5157,Grok 3 mini Reasoning (High),grok-3-mini-reasoning,False,True
-SpaceXAI,2025-07-10,22.4867,7.8654,Grok 4,grok-4,False,True
-SpaceXAI,2026-03-10,25.2163,2.7296,Grok 4.20 0309 (Reasoning),grok-4-20-0309,False,True
-SpaceXAI,2026-04-07,25.655,0.4387,Grok 4.20 0309 v2 (Reasoning),grok-4-20,False,True
-SpaceXAI,2026-06-16,27.1714,1.5164,Grok Build 0.1 0616,grok-build-0-1-06-16,False,True
-SpaceXAI,2026-07-08,38.8121,11.6407,Grok 4.5 (High),grok-4-5,False,True
-SpaceXAI,2026-08-12,44.3113,5.4992,Grok 4.6 (High),grok-4-6,False,True
-SpaceXAI,2026-09-21,46.4466,2.1353,Grok 4.7 (Xhigh),grok-4-7,False,True
-Xiaomi,2025-12-16,22.4406,,MiMo-V2-Flash (Feb 2026),mimo-v2-0206,True,True
-Xiaomi,2026-03-18,28.6442,6.2036,MiMo-V2-Pro,mimo-v2-pro,False,True
-Xiaomi,2026-09-21,46.3242,17.68,MiMo-V2.6-Pro,mimo-v2-6-pro,True,True
-Alibaba,2023-09-25,5.035,,Qwen Chat 14B,qwen-chat-14b,True,False
-Alibaba,2023-11-30,5.4364,0.4014,Qwen Chat 72B,qwen-chat-72b,True,False
-Alibaba,2024-04-25,5.6536,0.2172,Qwen1.5 Chat 110B,qwen1.5-110b-chat,True,False
-Alibaba,2024-06-07,6.3287,0.6751,Qwen2 Instruct 72B,qwen2-72b-instruct,True,False
-Alibaba,2024-09-19,7.7349,1.4062,Qwen2.5 Instruct 72B,qwen2-5-72b-instruct,True,False
-Alibaba,2025-01-28,8.02,0.2851,Qwen2.5 Max,qwen-2-5-max,False,False
-Alibaba,2025-03-05,9.4721,1.4521,QwQ 32B,qwq-32b,True,True
-Alibaba,2025-04-28,9.4997,0.0276,Qwen3 235B A22B (Reasoning),qwen3-235b-a22b-instruct-reasoning,True,True
-Alibaba,2025-07-21,11.9971,2.4974,Qwen3 235B A22B 2507 Instruct,qwen3-235b-a22b-instruct-2507,True,False
-Alibaba,2025-07-25,12.7109,0.7138,Qwen3 235B A22B 2507 (Reasoning),qwen3-235b-a22b-instruct-2507-reasoning,True,True
-Alibaba,2025-09-23,15.6098,2.8989,Qwen3 Max,qwen3-max,False,False
-Alibaba,2025-11-03,16.291,0.6812,Qwen3 Max Thinking (Preview),qwen3-max-thinking-preview,False,True
-Alibaba,2026-01-26,21.2551,4.9641,Qwen3 Max Thinking,qwen3-max-thinking,False,True
-Alibaba,2026-02-16,21.4367,0.1816,Qwen3.5 397B A17B (Non-reasoning),qwen3-5-397b-a17b-non-reasoning,True,False
-Alibaba,2026-02-24,22.8993,1.4626,Qwen3.5 27B (Reasoning),qwen3-5-27b,True,True
-Alibaba,2026-04-02,27.0099,4.1106,Qwen3.6 Plus,qwen3-6-plus,False,True
-Alibaba,2026-04-20,28.3749,1.365,Qwen3.6 Max Preview,qwen3-6-max,False,True
-Alibaba,2026-05-19,29.4572,1.0823,Qwen3.7 Max,qwen3-7-max,False,True
-Alibaba,2026-08-03,40.1529,10.6957,Qwen3.8 Max,qwen3-8-max-0803,False,True
-Alibaba,2026-09-02,45.4152,5.2623,Qwen3.8 Max (0902),qwen3-8-max,False,True
-DeepSeek,2023-11-29,5.3045,,DeepSeek LLM 67B Chat (V1),deepseek-llm-67b-chat,True,False
-DeepSeek,2024-05-06,5.5061,0.2016,DeepSeek-V2-Chat,deepseek-v2,True,False
-DeepSeek,2024-06-17,5.9843,0.4782,DeepSeek-Coder-V2,deepseek-coder-v2,True,False
-DeepSeek,2024-09-06,6.5531,0.5688,DeepSeek-V2.5,deepseek-v2-5-sep-2024,True,False
-DeepSeek,2024-12-10,6.6173,0.0642,DeepSeek-V2.5 (Dec '24),deepseek-v2-5,True,False
-DeepSeek,2024-12-26,8.4869,1.8696,DeepSeek V3 (Dec '24),deepseek-v3,True,False
-DeepSeek,2025-01-20,11.411,2.9241,DeepSeek R1 (Jan '25),deepseek-r1-0120,True,True
-DeepSeek,2025-05-28,13.1221,1.7111,DeepSeek R1 0528 (May '25),deepseek-r1,True,True
-DeepSeek,2025-08-21,13.7079,0.5858,DeepSeek V3.1 (Non-reasoning),deepseek-v3-1,True,False
-DeepSeek,2025-09-22,14.764,1.0561,DeepSeek V3.1 Terminus (Reasoning),deepseek-v3-1-terminus-reasoning,True,True
-DeepSeek,2025-09-29,16.5794,1.8154,DeepSeek V3.2 Exp (Reasoning),deepseek-v3-2-reasoning-0925,True,True
-DeepSeek,2025-12-01,21.4868,4.9074,DeepSeek V3.2 (Reasoning),deepseek-v3-2-reasoning,True,True
-DeepSeek,2026-04-24,30.4497,8.9629,DeepSeek V4 Pro 0424 (Max),deepseek-v4-pro-0424,True,True
-DeepSeek,2026-07-31,34.3305,3.8808,DeepSeek V4 Flash 0731 (Max),deepseek-v4-flash,True,True
-DeepSeek,2026-08-13,35.9968,1.6663,DeepSeek V4 Pro 0813 (Max),deepseek-v4-pro,True,True
-DeepSeek,2026-09-10,39.4562,3.4594,DeepSeek V4.1 Flash (Max),deepseek-v4-1-flash,True,True
-DeepSeek,2026-10-17,45.0965,5.6403,DeepSeek V4.1 Flash 1017 (Max),deepseek-v4-1-flash-1017,True,True
-Z AI,2025-07-28,12.768,,GLM-4.5 (Reasoning),glm-4.5,True,True
-Z AI,2025-09-30,18.5297,5.7617,GLM-4.6 (Reasoning),glm-4-6-reasoning,True,True
-Z AI,2025-12-22,22.2403,3.7106,GLM-4.7 (Reasoning),glm-4-7,True,True
-Z AI,2026-02-11,27.9112,5.6709,GLM-5 (Reasoning),glm-5,True,True
-Z AI,2026-06-16,33.7055,5.7943,GLM-5.2 (Max),glm-5-2,True,True
-Z AI,2026-08-18,44.7774,11.0719,GLM-5.3 (Max),glm-5-3,True,True
-InclusionAI,2025-09-09,5.5439,,Ling-mini-2.0,ling-mini-2-0,True,False
-InclusionAI,2025-09-17,7.8075,2.2636,Ling-flash-2.0,ling-flash-2-0,True,False
-InclusionAI,2025-10-08,9.1721,1.3646,Ling-1T,ling-1t,True,False
-InclusionAI,2025-10-13,10.8975,1.7254,Ring-1T,ring-1t,True,True
-InclusionAI,2026-04-23,17.0002,6.1027,Ling-2.6-1T,ling-2-6-1t,True,False
-InclusionAI,2026-08-04,20.1333,3.1331,Ling 3.0 Flash,ling-3-0-flash,True,True
-InclusionAI,2026-09-10,24.5693,4.436,Ling-3.0-flash-VL,ling-3-0-flash-vl,True,True
-InclusionAI,2026-10-01,41.0906,16.5213,Ling 3.1 Flash,ling-3-1-flash,True,True
-InclusionAI,2026-10-22,43.8974,2.8068,Ling 3.1 Flash 1019,ling-3-1-flash-1019,False,True
-StepFun,2026-01-20,7.6939,,Step3 VL 10B,step-3-vl-10b,True,True
-StepFun,2026-02-02,16.6169,8.923,Step 3.5 Flash,step-3-5-flash-0202,True,True
-StepFun,2026-04-02,16.9641,0.3472,Step 3.5 Flash 2603,step-3-5-flash,False,True
-StepFun,2026-05-29,19.4813,2.5172,Step 3.7 Flash,step-3-7-flash,True,True
-StepFun,2026-09-18,43.7343,24.253,Step 5 Preview,step-5,True,True
-MiniMax,2025-06-17,11.7253,,MiniMax M1 80k,minimax-m1-80k,True,True
-MiniMax,2025-10-26,18.6257,6.9004,MiniMax-M2,minimax-m2,True,True
-MiniMax,2025-12-23,20.9453,2.3196,MiniMax-M2.1,minimax-m2-1,True,True
-MiniMax,2026-02-12,22.7966,1.8513,MiniMax-M2.5,minimax-m2-5,True,True
-MiniMax,2026-06-01,29.2203,6.4237,MiniMax-M3,minimax-m3,True,True
-MiniMax,2026-10-19,42.7057,13.4854,MiniMax-M3.1-Flash,minimax-m3-1-flash,False,True
-Mistral,2023-09-27,5.035,,Mistral 7B Instruct,mistral-7b-instruct,True,False
-Mistral,2023-12-11,5.4919,0.4569,Mistral Medium,mistral-medium,False,False
-Mistral,2024-02-26,5.7644,0.2725,Mistral Large (Feb '24),mistral-large,False,False
-Mistral,2024-07-24,6.7995,1.0351,Mistral Large 2 (Jul '24),mistral-large-2407,True,False
-Mistral,2024-11-18,7.5556,0.7561,Mistral Large 2 (Nov '24),mistral-large-2,True,False
-Mistral,2025-05-07,9.0476,1.492,Mistral Medium 3,mistral-medium-3,False,False
-Mistral,2025-06-10,9.0539,0.0063,Magistral Medium 1,magistral-medium,False,True
-Mistral,2025-08-12,9.1844,0.1305,Mistral Medium 3.1,mistral-medium-3-1,False,False
-Mistral,2025-09-18,11.8255,2.6411,Magistral Medium 1.2,magistral-medium-2509,False,True
-Mistral,2026-04-29,14.1889,2.3634,Mistral Medium 3.5,mistral-medium-3-5,True,True
-Mistral,2026-10-06,38.377,24.1881,Mistral Large 4 Preview,mistral-large-4,False,True
-China Mobile,2026-04-15,12.2118,,JT-MINI,jt-mini,False,False
-China Mobile,2026-05-14,18.6626,6.4508,JT-35B-Flash,jt-35b-flash,False,False
-China Mobile,2026-07-09,33.9173,15.2547,JT-4.1 Flash 236B A21B (Reasoning),jt-4-1-flash-236b-a21b,False,True
-Motif Technologies,2025-12-04,9.1875,,Motif-2-12.7B-Reasoning,motif-2-12-7b,False,True
-Motif Technologies,2026-07-14,32.3147,23.1272,Motif 3 (Beta),motif-0714,False,True
-Motif Technologies,2026-08-12,33.5666,1.2519,Motif 3,motif-3,True,True
-Institute of Foundation Models,2025-12-05,9.8739,,K2-V2 (High),k2-v2,True,True
-Institute of Foundation Models,2025-12-15,11.4957,1.6218,K2 Think V2,k2-think-v2,True,True
-Institute of Foundation Models,2026-09-03,30.5015,19.0058,K2 Horizon 375B A23B,k2-horizon-375b-a23b,True,True
-Multiverse Computing,2026-05-26,11.738,,"HyperNova 60B 2605 (High, Based on gpt-oss-120b)",hypernova-60b,True,True
-Multiverse Computing,2026-08-10,26.7373,14.9993,"Quasar 438B (Max, Based on GLM-5.2)",quasar-438b,False,True
-Upstage,2024-01-25,6.4088,,Solar Mini,solar-mini,True,False
-Upstage,2025-05-20,9.07,2.6612,Solar Pro 2 (Preview) (Reasoning),solar-pro-2-preview-reasoning,False,True
-Upstage,2025-12-17,10.3644,1.2944,Solar Open 100B (Reasoning),solar-open-100b-reasoning,True,True
-Upstage,2026-08-06,26.56,16.1956,Solar Pro 4,solar-pro4,False,True
-NVIDIA,2024-10-15,6.9438,,Llama 3.1 Nemotron Instruct 70B,llama-3-1-nemotron-instruct-70b,True,False
-NVIDIA,2025-03-18,8.9331,1.9893,Llama 3.3 Nemotron Super 49B v1 (Reasoning),llama-3-3-nemotron-super-49b-reasoning,True,True
-NVIDIA,2025-07-25,9.0144,0.0813,Llama Nemotron Super 49B v1.5 (Reasoning),llama-nemotron-super-49b-v1-5-reasoning,True,True
-NVIDIA,2026-03-11,12.8288,3.8144,Nemotron 3 Super 120B A12B (Reasoning),nvidia-nemotron-3-super-120b-a12b,True,True
-NVIDIA,2026-06-04,22.9279,10.0991,Nemotron 3 Ultra 550B A55B (Reasoning),nvidia-nemotron-3-ultra-550b-a55b,True,True
-NVIDIA,2026-10-15,26.4911,3.5632,Nemotron 3.5 Super VL,nemotron-3-5-super-vl,True,True
-Thinking Machines,2026-07-15,24.9848,,Inkling (Xhigh),inkling,True,True
-Thinking Machines,2026-07-30,25.6583,0.6735,Inkling Small,inkling-small,True,True
-Tencent,2026-04-23,22.7362,,Hy3-preview (Reasoning),hy3-preview,True,True
-Tencent,2026-07-06,25.2973,2.5611,Hy3,hy3,True,True
-AI9Stars,2026-07-23,10.8416,,G9v3-3B,g9v3-3b,True,True
-AI9Stars,2026-08-20,21.8316,10.99,G9v3-39A5B,g9v3-39a5b,True,True
-KwaiKAT,2025-11-11,18.5863,,KAT-Coder-Pro V1,kat-coder-pro-v1,False,False
-KwaiKAT,2026-03-27,21.7045,3.1182,KAT Coder Pro V2,kat-coder-pro-v2,False,False
-LG AI Research,2025-07-15,8.1784,,EXAONE 4.0 32B (Reasoning),exaone-4-0-32b-reasoning,True,True
-LG AI Research,2025-12-31,14.3684,6.19,K-EXAONE (Reasoning),k-exaone,True,True
-LG AI Research,2026-08-12,19.6905,5.3221,K-EXAONE 2.0 0803,k-exaone-2-0-0803,True,True
-LongCat,2026-01-28,11.4709,,LongCat Flash Lite,longcat-flash-lite,True,False
-LongCat,2026-06-29,19.1123,7.6414,LongCat 2.0,longcat-2-0,True,True
-ByteDance Seed,2025-08-20,12.0993,,Seed-OSS-36B-Instruct,seed-oss-36b-instruct,True,True
-ByteDance Seed,2025-11-11,16.9468,4.8475,Doubao Seed Code,doubao-seed-code,False,True
-Baidu,2025-06-30,7.5045,,ERNIE 4.5 300B A47B,ernie-4-5-300b-a47b,True,False
-Baidu,2025-11-13,14.2552,6.7507,ERNIE 5.0 Thinking Preview,ernie-5-0-thinking-preview,False,True
-Amazon,2024-12-03,6.9583,,Nova Pro,nova-pro,False,False
-Amazon,2025-04-30,9.1591,2.2008,Nova Premier,nova-premier,False,False
-Amazon,2025-10-29,13.3741,4.215,Nova 2.0 Lite (High),nova-2-0-lite-reasoning,False,True
-Amazon,2025-11-26,13.6465,0.2724,Nova 2.0 Omni (Medium),nova-2-0-omni-reasoning-medium,False,True
-Amazon,2025-11-27,14.1555,0.509,Nova 2.0 Pro Preview (Medium),nova-2-0-pro-reasoning-medium,False,True
-Cohere,2024-03-12,5.035,,Command-R (Mar '24),command-r-03-2024,True,False
-Cohere,2024-04-04,5.2982,0.2632,Command-R+ (Apr '24),command-r-plus-04-2024,True,False
-Cohere,2025-03-13,6.9582,1.66,Command A,command-a,True,False
-Cohere,2026-05-20,13.1335,6.1753,Command A+,command-a-plus,True,True
-IBM,2025-04-16,4.9216,,Granite 3.3 8B (Non-reasoning),granite-3-3-8b-instruct,True,False
-IBM,2025-09-22,6.0493,1.1277,Granite 4.0 H Small,granite-4-0-h-small,True,False
-IBM,2026-04-29,7.4369,1.3876,Granite 4.1 30B,granite-4-1-30b,True,False
-IBM,2026-08-25,12.6832,5.2463,Granite 4.2 30B,granite-4-2-30b,True,True
-OpenBMB,2026-05-11,5.6903,,MiniCPM-V 4.6 1.3B,minicpm-v4-6-1-3b,True,False
-OpenBMB,2026-05-25,8.7966,3.1063,MiniCPM5-1B (Reasoning),minicpm5-1b,True,True
-OpenBMB,2026-09-07,12.4634,3.6668,MiniCPM5-2B,minicpm5-2b,True,True
-Inception,2026-02-20,10.777,,Mercury 2,mercury-2,False,True
-Inception,2026-09-08,12.3408,1.5638,Mercury 2.5,mercury-2-5,False,True
-Perplexity,2025-01-21,7.7097,,Sonar,sonar,False,False
-Perplexity,2025-01-28,11.8218,4.1121,Sonar Reasoning Pro,sonar-reasoning-pro,False,True
-Sarvam,2025-05-23,5.3107,,"Sarvam M (Reasoning, Based on Mistral Small 3.1)",sarvam-m-reasoning,True,True
-Sarvam,2026-03-06,8.7906,3.4799,Sarvam 105B (High),sarvam-105b,True,True
-Liquid AI,2024-09-30,5.418,,LFM 40B,lfm-40b,False,False
-Liquid AI,2026-02-25,5.9475,0.5295,LFM2 24B A2B,lfm2-24b-a2b,True,False
-Liquid AI,2026-05-28,7.2164,1.2689,LFM2.5-8B-A1B,lfm2-5-8b-a1b,True,True
-Liquid AI,2026-08-04,8.3871,1.1707,LFM2.5-2.6B,lfm2-5-2-6b,True,True
-Nous Research,2024-08-15,5.9968,,Hermes 3 - Llama-3.1 70B,hermes-3-llama-3-1-70b,True,False
-Nous Research,2025-03-13,6.0743,0.0775,DeepHermes 3 - Mistral 24B Preview (Non-reasoning),deephermes-3-mistral-24b-preview,True,False
-Nous Research,2025-08-27,7.9058,1.8315,Hermes 4 - Llama-3.1 70B (Reasoning),hermes-4-llama-3-1-70b-reasoning,True,True
-Allen Institute for AI,2024-09-25,5.5626,,Molmo 7B-D,molmo-7b-d,True,False
-Allen Institute for AI,2024-11-26,5.5774,0.0148,OLMo 2 7B,olmo-2-7b,True,False
-Allen Institute for AI,2025-01-30,7.1989,1.6215,Llama 3.1 Tulu3 405B,tulu3-405b,True,False
-AI21 Labs,2024-08-22,6.0121,,Jamba 1.5 Large,jamba-1-5-large,True,False
-AI21 Labs,2025-07-07,6.071,0.0589,Jamba 1.7 Large,jamba-1-7-large,True,False
+Google,2026-07-21,11.6563,,Gemini 3.5 Flash-Lite,gemini-3-5-flash-lite,False,True
+Google,2026-09-02,30.5468,18.8905,Gemini 3.8 Flash (High),gemini-3-8-flash,False,True
+Google,2026-09-30,50.4122,19.8654,Gemini 4 Argon (High),gemini-4-argon,False,True
+Google,2026-10-28,59.4257,9.0135,Gemini 4 Carbon (High),gemini-4-carbon,False,True
+Anthropic,2026-09-01,49.6716,,"Claude Fable 5.1 (Xhigh, Default Fallback)",claude-fable-5-1-xhigh,False,True
+Anthropic,2026-09-22,58.406,8.7344,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,False,True
+Meta,2026-08-10,6.3413,,Muse Glimmer (High),muse-glimmer,True,True
+Meta,2026-09-02,36.4172,30.0759,Muse Spark 1.3 (Max),muse-spark-1-3,False,True
+Meta,2026-10-12,49.7272,13.31,Muse Wonder Full (Max),muse-wonder-full,False,True
+Kimi,2026-07-16,17.4192,,Kimi K3 (Low),kimi-k3-low,True,True
+Kimi,2026-10-23,46.0026,28.5834,Kimi K3.1 Pro,kimi-k3-1-pro,False,True
+Alibaba,2026-08-14,20.1069,,Qwen3.8 27B (Xhigh),qwen3-8-27b,True,True
+Alibaba,2026-09-02,33.5546,13.4477,Qwen3.8 Max (0902),qwen3-8-max,False,True
+DeepSeek,2026-08-13,23.0633,,DeepSeek V4 Pro 0813 (Max),deepseek-v4-pro,True,True
+DeepSeek,2026-10-17,32.4896,9.4263,DeepSeek V4.1 Flash 1017 (Max),deepseek-v4-1-flash-1017,True,True
+MiniMax,2026-06-01,18.7289,,MiniMax-M3,minimax-m3,True,True
+MiniMax,2026-10-19,28.9095,10.1806,MiniMax-M3.1-Flash,minimax-m3-1-flash,True,True
+Mistral,2026-03-16,4.2972,,Mistral Small 4 (Reasoning),mistral-small-4,True,True
+Mistral,2026-10-06,25.2865,20.9893,Mistral Large 4 Preview,mistral-large-4-preview,False,True
+Mistral,2026-10-29,26.025,0.7385,Mistral Large 4 (High),mistral-large-4,True,True
+NVIDIA,2026-03-16,1.8158,,NVIDIA Nemotron 3 Nano 4B,nvidia-nemotron-3-nano-4b,True,True
+NVIDIA,2026-06-04,11.7593,9.9435,Nemotron 3 Ultra 550B A55B (Reasoning),nvidia-nemotron-3-ultra-550b-a55b,True,True
+NVIDIA,2026-10-15,13.6203,1.861,Nemotron 3.5 Super VL,nemotron-3-5-super-vl,True,True
+Thinking Machines,2026-07-15,12.4782,,Inkling (Xhigh),inkling,True,True
+Thinking Machines,2026-07-30,12.9102,0.432,Inkling Small,inkling-small,True,True

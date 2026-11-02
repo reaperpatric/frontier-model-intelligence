@@ -1,26 +1,10 @@
 ﻿date,intelligenceIndex,deltaVsPrevStep,model,slug,creator,isOpenWeights,isReasoning
-2022-11-30,5.4856,,GPT-3.5 Turbo,gpt-35-turbo,OpenAI,False,False
-2023-03-14,6.7016,1.216,GPT-4,gpt-4,OpenAI,False,False
-2023-11-06,7.0435,0.3419,GPT-4 Turbo,gpt-4-turbo,OpenAI,False,False
-2024-03-04,8.724,1.6805,Claude 3 Opus,claude-3-opus,Anthropic,False,False
-2024-09-12,11.3759,2.6519,o1-preview,o1-preview,OpenAI,False,True
-2024-12-05,15.2309,3.855,o1,o1,OpenAI,False,True
-2025-02-24,17.7114,2.4805,Claude 3.7 Sonnet (Reasoning),claude-3-7-sonnet-thinking,Anthropic,False,True
-2025-04-16,20.2008,2.4894,o3,o3,OpenAI,False,True
-2025-05-22,20.6446,0.4438,Claude 4 Opus (Reasoning),claude-4-opus-thinking,Anthropic,False,True
-2025-06-10,21.87,1.2254,o3-pro,o3-pro,OpenAI,False,True
-2025-07-10,22.4867,0.6167,Grok 4,grok-4,SpaceXAI,False,True
-2025-08-05,22.8472,0.3605,Claude 4.1 Opus (Reasoning),claude-4-1-opus-thinking,Anthropic,False,True
-2025-08-07,22.9828,0.1356,GPT-5 (High),gpt-5,OpenAI,False,True
-2025-09-23,24.8819,1.8991,GPT-5 Codex (High),gpt-5-codex,OpenAI,False,True
-2025-11-18,27.958,3.0761,Gemini 3 Pro Preview (High),gemini-3-pro,Google,False,True
-2025-11-24,29.0955,1.1375,Claude Opus 4.5 (Reasoning),claude-opus-4-5-thinking,Anthropic,False,True
-2025-12-11,30.4482,1.3527,GPT-5.2 (Xhigh),gpt-5-2,OpenAI,False,True
-2026-02-05,32.5028,2.0546,GPT-5.3 Codex (Xhigh),gpt-5-3-codex,OpenAI,False,True
-2026-03-05,38.9756,6.4728,GPT-5.4 (Xhigh),gpt-5-4,OpenAI,False,True
-2026-04-16,40.6898,1.7142,Claude Opus 4.7 (Max),claude-opus-4-7,Anthropic,False,True
-2026-05-28,41.7899,1.1001,Claude Opus 4.8 (Max),claude-opus-4-8,Anthropic,False,True
-2026-06-09,49.6258,7.8359,"Claude Fable 5 (Max, Opus 4.8 Fallback)",claude-fable-5,Anthropic,False,True
-2026-07-24,50.7771,1.1513,Claude Opus 5 (Max),claude-opus-5,Anthropic,False,True
-2026-09-01,53.3549,2.5778,"Claude Fable 5.1 (Max, Default Fallback)",claude-fable-5-1,Anthropic,False,True
-2026-09-22,57.6224,4.2675,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,Anthropic,False,True
+2026-03-16,4.2972,,Mistral Small 4 (Reasoning),mistral-small-4,Mistral,True,True
+2026-05-20,6.2412,1.944,Command A+,command-a-plus,Cohere,True,True
+2026-06-01,18.7289,12.4877,MiniMax-M3,minimax-m3,MiniMax,True,True
+2026-08-13,23.0633,4.3344,DeepSeek V4 Pro 0813 (Max),deepseek-v4-pro,DeepSeek,True,True
+2026-08-18,31.6534,8.5901,GLM-5.3 (Max),glm-5-3,Z AI,True,True
+2026-09-01,49.6716,18.0182,"Claude Fable 5.1 (Xhigh, Default Fallback)",claude-fable-5-1-xhigh,Anthropic,False,True
+2026-09-03,56.8539,7.1823,GPT-6 Astra (Max),gpt-6-astra,OpenAI,False,True
+2026-09-22,58.406,1.5521,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,Anthropic,False,True
+2026-10-28,59.4257,1.0197,Gemini 4 Carbon (High),gemini-4-carbon,Google,False,True
