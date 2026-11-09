@@ -8,8 +8,8 @@
    "median": null,
    "mean": null,
    "roll3": null,
-   "frontierEnd": null,
-   "frontierDelta": null,
+   "frontierEnd": 7.43,
+   "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
    "events": []
@@ -20,8 +20,8 @@
    "median": null,
    "mean": null,
    "roll3": null,
-   "frontierEnd": null,
-   "frontierDelta": null,
+   "frontierEnd": 7.43,
+   "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
    "events": []
@@ -32,46 +32,45 @@
    "median": null,
    "mean": null,
    "roll3": null,
-   "frontierEnd": 4.3,
-   "frontierDelta": null,
-   "refreshCount": 1,
-   "refreshModels": [
-    {
-     "name": "Mistral Small 4 (Reasoning)",
-     "creator": "Mistral",
-     "intel": 4.3
-    }
-   ],
-   "events": []
-  },
-  {
-   "month": "2026-04",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "roll3": null,
-   "frontierEnd": 4.3,
+   "frontierEnd": 7.43,
    "frontierDelta": 0.0,
    "refreshCount": 0,
    "refreshModels": [],
    "events": []
   },
   {
+   "month": "2026-04",
+   "n": 2,
+   "median": 37.0,
+   "mean": 37.0,
+   "roll3": 37.0,
+   "frontierEnd": 7.43,
+   "frontierDelta": 0.0,
+   "refreshCount": 0,
+   "refreshModels": [],
+   "events": [
+    {
+     "creator": "Google",
+     "gap": 30,
+     "to": "2026-04-02"
+    },
+    {
+     "creator": "Mistral",
+     "gap": 44,
+     "to": "2026-04-29"
+    }
+   ]
+  },
+  {
    "month": "2026-05",
    "n": 0,
    "median": null,
    "mean": null,
-   "roll3": null,
-   "frontierEnd": 6.24,
-   "frontierDelta": 1.944,
-   "refreshCount": 1,
-   "refreshModels": [
-    {
-     "name": "Command A+",
-     "creator": "Cohere",
-     "intel": 6.24
-    }
-   ],
+   "roll3": 37.0,
+   "frontierEnd": 7.43,
+   "frontierDelta": 0.0,
+   "refreshCount": 0,
+   "refreshModels": [],
    "events": []
   },
   {
@@ -79,15 +78,15 @@
    "n": 0,
    "median": null,
    "mean": null,
-   "roll3": null,
-   "frontierEnd": 18.73,
-   "frontierDelta": 12.488,
+   "roll3": 37.0,
+   "frontierEnd": 18.88,
+   "frontierDelta": 11.449,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "MiniMax-M3",
      "creator": "MiniMax",
-     "intel": 18.73
+     "intel": 18.88
     }
    ],
    "events": []
@@ -95,64 +94,58 @@
   {
    "month": "2026-07",
    "n": 1,
-   "median": 15,
-   "mean": 15.0,
-   "roll3": 15,
-   "frontierEnd": 18.73,
-   "frontierDelta": 0.0,
-   "refreshCount": 0,
-   "refreshModels": [],
+   "median": 282,
+   "mean": 282.0,
+   "roll3": 282,
+   "frontierEnd": 44.16,
+   "frontierDelta": 25.286,
+   "refreshCount": 2,
+   "refreshModels": [
+    {
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.34
+    },
+    {
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.16
+    }
+   ],
    "events": [
     {
-     "creator": "Thinking Machines",
-     "gap": 15,
-     "to": "2026-07-30"
+     "creator": "Anthropic",
+     "gap": 282,
+     "to": "2026-07-24"
     }
    ]
   },
   {
    "month": "2026-08",
-   "n": 1,
-   "median": 8,
-   "mean": 8.0,
-   "roll3": 11.5,
-   "frontierEnd": 31.65,
-   "frontierDelta": 12.925,
-   "refreshCount": 2,
-   "refreshModels": [
-    {
-     "name": "DeepSeek V4 Pro 0813 (Max)",
-     "creator": "DeepSeek",
-     "intel": 23.06
-    },
-    {
-     "name": "GLM-5.3 (Max)",
-     "creator": "Z AI",
-     "intel": 31.65
-    }
-   ],
-   "events": [
-    {
-     "creator": "Z AI",
-     "gap": 8,
-     "to": "2026-08-26"
-    }
-   ]
+   "n": 0,
+   "median": null,
+   "mean": null,
+   "roll3": 282,
+   "frontierEnd": 44.16,
+   "frontierDelta": 0.0,
+   "refreshCount": 0,
+   "refreshModels": [],
+   "events": []
   },
   {
    "month": "2026-09",
-   "n": 3,
-   "median": 21,
-   "mean": 17.7,
-   "roll3": 15,
-   "frontierEnd": 58.41,
-   "frontierDelta": 26.753,
+   "n": 5,
+   "median": 26,
+   "mean": 29.6,
+   "roll3": 32.5,
+   "frontierEnd": 59.11,
+   "frontierDelta": 14.941,
    "refreshCount": 3,
    "refreshModels": [
     {
      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 49.67
+     "intel": 50.02
     },
     {
      "name": "GPT-6 Astra (Max)",
@@ -162,10 +155,20 @@
     {
      "name": "Claude Opus 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 58.41
+     "intel": 59.11
     }
    ],
    "events": [
+    {
+     "creator": "Anthropic",
+     "gap": 39,
+     "to": "2026-09-01"
+    },
+    {
+     "creator": "OpenAI",
+     "gap": 56,
+     "to": "2026-09-03"
+    },
     {
      "creator": "Anthropic",
      "gap": 21,
@@ -185,49 +188,67 @@
   },
   {
    "month": "2026-10",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "roll3": 14.5,
-   "frontierEnd": 59.43,
-   "frontierDelta": 1.02,
+   "n": 1,
+   "median": 209,
+   "mean": 209.0,
+   "roll3": 32.5,
+   "frontierEnd": 60.03,
+   "frontierDelta": 0.92,
    "refreshCount": 1,
    "refreshModels": [
     {
      "name": "Gemini 4 Carbon (High)",
      "creator": "Google",
-     "intel": 59.43
+     "intel": 60.03
     }
    ],
+   "events": [
+    {
+     "creator": "Google",
+     "gap": 209,
+     "to": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "month": "2026-11",
+   "n": 0,
+   "median": null,
+   "mean": null,
+   "roll3": 32.5,
+   "frontierEnd": 60.03,
+   "frontierDelta": 0.0,
+   "refreshCount": 0,
+   "refreshModels": [],
    "events": []
   }
  ],
- "versionCount": 45,
+ "versionCount": 61,
  "dateRange": [
-  "2026-03-16",
-  "2026-10-29"
+  "2025-10-15",
+  "2026-11-07"
  ],
  "cadence": {
-  "n": 5,
-  "median": 15,
-  "mean": 15.2,
-  "p25": 6,
-  "p75": 21,
+  "n": 9,
+  "median": 39,
+  "mean": 79.2,
+  "p25": 21,
+  "p75": 56,
   "min": 6,
-  "max": 26
+  "max": 282
  },
  "cadenceHistogram": [
   {
    "label": "≤1 个月",
    "lo": 0,
    "hi": 30,
-   "count": 5
+   "count": 4
   },
   {
    "label": "1–2 个月",
    "lo": 31,
    "hi": 60,
-   "count": 0
+   "count": 3
   },
   {
    "label": "2–3 个月",
@@ -251,103 +272,96 @@
    "label": ">6 个月",
    "lo": 181,
    "hi": 1000000,
-   "count": 0
+   "count": 2
   }
  ],
  "seat": {
-  "n": 17,
-  "median": 6,
-  "mean": 13.3,
-  "p25": 1,
-  "p75": 14,
+  "n": 18,
+  "median": 14.5,
+  "mean": 21.0,
+  "p25": 3,
+  "p75": 21,
   "min": 1,
-  "max": 65
+  "max": 139
  },
  "leader": {
-  "n": 8,
-  "median": 16.5,
-  "mean": 28.2,
-  "p25": 5,
-  "p75": 65,
+  "n": 7,
+  "median": 36,
+  "mean": 54.0,
+  "p25": 2,
+  "p75": 39,
   "min": 2,
-  "max": 73
+  "max": 229
  },
  "byYear": [
   {
    "year": 2026,
-   "n": 5,
-   "median": 15,
-   "mean": 15.2,
-   "p25": 6,
-   "p75": 21,
+   "n": 9,
+   "median": 39,
+   "mean": 79.2,
+   "p25": 21,
+   "p75": 56,
    "min": 6,
-   "max": 26
+   "max": 282
   }
  ],
  "byCreator": [
   {
    "creator": "Anthropic",
-   "n": 2,
-   "median": 13.5,
-   "mean": 13.5,
+   "n": 4,
+   "median": 30.0,
+   "mean": 87.0,
    "min": 6,
-   "max": 21,
+   "max": 282,
    "lastDate": "2026-09-28",
    "lastGap": 6,
    "gaps": [
+    282,
+    39,
     21,
     6
    ]
   },
   {
+   "creator": "Google",
+   "n": 2,
+   "median": 119.5,
+   "mean": 119.5,
+   "min": 30,
+   "max": 209,
+   "lastDate": "2026-10-28",
+   "lastGap": 209,
+   "gaps": [
+    30,
+    209
+   ]
+  },
+  {
    "creator": "OpenAI",
-   "n": 1,
-   "median": 26,
-   "mean": 26.0,
+   "n": 2,
+   "median": 41.0,
+   "mean": 41.0,
    "min": 26,
-   "max": 26,
+   "max": 56,
    "lastDate": "2026-09-29",
    "lastGap": 26,
    "gaps": [
+    56,
     26
    ]
   },
   {
-   "creator": "Thinking Machines",
-   "n": 1,
-   "median": 15,
-   "mean": 15.0,
-   "min": 15,
-   "max": 15,
-   "lastDate": "2026-07-30",
-   "lastGap": 15,
-   "gaps": [
-    15
-   ]
-  },
-  {
-   "creator": "Z AI",
-   "n": 1,
-   "median": 8,
-   "mean": 8.0,
-   "min": 8,
-   "max": 8,
-   "lastDate": "2026-08-26",
-   "lastGap": 8,
-   "gaps": [
-    8
-   ]
-  },
-  {
    "creator": "Mistral",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "min": null,
-   "max": null,
-   "lastDate": "2026-03-16",
-   "lastGap": null,
-   "gaps": []
+   "n": 1,
+   "median": 44,
+   "mean": 44.0,
+   "min": 44,
+   "max": 44,
+   "lastDate": "2026-04-29",
+   "lastGap": 44,
+   "gaps": [
+    44
+   ]
   },
   {
    "creator": "Cohere",
@@ -383,35 +397,24 @@
    "gaps": []
   },
   {
-   "creator": "Kimi",
+   "creator": "SpaceXAI",
    "n": 0,
    "median": null,
    "mean": null,
    "min": null,
    "max": null,
-   "lastDate": "2026-07-16",
+   "lastDate": "2026-08-12",
    "lastGap": null,
    "gaps": []
   },
   {
-   "creator": "DeepSeek",
+   "creator": "Z AI",
    "n": 0,
    "median": null,
    "mean": null,
    "min": null,
    "max": null,
-   "lastDate": "2026-08-13",
-   "lastGap": null,
-   "gaps": []
-  },
-  {
-   "creator": "Alibaba",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "min": null,
-   "max": null,
-   "lastDate": "2026-08-14",
+   "lastDate": "2026-08-18",
    "lastGap": null,
    "gaps": []
   },
@@ -425,31 +428,38 @@
    "lastDate": "2026-09-02",
    "lastGap": null,
    "gaps": []
-  },
-  {
-   "creator": "Google",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "min": null,
-   "max": null,
-   "lastDate": "2026-10-28",
-   "lastGap": null,
-   "gaps": []
   }
  ],
  "iterEvents": [
   {
-   "creator": "Thinking Machines",
-   "from": "2026-07-15",
-   "to": "2026-07-30",
-   "gap": 15
+   "creator": "Google",
+   "from": "2026-03-03",
+   "to": "2026-04-02",
+   "gap": 30
   },
   {
-   "creator": "Z AI",
-   "from": "2026-08-18",
-   "to": "2026-08-26",
-   "gap": 8
+   "creator": "Mistral",
+   "from": "2026-03-16",
+   "to": "2026-04-29",
+   "gap": 44
+  },
+  {
+   "creator": "Anthropic",
+   "from": "2025-10-15",
+   "to": "2026-07-24",
+   "gap": 282
+  },
+  {
+   "creator": "Anthropic",
+   "from": "2026-07-24",
+   "to": "2026-09-01",
+   "gap": 39
+  },
+  {
+   "creator": "OpenAI",
+   "from": "2026-07-09",
+   "to": "2026-09-03",
+   "gap": 56
   },
   {
    "creator": "Anthropic",
@@ -468,9 +478,33 @@
    "from": "2026-09-03",
    "to": "2026-09-29",
    "gap": 26
+  },
+  {
+   "creator": "Google",
+   "from": "2026-04-02",
+   "to": "2026-10-28",
+   "gap": 209
   }
  ],
  "changelog": [
+  {
+   "date": "2025-10-15",
+   "entered": "Claude 4.5 Haiku (Reasoning)",
+   "enteredCreator": "Anthropic",
+   "enteredIntel": 7.4303,
+   "exited": null,
+   "exitedCreator": null,
+   "gapDays": null
+  },
+  {
+   "date": "2026-03-03",
+   "entered": "Gemini 3.1 Flash-Lite",
+   "enteredCreator": "Google",
+   "enteredIntel": 6.1568,
+   "exited": null,
+   "exitedCreator": null,
+   "gapDays": 139
+  },
   {
    "date": "2026-03-16",
    "entered": "Mistral Small 4 (Reasoning)",
@@ -478,24 +512,42 @@
    "enteredIntel": 4.2972,
    "exited": null,
    "exitedCreator": null,
-   "gapDays": null
+   "gapDays": 13
+  },
+  {
+   "date": "2026-04-02",
+   "entered": "Gemma 4 31B (Reasoning)",
+   "enteredCreator": "Google",
+   "enteredIntel": 4.3844,
+   "exited": "Mistral Small 4 (Reasoning)",
+   "exitedCreator": "Mistral",
+   "gapDays": 17
+  },
+  {
+   "date": "2026-04-29",
+   "entered": "Mistral Medium 3.5",
+   "enteredCreator": "Mistral",
+   "enteredIntel": 4.6451,
+   "exited": "Gemma 4 31B (Reasoning)",
+   "exitedCreator": "Google",
+   "gapDays": 27
   },
   {
    "date": "2026-05-20",
    "entered": "Command A+",
    "enteredCreator": "Cohere",
    "enteredIntel": 6.2412,
-   "exited": null,
-   "exitedCreator": null,
-   "gapDays": 65
+   "exited": "Mistral Medium 3.5",
+   "exitedCreator": "Mistral",
+   "gapDays": 21
   },
   {
    "date": "2026-06-01",
    "entered": "MiniMax-M3",
    "enteredCreator": "MiniMax",
-   "enteredIntel": 18.7289,
-   "exited": "NVIDIA Nemotron 3 Nano 4B",
-   "exitedCreator": "NVIDIA",
+   "enteredIntel": 18.8789,
+   "exited": "Gemini 3.1 Flash-Lite",
+   "exitedCreator": "Google",
    "gapDays": 12
   },
   {
@@ -503,89 +555,62 @@
    "entered": "Nemotron 3 Ultra 550B A55B (Reasoning)",
    "enteredCreator": "NVIDIA",
    "enteredIntel": 11.7593,
-   "exited": "Mistral Small 4 (Reasoning)",
-   "exitedCreator": "Mistral",
+   "exited": "Command A+",
+   "exitedCreator": "Cohere",
    "gapDays": 3
   },
   {
-   "date": "2026-07-15",
-   "entered": "Inkling (Xhigh)",
-   "enteredCreator": "Thinking Machines",
-   "enteredIntel": 12.4782,
-   "exited": "Command A+",
-   "exitedCreator": "Cohere",
-   "gapDays": 41
+   "date": "2026-07-09",
+   "entered": "GPT-5.6 Terra (Max)",
+   "enteredCreator": "OpenAI",
+   "enteredIntel": 32.3434,
+   "exited": "Claude 4.5 Haiku (Reasoning)、Nemotron 3 Ultra 550B A55B (Reasoning)",
+   "exitedCreator": "Anthropic、NVIDIA",
+   "gapDays": 35
   },
   {
-   "date": "2026-07-16",
-   "entered": "Kimi K3 (Low)",
-   "enteredCreator": "Kimi",
-   "enteredIntel": 17.4192,
-   "exited": "Nemotron 3 Ultra 550B A55B (Reasoning)",
-   "exitedCreator": "NVIDIA",
-   "gapDays": 1
+   "date": "2026-07-24",
+   "entered": "Claude Opus 5 (Max)",
+   "enteredCreator": "Anthropic",
+   "enteredIntel": 44.1646,
+   "exited": "MiniMax-M3",
+   "exitedCreator": "MiniMax",
+   "gapDays": 15
   },
   {
-   "date": "2026-07-30",
-   "entered": "Inkling Small",
-   "enteredCreator": "Thinking Machines",
-   "enteredIntel": 12.9102,
-   "exited": "Inkling (Xhigh)",
-   "exitedCreator": "Thinking Machines",
-   "gapDays": 14
-  },
-  {
-   "date": "2026-08-13",
-   "entered": "DeepSeek V4 Pro 0813 (Max)",
-   "enteredCreator": "DeepSeek",
-   "enteredIntel": 23.0633,
-   "exited": "Inkling Small",
-   "exitedCreator": "Thinking Machines",
-   "gapDays": 14
-  },
-  {
-   "date": "2026-08-14",
-   "entered": "Qwen3.8 27B (Xhigh)",
-   "enteredCreator": "Alibaba",
-   "enteredIntel": 20.1069,
-   "exited": "Kimi K3 (Low)",
-   "exitedCreator": "Kimi",
-   "gapDays": 1
+   "date": "2026-08-12",
+   "entered": "Grok 4.6 (Xhigh)",
+   "enteredCreator": "SpaceXAI",
+   "enteredIntel": 31.0288,
+   "exited": "GPT-5.6 Luna (Max)",
+   "exitedCreator": "OpenAI",
+   "gapDays": 19
   },
   {
    "date": "2026-08-18",
    "entered": "GLM-5.3 (Max)",
    "enteredCreator": "Z AI",
    "enteredIntel": 31.6534,
-   "exited": "MiniMax-M3",
-   "exitedCreator": "MiniMax",
-   "gapDays": 4
-  },
-  {
-   "date": "2026-08-26",
-   "entered": "GLM-5.3-Flash",
-   "enteredCreator": "Z AI",
-   "enteredIntel": 27.7539,
-   "exited": "Qwen3.8 27B (Xhigh)",
-   "exitedCreator": "Alibaba",
-   "gapDays": 8
+   "exited": "Grok 4.6 (Xhigh)",
+   "exitedCreator": "SpaceXAI",
+   "gapDays": 6
   },
   {
    "date": "2026-09-01",
    "entered": "Claude Fable 5.1 (Xhigh, Default Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 49.6716,
-   "exited": "DeepSeek V4 Pro 0813 (Max)",
-   "exitedCreator": "DeepSeek",
-   "gapDays": 6
+   "enteredIntel": 50.0216,
+   "exited": "GLM-5.3 (Max)",
+   "exitedCreator": "Z AI",
+   "gapDays": 14
   },
   {
    "date": "2026-09-02",
    "entered": "Muse Spark 1.3 (Max)",
    "enteredCreator": "Meta",
-   "enteredIntel": 36.4172,
-   "exited": "GLM-5.3-Flash、GLM-5.3 (Max)",
-   "exitedCreator": "Z AI、Z AI",
+   "enteredIntel": 36.6172,
+   "exited": "GPT-5.6 Terra (Max)",
+   "exitedCreator": "OpenAI",
    "gapDays": 1
   },
   {
@@ -593,24 +618,24 @@
    "entered": "GPT-6 Astra (Max)",
    "enteredCreator": "OpenAI",
    "enteredIntel": 56.8539,
-   "exited": "Qwen3.8 Max (0902)",
-   "exitedCreator": "Alibaba",
+   "exited": "Muse Spark 1.3 (Max)",
+   "exitedCreator": "Meta",
    "gapDays": 1
   },
   {
    "date": "2026-09-22",
    "entered": "Claude Opus 5.5 (Max, Default Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 58.406,
-   "exited": "Muse Spark 1.3 (Max)",
-   "exitedCreator": "Meta",
+   "enteredIntel": 59.106,
+   "exited": "Claude Opus 5 (Max)",
+   "exitedCreator": "Anthropic",
    "gapDays": 19
   },
   {
    "date": "2026-09-28",
    "entered": "Claude Sonnet 5.5 (Max, Default Fallback)",
    "enteredCreator": "Anthropic",
-   "enteredIntel": 54.2413,
+   "enteredIntel": 54.5413,
    "exited": "Claude Fable 5.1 (Xhigh, Default Fallback)",
    "exitedCreator": "Anthropic",
    "gapDays": 6
@@ -619,7 +644,7 @@
    "date": "2026-09-29",
    "entered": "GPT-6.1 Sol (Max)",
    "enteredCreator": "OpenAI",
-   "enteredIntel": 54.5087,
+   "enteredIntel": 54.6087,
    "exited": "Claude Sonnet 5.5 (Max, Default Fallback)",
    "exitedCreator": "Anthropic",
    "gapDays": 1
@@ -628,7 +653,7 @@
    "date": "2026-10-28",
    "entered": "Gemini 4 Carbon (High)",
    "enteredCreator": "Google",
-   "enteredIntel": 59.4257,
+   "enteredIntel": 60.0257,
    "exited": "GPT-6.1 Sol (Max)",
    "exitedCreator": "OpenAI",
    "gapDays": 29
@@ -638,12 +663,12 @@
   {
    "name": "Gemini 4 Carbon (High)",
    "creator": "Google",
-   "intel": 59.4257
+   "intel": 60.0257
   },
   {
    "name": "Claude Opus 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
-   "intel": 58.406
+   "intel": 59.106
   },
   {
    "name": "GPT-6 Astra (Max)",
@@ -653,71 +678,78 @@
  ],
  "tenure": {
   "n": 20,
-  "median": 23.5,
-  "mean": 30.8,
-  "p25": 12,
-  "p75": 56,
+  "median": 28.0,
+  "mean": 43.6,
+  "p25": 14,
+  "p75": 55,
   "min": 1,
-  "max": 80
+  "max": 267
  },
  "tenures": [
   {
-   "name": "Mistral Small 4 (Reasoning)",
-   "creator": "Mistral",
-   "from": "2026-03-16",
-   "to": "2026-06-04",
-   "days": 80
+   "name": "Claude 4.5 Haiku (Reasoning)",
+   "creator": "Anthropic",
+   "from": "2025-10-15",
+   "to": "2026-07-09",
+   "days": 267
   },
   {
-   "name": "MiniMax-M3",
-   "creator": "MiniMax",
-   "from": "2026-06-01",
-   "to": "2026-08-18",
-   "days": 78
-  },
-  {
-   "name": "NVIDIA Nemotron 3 Nano 4B",
-   "creator": "NVIDIA",
-   "from": "2026-03-16",
+   "name": "Gemini 3.1 Flash-Lite",
+   "creator": "Google",
+   "from": "2026-03-03",
    "to": "2026-06-01",
-   "days": 77
-  },
-  {
-   "name": "Command A+",
-   "creator": "Cohere",
-   "from": "2026-05-20",
-   "to": "2026-07-15",
-   "days": 56
+   "days": 90
   },
   {
    "name": "GPT-6 Astra (Max)",
    "creator": "OpenAI",
    "from": "2026-09-03",
    "to": null,
-   "days": 56,
+   "days": 65,
    "current": true
   },
   {
-   "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
-   "creator": "NVIDIA",
-   "from": "2026-06-04",
-   "to": "2026-07-16",
-   "days": 42
+   "name": "Claude Opus 5 (Max)",
+   "creator": "Anthropic",
+   "from": "2026-07-24",
+   "to": "2026-09-22",
+   "days": 60
+  },
+  {
+   "name": "GPT-5.6 Terra (Max)",
+   "creator": "OpenAI",
+   "from": "2026-07-09",
+   "to": "2026-09-02",
+   "days": 55
+  },
+  {
+   "name": "MiniMax-M3",
+   "creator": "MiniMax",
+   "from": "2026-06-01",
+   "to": "2026-07-24",
+   "days": 53
   },
   {
    "name": "Claude Opus 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
    "from": "2026-09-22",
    "to": null,
-   "days": 37,
+   "days": 46,
    "current": true
   },
   {
-   "name": "Kimi K3 (Low)",
-   "creator": "Kimi",
-   "from": "2026-07-16",
-   "to": "2026-08-14",
-   "days": 29
+   "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+   "creator": "NVIDIA",
+   "from": "2026-06-04",
+   "to": "2026-07-09",
+   "days": 35
+  },
+  {
+   "name": "GPT-5.6 Luna (Max)",
+   "creator": "OpenAI",
+   "from": "2026-07-09",
+   "to": "2026-08-12",
+   "days": 34
   },
   {
    "name": "GPT-6.1 Sol (Max)",
@@ -727,6 +759,13 @@
    "days": 29
   },
   {
+   "name": "Gemma 4 31B (Reasoning)",
+   "creator": "Google",
+   "from": "2026-04-02",
+   "to": "2026-04-29",
+   "days": 27
+  },
+  {
    "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
    "creator": "Anthropic",
    "from": "2026-09-01",
@@ -734,57 +773,51 @@
    "days": 27
   },
   {
-   "name": "Muse Spark 1.3 (Max)",
-   "creator": "Meta",
-   "from": "2026-09-02",
-   "to": "2026-09-22",
-   "days": 20
+   "name": "Mistral Medium 3.5",
+   "creator": "Mistral",
+   "from": "2026-04-29",
+   "to": "2026-05-20",
+   "days": 21
   },
   {
-   "name": "DeepSeek V4 Pro 0813 (Max)",
-   "creator": "DeepSeek",
-   "from": "2026-08-13",
-   "to": "2026-09-01",
-   "days": 19
+   "name": "Mistral Small 4 (Reasoning)",
+   "creator": "Mistral",
+   "from": "2026-03-16",
+   "to": "2026-04-02",
+   "days": 17
   },
   {
-   "name": "Inkling (Xhigh)",
-   "creator": "Thinking Machines",
-   "from": "2026-07-15",
-   "to": "2026-07-30",
+   "name": "Command A+",
+   "creator": "Cohere",
+   "from": "2026-05-20",
+   "to": "2026-06-04",
    "days": 15
   },
   {
    "name": "GLM-5.3 (Max)",
    "creator": "Z AI",
    "from": "2026-08-18",
-   "to": "2026-09-02",
-   "days": 15
-  },
-  {
-   "name": "Inkling Small",
-   "creator": "Thinking Machines",
-   "from": "2026-07-30",
-   "to": "2026-08-13",
+   "to": "2026-09-01",
    "days": 14
   },
   {
-   "name": "Qwen3.8 27B (Xhigh)",
-   "creator": "Alibaba",
-   "from": "2026-08-14",
-   "to": "2026-08-26",
-   "days": 12
+   "name": "Gemini 4 Carbon (High)",
+   "creator": "Google",
+   "from": "2026-10-28",
+   "to": null,
+   "days": 10,
+   "current": true
   },
   {
-   "name": "GLM-5.3-Flash",
-   "creator": "Z AI",
-   "from": "2026-08-26",
-   "to": "2026-09-02",
-   "days": 7
+   "name": "Grok 4.6 (Xhigh)",
+   "creator": "SpaceXAI",
+   "from": "2026-08-12",
+   "to": "2026-08-18",
+   "days": 6
   },
   {
-   "name": "Qwen3.8 Max (0902)",
-   "creator": "Alibaba",
+   "name": "Muse Spark 1.3 (Max)",
+   "creator": "Meta",
    "from": "2026-09-02",
    "to": "2026-09-03",
    "days": 1
@@ -795,29 +828,91 @@
    "from": "2026-09-28",
    "to": "2026-09-29",
    "days": 1
-  },
-  {
-   "name": "Gemini 4 Carbon (High)",
-   "creator": "Google",
-   "from": "2026-10-28",
-   "to": null,
-   "days": 1,
-   "current": true
   }
  ],
  "snaps": [
   {
+   "date": "2025-10-15",
+   "top": [
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
+    }
+   ]
+  },
+  {
+   "date": "2026-03-03",
+   "top": [
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
+    },
+    {
+     "name": "Gemini 3.1 Flash-Lite",
+     "creator": "Google",
+     "intel": 6.1568
+    }
+   ]
+  },
+  {
    "date": "2026-03-16",
    "top": [
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
+    },
+    {
+     "name": "Gemini 3.1 Flash-Lite",
+     "creator": "Google",
+     "intel": 6.1568
+    },
     {
      "name": "Mistral Small 4 (Reasoning)",
      "creator": "Mistral",
      "intel": 4.2972
+    }
+   ]
+  },
+  {
+   "date": "2026-04-02",
+   "top": [
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
     },
     {
-     "name": "NVIDIA Nemotron 3 Nano 4B",
-     "creator": "NVIDIA",
-     "intel": 1.8158
+     "name": "Gemini 3.1 Flash-Lite",
+     "creator": "Google",
+     "intel": 6.1568
+    },
+    {
+     "name": "Gemma 4 31B (Reasoning)",
+     "creator": "Google",
+     "intel": 4.3844
+    }
+   ]
+  },
+  {
+   "date": "2026-04-29",
+   "top": [
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
+    },
+    {
+     "name": "Gemini 3.1 Flash-Lite",
+     "creator": "Google",
+     "intel": 6.1568
+    },
+    {
+     "name": "Mistral Medium 3.5",
+     "creator": "Mistral",
+     "intel": 4.6451
     }
    ]
   },
@@ -825,19 +920,19 @@
    "date": "2026-05-20",
    "top": [
     {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
+    },
+    {
      "name": "Command A+",
      "creator": "Cohere",
      "intel": 6.2412
     },
     {
-     "name": "Mistral Small 4 (Reasoning)",
-     "creator": "Mistral",
-     "intel": 4.2972
-    },
-    {
-     "name": "NVIDIA Nemotron 3 Nano 4B",
-     "creator": "NVIDIA",
-     "intel": 1.8158
+     "name": "Gemini 3.1 Flash-Lite",
+     "creator": "Google",
+     "intel": 6.1568
     }
    ]
   },
@@ -847,17 +942,17 @@
     {
      "name": "MiniMax-M3",
      "creator": "MiniMax",
-     "intel": 18.7289
+     "intel": 18.8789
+    },
+    {
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
     },
     {
      "name": "Command A+",
      "creator": "Cohere",
      "intel": 6.2412
-    },
-    {
-     "name": "Mistral Small 4 (Reasoning)",
-     "creator": "Mistral",
-     "intel": 4.2972
     }
    ]
   },
@@ -867,7 +962,7 @@
     {
      "name": "MiniMax-M3",
      "creator": "MiniMax",
-     "intel": 18.7289
+     "intel": 18.8789
     },
     {
      "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
@@ -875,109 +970,69 @@
      "intel": 11.7593
     },
     {
-     "name": "Command A+",
-     "creator": "Cohere",
-     "intel": 6.2412
+     "name": "Claude 4.5 Haiku (Reasoning)",
+     "creator": "Anthropic",
+     "intel": 7.4303
     }
    ]
   },
   {
-   "date": "2026-07-15",
+   "date": "2026-07-09",
    "top": [
+    {
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.3434
+    },
+    {
+     "name": "GPT-5.6 Luna (Max)",
+     "creator": "OpenAI",
+     "intel": 23.7902
+    },
     {
      "name": "MiniMax-M3",
      "creator": "MiniMax",
-     "intel": 18.7289
-    },
-    {
-     "name": "Inkling (Xhigh)",
-     "creator": "Thinking Machines",
-     "intel": 12.4782
-    },
-    {
-     "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
-     "creator": "NVIDIA",
-     "intel": 11.7593
+     "intel": 18.8789
     }
    ]
   },
   {
-   "date": "2026-07-16",
+   "date": "2026-07-24",
    "top": [
     {
-     "name": "MiniMax-M3",
-     "creator": "MiniMax",
-     "intel": 18.7289
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     },
     {
-     "name": "Kimi K3 (Low)",
-     "creator": "Kimi",
-     "intel": 17.4192
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.3434
     },
     {
-     "name": "Inkling (Xhigh)",
-     "creator": "Thinking Machines",
-     "intel": 12.4782
+     "name": "GPT-5.6 Luna (Max)",
+     "creator": "OpenAI",
+     "intel": 23.7902
     }
    ]
   },
   {
-   "date": "2026-07-30",
+   "date": "2026-08-12",
    "top": [
     {
-     "name": "MiniMax-M3",
-     "creator": "MiniMax",
-     "intel": 18.7289
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     },
     {
-     "name": "Kimi K3 (Low)",
-     "creator": "Kimi",
-     "intel": 17.4192
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.3434
     },
     {
-     "name": "Inkling Small",
-     "creator": "Thinking Machines",
-     "intel": 12.9102
-    }
-   ]
-  },
-  {
-   "date": "2026-08-13",
-   "top": [
-    {
-     "name": "DeepSeek V4 Pro 0813 (Max)",
-     "creator": "DeepSeek",
-     "intel": 23.0633
-    },
-    {
-     "name": "MiniMax-M3",
-     "creator": "MiniMax",
-     "intel": 18.7289
-    },
-    {
-     "name": "Kimi K3 (Low)",
-     "creator": "Kimi",
-     "intel": 17.4192
-    }
-   ]
-  },
-  {
-   "date": "2026-08-14",
-   "top": [
-    {
-     "name": "DeepSeek V4 Pro 0813 (Max)",
-     "creator": "DeepSeek",
-     "intel": 23.0633
-    },
-    {
-     "name": "Qwen3.8 27B (Xhigh)",
-     "creator": "Alibaba",
-     "intel": 20.1069
-    },
-    {
-     "name": "MiniMax-M3",
-     "creator": "MiniMax",
-     "intel": 18.7289
+     "name": "Grok 4.6 (Xhigh)",
+     "creator": "SpaceXAI",
+     "intel": 31.0288
     }
    ]
   },
@@ -985,39 +1040,19 @@
    "date": "2026-08-18",
    "top": [
     {
-     "name": "GLM-5.3 (Max)",
-     "creator": "Z AI",
-     "intel": 31.6534
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     },
     {
-     "name": "DeepSeek V4 Pro 0813 (Max)",
-     "creator": "DeepSeek",
-     "intel": 23.0633
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.3434
     },
-    {
-     "name": "Qwen3.8 27B (Xhigh)",
-     "creator": "Alibaba",
-     "intel": 20.1069
-    }
-   ]
-  },
-  {
-   "date": "2026-08-26",
-   "top": [
     {
      "name": "GLM-5.3 (Max)",
      "creator": "Z AI",
      "intel": 31.6534
-    },
-    {
-     "name": "GLM-5.3-Flash",
-     "creator": "Z AI",
-     "intel": 27.7539
-    },
-    {
-     "name": "DeepSeek V4 Pro 0813 (Max)",
-     "creator": "DeepSeek",
-     "intel": 23.0633
     }
    ]
   },
@@ -1027,17 +1062,17 @@
     {
      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6716
+     "intel": 50.0216
     },
     {
-     "name": "GLM-5.3 (Max)",
-     "creator": "Z AI",
-     "intel": 31.6534
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     },
     {
-     "name": "GLM-5.3-Flash",
-     "creator": "Z AI",
-     "intel": 27.7539
+     "name": "GPT-5.6 Terra (Max)",
+     "creator": "OpenAI",
+     "intel": 32.3434
     }
    ]
   },
@@ -1047,17 +1082,17 @@
     {
      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6716
+     "intel": 50.0216
+    },
+    {
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     },
     {
      "name": "Muse Spark 1.3 (Max)",
      "creator": "Meta",
-     "intel": 36.4172
-    },
-    {
-     "name": "Qwen3.8 Max (0902)",
-     "creator": "Alibaba",
-     "intel": 33.5546
+     "intel": 36.6172
     }
    ]
   },
@@ -1072,12 +1107,12 @@
     {
      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6716
+     "intel": 50.0216
     },
     {
-     "name": "Muse Spark 1.3 (Max)",
-     "creator": "Meta",
-     "intel": 36.4172
+     "name": "Claude Opus 5 (Max)",
+     "creator": "Anthropic",
+     "intel": 44.1646
     }
    ]
   },
@@ -1087,7 +1122,7 @@
     {
      "name": "Claude Opus 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 58.406
+     "intel": 59.106
     },
     {
      "name": "GPT-6 Astra (Max)",
@@ -1097,7 +1132,7 @@
     {
      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 49.6716
+     "intel": 50.0216
     }
    ]
   },
@@ -1107,7 +1142,7 @@
     {
      "name": "Claude Opus 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 58.406
+     "intel": 59.106
     },
     {
      "name": "GPT-6 Astra (Max)",
@@ -1117,7 +1152,7 @@
     {
      "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 54.2413
+     "intel": 54.5413
     }
    ]
   },
@@ -1127,7 +1162,7 @@
     {
      "name": "Claude Opus 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 58.406
+     "intel": 59.106
     },
     {
      "name": "GPT-6 Astra (Max)",
@@ -1137,7 +1172,7 @@
     {
      "name": "GPT-6.1 Sol (Max)",
      "creator": "OpenAI",
-     "intel": 54.5087
+     "intel": 54.6087
     }
    ]
   },
@@ -1147,12 +1182,12 @@
     {
      "name": "Gemini 4 Carbon (High)",
      "creator": "Google",
-     "intel": 59.4257
+     "intel": 60.0257
     },
     {
      "name": "Claude Opus 5.5 (Max, Default Fallback)",
      "creator": "Anthropic",
-     "intel": 58.406
+     "intel": 59.106
     },
     {
      "name": "GPT-6 Astra (Max)",
@@ -1163,57 +1198,56 @@
   }
  ],
  "seatCount": {
-  "Anthropic": 3,
-  "Thinking Machines": 2,
-  "Z AI": 2,
-  "OpenAI": 2,
-  "Mistral": 1,
+  "Anthropic": 5,
+  "Google": 3,
+  "OpenAI": 3,
+  "Mistral": 2,
   "Cohere": 1,
   "MiniMax": 1,
   "NVIDIA": 1,
-  "Kimi": 1,
-  "DeepSeek": 1,
-  "Alibaba": 1,
-  "Meta": 1,
-  "Google": 1
+  "SpaceXAI": 1,
+  "Z AI": 1,
+  "Meta": 1
  },
  "raw": {
   "creatorGaps": {
-   "Mistral": [],
-   "Cohere": [],
-   "MiniMax": [],
-   "NVIDIA": [],
-   "Thinking Machines": [
-    15
-   ],
-   "Kimi": [],
-   "DeepSeek": [],
-   "Alibaba": [],
-   "Z AI": [
-    8
-   ],
    "Anthropic": [
+    282,
+    39,
     21,
     6
    ],
-   "Meta": [],
+   "Google": [
+    30,
+    209
+   ],
+   "Mistral": [
+    44
+   ],
+   "Cohere": [],
+   "MiniMax": [],
+   "NVIDIA": [],
    "OpenAI": [
+    56,
     26
    ],
-   "Google": []
+   "SpaceXAI": [],
+   "Z AI": [],
+   "Meta": []
   },
   "seatGaps": [
-   65,
+   139,
+   13,
+   17,
+   27,
+   21,
    12,
    3,
-   41,
-   1,
-   14,
-   14,
-   1,
-   4,
-   8,
+   35,
+   15,
+   19,
    6,
+   14,
    1,
    1,
    19,
@@ -1222,11 +1256,10 @@
    29
   ],
   "leaderGaps": [
-   65,
-   12,
-   73,
-   5,
-   14,
+   229,
+   38,
+   15,
+   39,
    2,
    19,
    36
