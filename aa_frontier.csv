@@ -1,5 +1,6 @@
 ﻿date,intelligenceIndex,deltaVsPrevStep,model,slug,creator,isOpenWeights,isReasoning
-2025-10-15,7.4303,,Claude 4.5 Haiku (Reasoning),claude-4-5-haiku-reasoning,Anthropic,False,True
+2025-08-05,3.8198,,gpt-oss-120b (High),gpt-oss-120b,OpenAI,True,True
+2025-10-15,7.4303,3.6105,Claude 4.5 Haiku (Reasoning),claude-4-5-haiku-reasoning,Anthropic,False,True
 2026-06-01,18.8789,11.4486,MiniMax-M3,minimax-m3,MiniMax,True,True
 2026-07-09,32.3434,13.4645,GPT-5.6 Terra (Max),gpt-5-6-terra,OpenAI,False,True
 2026-07-24,44.1646,11.8212,Claude Opus 5 (Max),claude-opus-5,Anthropic,False,True
@@ -7,3 +8,4 @@
 2026-09-03,56.8539,6.8323,GPT-6 Astra (Max),gpt-6-astra,OpenAI,False,True
 2026-09-22,59.106,2.2521,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,Anthropic,False,True
 2026-10-28,60.0257,0.9197,Gemini 4 Carbon (High),gemini-4-carbon,Google,False,True
+2026-11-09,64.5636,4.5379,"Claude Fable 5.2 (Max, Default Fallback)",claude-fable-5-2,Anthropic,False,True

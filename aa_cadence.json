@@ -93,10 +93,10 @@
   },
   {
    "month": "2026-07",
-   "n": 1,
-   "median": 282,
-   "mean": 282.0,
-   "roll3": 282,
+   "n": 2,
+   "median": 310.0,
+   "mean": 310.0,
+   "roll3": 310.0,
    "frontierEnd": 44.16,
    "frontierDelta": 25.286,
    "refreshCount": 2,
@@ -114,6 +114,11 @@
    ],
    "events": [
     {
+     "creator": "OpenAI",
+     "gap": 338,
+     "to": "2026-07-09"
+    },
+    {
      "creator": "Anthropic",
      "gap": 282,
      "to": "2026-07-24"
@@ -125,7 +130,7 @@
    "n": 0,
    "median": null,
    "mean": null,
-   "roll3": 282,
+   "roll3": 310.0,
    "frontierEnd": 44.16,
    "frontierDelta": 0.0,
    "refreshCount": 0,
@@ -137,7 +142,7 @@
    "n": 5,
    "median": 26,
    "mean": 29.6,
-   "roll3": 32.5,
+   "roll3": 39,
    "frontierEnd": 59.11,
    "frontierDelta": 14.941,
    "refreshCount": 3,
@@ -212,30 +217,42 @@
   },
   {
    "month": "2026-11",
-   "n": 0,
-   "median": null,
-   "mean": null,
-   "roll3": 32.5,
-   "frontierEnd": 60.03,
-   "frontierDelta": 0.0,
-   "refreshCount": 0,
-   "refreshModels": [],
-   "events": []
+   "n": 1,
+   "median": 42,
+   "mean": 42.0,
+   "roll3": 39,
+   "frontierEnd": 64.56,
+   "frontierDelta": 4.538,
+   "refreshCount": 1,
+   "refreshModels": [
+    {
+     "name": "Claude Fable 5.2 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 64.56
+    }
+   ],
+   "events": [
+    {
+     "creator": "Anthropic",
+     "gap": 42,
+     "to": "2026-11-09"
+    }
+   ]
   }
  ],
- "versionCount": 61,
+ "versionCount": 70,
  "dateRange": [
-  "2025-10-15",
-  "2026-11-07"
+  "2025-08-05",
+  "2026-11-16"
  ],
  "cadence": {
-  "n": 9,
-  "median": 39,
-  "mean": 79.2,
+  "n": 11,
+  "median": 42,
+  "mean": 99.4,
   "p25": 21,
-  "p75": 56,
+  "p75": 209,
   "min": 6,
-  "max": 282
+  "max": 338
  },
  "cadenceHistogram": [
   {
@@ -248,7 +265,7 @@
    "label": "1–2 个月",
    "lo": 31,
    "hi": 60,
-   "count": 3
+   "count": 4
   },
   {
    "label": "2–3 个月",
@@ -272,23 +289,23 @@
    "label": ">6 个月",
    "lo": 181,
    "hi": 1000000,
-   "count": 2
+   "count": 3
   }
  ],
  "seat": {
-  "n": 18,
+  "n": 20,
   "median": 14.5,
-  "mean": 21.0,
-  "p25": 3,
-  "p75": 21,
+  "mean": 23.1,
+  "p25": 6,
+  "p75": 27,
   "min": 1,
   "max": 139
  },
  "leader": {
-  "n": 7,
+  "n": 9,
   "median": 36,
-  "mean": 54.0,
-  "p25": 2,
+  "mean": 51.2,
+  "p25": 12,
   "p75": 39,
   "min": 2,
   "max": 229
@@ -296,30 +313,46 @@
  "byYear": [
   {
    "year": 2026,
-   "n": 9,
-   "median": 39,
-   "mean": 79.2,
+   "n": 11,
+   "median": 42,
+   "mean": 99.4,
    "p25": 21,
-   "p75": 56,
+   "p75": 209,
    "min": 6,
-   "max": 282
+   "max": 338
   }
  ],
  "byCreator": [
   {
    "creator": "Anthropic",
-   "n": 4,
-   "median": 30.0,
-   "mean": 87.0,
+   "n": 5,
+   "median": 39,
+   "mean": 78.0,
    "min": 6,
    "max": 282,
-   "lastDate": "2026-09-28",
-   "lastGap": 6,
+   "lastDate": "2026-11-09",
+   "lastGap": 42,
    "gaps": [
     282,
     39,
     21,
-    6
+    6,
+    42
+   ]
+  },
+  {
+   "creator": "OpenAI",
+   "n": 3,
+   "median": 56,
+   "mean": 140.0,
+   "min": 26,
+   "max": 338,
+   "lastDate": "2026-09-29",
+   "lastGap": 26,
+   "gaps": [
+    338,
+    56,
+    26
    ]
   },
   {
@@ -334,20 +367,6 @@
    "gaps": [
     30,
     209
-   ]
-  },
-  {
-   "creator": "OpenAI",
-   "n": 2,
-   "median": 41.0,
-   "mean": 41.0,
-   "min": 26,
-   "max": 56,
-   "lastDate": "2026-09-29",
-   "lastGap": 26,
-   "gaps": [
-    56,
-    26
    ]
   },
   {
@@ -444,6 +463,12 @@
    "gap": 44
   },
   {
+   "creator": "OpenAI",
+   "from": "2025-08-05",
+   "to": "2026-07-09",
+   "gap": 338
+  },
+  {
    "creator": "Anthropic",
    "from": "2025-10-15",
    "to": "2026-07-24",
@@ -484,9 +509,24 @@
    "from": "2026-04-02",
    "to": "2026-10-28",
    "gap": 209
+  },
+  {
+   "creator": "Anthropic",
+   "from": "2026-09-28",
+   "to": "2026-11-09",
+   "gap": 42
   }
  ],
  "changelog": [
+  {
+   "date": "2025-08-05",
+   "entered": "gpt-oss-120b (High)",
+   "enteredCreator": "OpenAI",
+   "enteredIntel": 3.8198,
+   "exited": null,
+   "exitedCreator": null,
+   "gapDays": null
+  },
   {
    "date": "2025-10-15",
    "entered": "Claude 4.5 Haiku (Reasoning)",
@@ -494,7 +534,7 @@
    "enteredIntel": 7.4303,
    "exited": null,
    "exitedCreator": null,
-   "gapDays": null
+   "gapDays": 71
   },
   {
    "date": "2026-03-03",
@@ -510,8 +550,8 @@
    "entered": "Mistral Small 4 (Reasoning)",
    "enteredCreator": "Mistral",
    "enteredIntel": 4.2972,
-   "exited": null,
-   "exitedCreator": null,
+   "exited": "gpt-oss-120b (High)",
+   "exitedCreator": "OpenAI",
    "gapDays": 13
   },
   {
@@ -657,9 +697,23 @@
    "exited": "GPT-6.1 Sol (Max)",
    "exitedCreator": "OpenAI",
    "gapDays": 29
+  },
+  {
+   "date": "2026-11-09",
+   "entered": "Claude Fable 5.2 (Max, Default Fallback)",
+   "enteredCreator": "Anthropic",
+   "enteredIntel": 64.5636,
+   "exited": "GPT-6 Astra (Max)",
+   "exitedCreator": "OpenAI",
+   "gapDays": 12
   }
  ],
  "finalTop": [
+  {
+   "name": "Claude Fable 5.2 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "intel": 64.5636
+  },
   {
    "name": "Gemini 4 Carbon (High)",
    "creator": "Google",
@@ -669,17 +723,12 @@
    "name": "Claude Opus 5.5 (Max, Default Fallback)",
    "creator": "Anthropic",
    "intel": 59.106
-  },
-  {
-   "name": "GPT-6 Astra (Max)",
-   "creator": "OpenAI",
-   "intel": 56.8539
   }
  ],
  "tenure": {
-  "n": 20,
+  "n": 22,
   "median": 28.0,
-  "mean": 43.6,
+  "mean": 51.0,
   "p25": 14,
   "p75": 55,
   "min": 1,
@@ -694,6 +743,13 @@
    "days": 267
   },
   {
+   "name": "gpt-oss-120b (High)",
+   "creator": "OpenAI",
+   "from": "2025-08-05",
+   "to": "2026-03-16",
+   "days": 223
+  },
+  {
    "name": "Gemini 3.1 Flash-Lite",
    "creator": "Google",
    "from": "2026-03-03",
@@ -704,9 +760,8 @@
    "name": "GPT-6 Astra (Max)",
    "creator": "OpenAI",
    "from": "2026-09-03",
-   "to": null,
-   "days": 65,
-   "current": true
+   "to": "2026-11-09",
+   "days": 67
   },
   {
    "name": "Claude Opus 5 (Max)",
@@ -723,19 +778,19 @@
    "days": 55
   },
   {
+   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": null,
+   "days": 55,
+   "current": true
+  },
+  {
    "name": "MiniMax-M3",
    "creator": "MiniMax",
    "from": "2026-06-01",
    "to": "2026-07-24",
    "days": 53
-  },
-  {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-22",
-   "to": null,
-   "days": 46,
-   "current": true
   },
   {
    "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
@@ -780,6 +835,14 @@
    "days": 21
   },
   {
+   "name": "Gemini 4 Carbon (High)",
+   "creator": "Google",
+   "from": "2026-10-28",
+   "to": null,
+   "days": 19,
+   "current": true
+  },
+  {
    "name": "Mistral Small 4 (Reasoning)",
    "creator": "Mistral",
    "from": "2026-03-16",
@@ -801,11 +864,11 @@
    "days": 14
   },
   {
-   "name": "Gemini 4 Carbon (High)",
-   "creator": "Google",
-   "from": "2026-10-28",
+   "name": "Claude Fable 5.2 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-11-09",
    "to": null,
-   "days": 10,
+   "days": 7,
    "current": true
   },
   {
@@ -832,12 +895,27 @@
  ],
  "snaps": [
   {
+   "date": "2025-08-05",
+   "top": [
+    {
+     "name": "gpt-oss-120b (High)",
+     "creator": "OpenAI",
+     "intel": 3.8198
+    }
+   ]
+  },
+  {
    "date": "2025-10-15",
    "top": [
     {
      "name": "Claude 4.5 Haiku (Reasoning)",
      "creator": "Anthropic",
      "intel": 7.4303
+    },
+    {
+     "name": "gpt-oss-120b (High)",
+     "creator": "OpenAI",
+     "intel": 3.8198
     }
    ]
   },
@@ -853,6 +931,11 @@
      "name": "Gemini 3.1 Flash-Lite",
      "creator": "Google",
      "intel": 6.1568
+    },
+    {
+     "name": "gpt-oss-120b (High)",
+     "creator": "OpenAI",
+     "intel": 3.8198
     }
    ]
   },
@@ -1195,12 +1278,32 @@
      "intel": 56.8539
     }
    ]
+  },
+  {
+   "date": "2026-11-09",
+   "top": [
+    {
+     "name": "Claude Fable 5.2 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 64.5636
+    },
+    {
+     "name": "Gemini 4 Carbon (High)",
+     "creator": "Google",
+     "intel": 60.0257
+    },
+    {
+     "name": "Claude Opus 5.5 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 59.106
+    }
+   ]
   }
  ],
  "seatCount": {
-  "Anthropic": 5,
+  "Anthropic": 6,
+  "OpenAI": 4,
   "Google": 3,
-  "OpenAI": 3,
   "Mistral": 2,
   "Cohere": 1,
   "MiniMax": 1,
@@ -1211,11 +1314,17 @@
  },
  "raw": {
   "creatorGaps": {
+   "OpenAI": [
+    338,
+    56,
+    26
+   ],
    "Anthropic": [
     282,
     39,
     21,
-    6
+    6,
+    42
    ],
    "Google": [
     30,
@@ -1227,15 +1336,12 @@
    "Cohere": [],
    "MiniMax": [],
    "NVIDIA": [],
-   "OpenAI": [
-    56,
-    26
-   ],
    "SpaceXAI": [],
    "Z AI": [],
    "Meta": []
   },
   "seatGaps": [
+   71,
    139,
    13,
    17,
@@ -1253,16 +1359,19 @@
    19,
    6,
    1,
-   29
+   29,
+   12
   ],
   "leaderGaps": [
+   71,
    229,
    38,
    15,
    39,
    2,
    19,
-   36
+   36,
+   12
   ]
  }
 }
