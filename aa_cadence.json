@@ -41,9 +41,9 @@
   {
    "month": "2026-04",
    "n": 2,
-   "median": 37.0,
-   "mean": 37.0,
-   "roll3": 37.0,
+   "median": 15.5,
+   "mean": 15.5,
+   "roll3": 15.5,
    "frontierEnd": 7.43,
    "frontierDelta": 0.0,
    "refreshCount": 0,
@@ -55,9 +55,9 @@
      "to": "2026-04-02"
     },
     {
-     "creator": "Mistral",
-     "gap": 44,
-     "to": "2026-04-29"
+     "creator": "Google",
+     "gap": 1,
+     "to": "2026-04-03"
     }
    ]
   },
@@ -66,7 +66,7 @@
    "n": 0,
    "median": null,
    "mean": null,
-   "roll3": 37.0,
+   "roll3": 15.5,
    "frontierEnd": 7.43,
    "frontierDelta": 0.0,
    "refreshCount": 0,
@@ -78,7 +78,7 @@
    "n": 0,
    "median": null,
    "mean": null,
-   "roll3": 37.0,
+   "roll3": 15.5,
    "frontierEnd": 18.88,
    "frontierDelta": 11.449,
    "refreshCount": 1,
@@ -194,8 +194,8 @@
   {
    "month": "2026-10",
    "n": 1,
-   "median": 209,
-   "mean": 209.0,
+   "median": 208,
+   "mean": 208.0,
    "roll3": 32.5,
    "frontierEnd": 60.03,
    "frontierDelta": 0.92,
@@ -210,16 +210,16 @@
    "events": [
     {
      "creator": "Google",
-     "gap": 209,
+     "gap": 208,
      "to": "2026-10-28"
     }
    ]
   },
   {
    "month": "2026-11",
-   "n": 1,
+   "n": 3,
    "median": 42,
-   "mean": 42.0,
+   "mean": 37.3,
    "roll3": 39,
    "frontierEnd": 64.56,
    "frontierDelta": 4.538,
@@ -236,22 +236,32 @@
      "creator": "Anthropic",
      "gap": 42,
      "to": "2026-11-09"
+    },
+    {
+     "creator": "OpenAI",
+     "gap": 49,
+     "to": "2026-11-17"
+    },
+    {
+     "creator": "Google",
+     "gap": 21,
+     "to": "2026-11-18"
     }
    ]
   }
  ],
- "versionCount": 70,
+ "versionCount": 85,
  "dateRange": [
   "2025-08-05",
-  "2026-11-16"
+  "2026-11-20"
  ],
  "cadence": {
-  "n": 11,
-  "median": 42,
-  "mean": 99.4,
+  "n": 13,
+  "median": 39,
+  "mean": 86.1,
   "p25": 21,
-  "p75": 209,
-  "min": 6,
+  "p75": 56,
+  "min": 1,
   "max": 338
  },
  "cadenceHistogram": [
@@ -259,7 +269,7 @@
    "label": "≤1 个月",
    "lo": 0,
    "hi": 30,
-   "count": 4
+   "count": 6
   },
   {
    "label": "1–2 个月",
@@ -293,11 +303,11 @@
   }
  ],
  "seat": {
-  "n": 20,
-  "median": 14.5,
-  "mean": 23.1,
-  "p25": 6,
-  "p75": 27,
+  "n": 22,
+  "median": 12.5,
+  "mean": 21.4,
+  "p25": 1,
+  "p75": 19,
   "min": 1,
   "max": 139
  },
@@ -313,12 +323,12 @@
  "byYear": [
   {
    "year": 2026,
-   "n": 11,
-   "median": 42,
-   "mean": 99.4,
+   "n": 13,
+   "median": 39,
+   "mean": 86.1,
    "p25": 21,
-   "p75": 209,
-   "min": 6,
+   "p75": 56,
+   "min": 1,
    "max": 338
   }
  ],
@@ -342,45 +352,46 @@
   },
   {
    "creator": "OpenAI",
-   "n": 3,
-   "median": 56,
-   "mean": 140.0,
+   "n": 4,
+   "median": 52.5,
+   "mean": 117.2,
    "min": 26,
    "max": 338,
-   "lastDate": "2026-09-29",
-   "lastGap": 26,
+   "lastDate": "2026-11-17",
+   "lastGap": 49,
    "gaps": [
     338,
     56,
-    26
+    26,
+    49
    ]
   },
   {
    "creator": "Google",
-   "n": 2,
-   "median": 119.5,
-   "mean": 119.5,
-   "min": 30,
-   "max": 209,
-   "lastDate": "2026-10-28",
-   "lastGap": 209,
+   "n": 4,
+   "median": 25.5,
+   "mean": 65.0,
+   "min": 1,
+   "max": 208,
+   "lastDate": "2026-11-18",
+   "lastGap": 21,
    "gaps": [
     30,
-    209
+    1,
+    208,
+    21
    ]
   },
   {
    "creator": "Mistral",
-   "n": 1,
-   "median": 44,
-   "mean": 44.0,
-   "min": 44,
-   "max": 44,
-   "lastDate": "2026-04-29",
-   "lastGap": 44,
-   "gaps": [
-    44
-   ]
+   "n": 0,
+   "median": null,
+   "mean": null,
+   "min": null,
+   "max": null,
+   "lastDate": "2026-03-16",
+   "lastGap": null,
+   "gaps": []
   },
   {
    "creator": "Cohere",
@@ -457,10 +468,10 @@
    "gap": 30
   },
   {
-   "creator": "Mistral",
-   "from": "2026-03-16",
-   "to": "2026-04-29",
-   "gap": 44
+   "creator": "Google",
+   "from": "2026-04-02",
+   "to": "2026-04-03",
+   "gap": 1
   },
   {
    "creator": "OpenAI",
@@ -506,15 +517,27 @@
   },
   {
    "creator": "Google",
-   "from": "2026-04-02",
+   "from": "2026-04-03",
    "to": "2026-10-28",
-   "gap": 209
+   "gap": 208
   },
   {
    "creator": "Anthropic",
    "from": "2026-09-28",
    "to": "2026-11-09",
    "gap": 42
+  },
+  {
+   "creator": "OpenAI",
+   "from": "2026-09-29",
+   "to": "2026-11-17",
+   "gap": 49
+  },
+  {
+   "creator": "Google",
+   "from": "2026-10-28",
+   "to": "2026-11-18",
+   "gap": 21
   }
  ],
  "changelog": [
@@ -564,22 +587,22 @@
    "gapDays": 17
   },
   {
-   "date": "2026-04-29",
-   "entered": "Mistral Medium 3.5",
-   "enteredCreator": "Mistral",
-   "enteredIntel": 4.6451,
+   "date": "2026-04-03",
+   "entered": "Gemma 4 E4B (Reasoning)",
+   "enteredCreator": "Google",
+   "enteredIntel": 4.7808,
    "exited": "Gemma 4 31B (Reasoning)",
    "exitedCreator": "Google",
-   "gapDays": 27
+   "gapDays": 1
   },
   {
    "date": "2026-05-20",
    "entered": "Command A+",
    "enteredCreator": "Cohere",
    "enteredIntel": 6.2412,
-   "exited": "Mistral Medium 3.5",
-   "exitedCreator": "Mistral",
-   "gapDays": 21
+   "exited": "Gemma 4 E4B (Reasoning)",
+   "exitedCreator": "Google",
+   "gapDays": 47
   },
   {
    "date": "2026-06-01",
@@ -706,6 +729,24 @@
    "exited": "GPT-6 Astra (Max)",
    "exitedCreator": "OpenAI",
    "gapDays": 12
+  },
+  {
+   "date": "2026-11-17",
+   "entered": "GPT-6.2 Astra (Max)",
+   "enteredCreator": "OpenAI",
+   "enteredIntel": 62.1388,
+   "exited": "Claude Opus 5.5 (Max, Default Fallback)",
+   "exitedCreator": "Anthropic",
+   "gapDays": 8
+  },
+  {
+   "date": "2026-11-18",
+   "entered": "Gemini 4 Neon (Xhigh)",
+   "enteredCreator": "Google",
+   "enteredIntel": 61.3982,
+   "exited": "Gemini 4 Carbon (High)",
+   "exitedCreator": "Google",
+   "gapDays": 1
   }
  ],
  "finalTop": [
@@ -715,22 +756,22 @@
    "intel": 64.5636
   },
   {
-   "name": "Gemini 4 Carbon (High)",
-   "creator": "Google",
-   "intel": 60.0257
+   "name": "GPT-6.2 Astra (Max)",
+   "creator": "OpenAI",
+   "intel": 62.1388
   },
   {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "intel": 59.106
+   "name": "Gemini 4 Neon (Xhigh)",
+   "creator": "Google",
+   "intel": 61.3982
   }
  ],
  "tenure": {
-  "n": 22,
+  "n": 24,
   "median": 28.0,
-  "mean": 51.0,
-  "p25": 14,
-  "p75": 55,
+  "mean": 47.3,
+  "p25": 6,
+  "p75": 56,
   "min": 1,
   "max": 267
  },
@@ -771,6 +812,13 @@
    "days": 60
   },
   {
+   "name": "Claude Opus 5.5 (Max, Default Fallback)",
+   "creator": "Anthropic",
+   "from": "2026-09-22",
+   "to": "2026-11-17",
+   "days": 56
+  },
+  {
    "name": "GPT-5.6 Terra (Max)",
    "creator": "OpenAI",
    "from": "2026-07-09",
@@ -778,19 +826,18 @@
    "days": 55
   },
   {
-   "name": "Claude Opus 5.5 (Max, Default Fallback)",
-   "creator": "Anthropic",
-   "from": "2026-09-22",
-   "to": null,
-   "days": 55,
-   "current": true
-  },
-  {
    "name": "MiniMax-M3",
    "creator": "MiniMax",
    "from": "2026-06-01",
    "to": "2026-07-24",
    "days": 53
+  },
+  {
+   "name": "Gemma 4 E4B (Reasoning)",
+   "creator": "Google",
+   "from": "2026-04-03",
+   "to": "2026-05-20",
+   "days": 47
   },
   {
    "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
@@ -814,13 +861,6 @@
    "days": 29
   },
   {
-   "name": "Gemma 4 31B (Reasoning)",
-   "creator": "Google",
-   "from": "2026-04-02",
-   "to": "2026-04-29",
-   "days": 27
-  },
-  {
    "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
    "creator": "Anthropic",
    "from": "2026-09-01",
@@ -828,19 +868,11 @@
    "days": 27
   },
   {
-   "name": "Mistral Medium 3.5",
-   "creator": "Mistral",
-   "from": "2026-04-29",
-   "to": "2026-05-20",
-   "days": 21
-  },
-  {
    "name": "Gemini 4 Carbon (High)",
    "creator": "Google",
    "from": "2026-10-28",
-   "to": null,
-   "days": 19,
-   "current": true
+   "to": "2026-11-18",
+   "days": 21
   },
   {
    "name": "Mistral Small 4 (Reasoning)",
@@ -868,7 +900,7 @@
    "creator": "Anthropic",
    "from": "2026-11-09",
    "to": null,
-   "days": 7,
+   "days": 11,
    "current": true
   },
   {
@@ -877,6 +909,29 @@
    "from": "2026-08-12",
    "to": "2026-08-18",
    "days": 6
+  },
+  {
+   "name": "GPT-6.2 Astra (Max)",
+   "creator": "OpenAI",
+   "from": "2026-11-17",
+   "to": null,
+   "days": 3,
+   "current": true
+  },
+  {
+   "name": "Gemini 4 Neon (Xhigh)",
+   "creator": "Google",
+   "from": "2026-11-18",
+   "to": null,
+   "days": 2,
+   "current": true
+  },
+  {
+   "name": "Gemma 4 31B (Reasoning)",
+   "creator": "Google",
+   "from": "2026-04-02",
+   "to": "2026-04-03",
+   "days": 1
   },
   {
    "name": "Muse Spark 1.3 (Max)",
@@ -980,7 +1035,7 @@
    ]
   },
   {
-   "date": "2026-04-29",
+   "date": "2026-04-03",
    "top": [
     {
      "name": "Claude 4.5 Haiku (Reasoning)",
@@ -993,9 +1048,9 @@
      "intel": 6.1568
     },
     {
-     "name": "Mistral Medium 3.5",
-     "creator": "Mistral",
-     "intel": 4.6451
+     "name": "Gemma 4 E4B (Reasoning)",
+     "creator": "Google",
+     "intel": 4.7808
     }
    ]
   },
@@ -1298,13 +1353,53 @@
      "intel": 59.106
     }
    ]
+  },
+  {
+   "date": "2026-11-17",
+   "top": [
+    {
+     "name": "Claude Fable 5.2 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 64.5636
+    },
+    {
+     "name": "GPT-6.2 Astra (Max)",
+     "creator": "OpenAI",
+     "intel": 62.1388
+    },
+    {
+     "name": "Gemini 4 Carbon (High)",
+     "creator": "Google",
+     "intel": 60.0257
+    }
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "top": [
+    {
+     "name": "Claude Fable 5.2 (Max, Default Fallback)",
+     "creator": "Anthropic",
+     "intel": 64.5636
+    },
+    {
+     "name": "GPT-6.2 Astra (Max)",
+     "creator": "OpenAI",
+     "intel": 62.1388
+    },
+    {
+     "name": "Gemini 4 Neon (Xhigh)",
+     "creator": "Google",
+     "intel": 61.3982
+    }
+   ]
   }
  ],
  "seatCount": {
   "Anthropic": 6,
-  "OpenAI": 4,
-  "Google": 3,
-  "Mistral": 2,
+  "OpenAI": 5,
+  "Google": 5,
+  "Mistral": 1,
   "Cohere": 1,
   "MiniMax": 1,
   "NVIDIA": 1,
@@ -1317,7 +1412,8 @@
    "OpenAI": [
     338,
     56,
-    26
+    26,
+    49
    ],
    "Anthropic": [
     282,
@@ -1328,11 +1424,11 @@
    ],
    "Google": [
     30,
-    209
+    1,
+    208,
+    21
    ],
-   "Mistral": [
-    44
-   ],
+   "Mistral": [],
    "Cohere": [],
    "MiniMax": [],
    "NVIDIA": [],
@@ -1345,8 +1441,8 @@
    139,
    13,
    17,
-   27,
-   21,
+   1,
+   47,
    12,
    3,
    35,
@@ -1360,7 +1456,9 @@
    6,
    1,
    29,
-   12
+   12,
+   8,
+   1
   ],
   "leaderGaps": [
    71,

@@ -4,14 +4,16 @@ Anthropic,2026-07-24,44.1646,36.7343,Claude Opus 5 (Max),claude-opus-5,False,Tru
 Anthropic,2026-09-01,50.0216,5.857,"Claude Fable 5.1 (Xhigh, Default Fallback)",claude-fable-5-1-xhigh,False,True
 Anthropic,2026-09-22,59.106,9.0844,"Claude Opus 5.5 (Max, Default Fallback)",claude-opus-5-5,False,True
 Anthropic,2026-11-09,64.5636,5.4576,"Claude Fable 5.2 (Max, Default Fallback)",claude-fable-5-2,False,True
+OpenAI,2025-08-05,3.8198,,gpt-oss-120b (High),gpt-oss-120b,True,True
+OpenAI,2026-07-09,32.3434,28.5236,GPT-5.6 Terra (Max),gpt-5-6-terra,False,True
+OpenAI,2026-09-03,56.8539,24.5105,GPT-6 Astra (Max),gpt-6-astra,False,True
+OpenAI,2026-11-17,62.1388,5.2849,GPT-6.2 Astra (Max),gpt-6-2-astra,False,True
 Google,2026-03-03,6.1568,,Gemini 3.1 Flash-Lite,gemini-3-1-flash-lite-preview,False,True
 Google,2026-07-21,11.6563,5.4995,Gemini 3.5 Flash-Lite,gemini-3-5-flash-lite,False,True
 Google,2026-09-02,30.8468,19.1905,Gemini 3.8 Flash (High),gemini-3-8-flash,False,True
 Google,2026-09-30,50.4122,19.5654,Gemini 4 Argon (High),gemini-4-argon,False,True
 Google,2026-10-28,60.0257,9.6135,Gemini 4 Carbon (High),gemini-4-carbon,False,True
-OpenAI,2025-08-05,3.8198,,gpt-oss-120b (High),gpt-oss-120b,True,True
-OpenAI,2026-07-09,32.3434,28.5236,GPT-5.6 Terra (Max),gpt-5-6-terra,False,True
-OpenAI,2026-09-03,56.8539,24.5105,GPT-6 Astra (Max),gpt-6-astra,False,True
+Google,2026-11-18,61.3982,1.3725,Gemini 4 Neon (Xhigh),gemini-4-neon,False,True
 Meta,2026-08-10,6.3413,,Muse Glimmer (High),muse-glimmer,True,True
 Meta,2026-09-02,36.6172,30.2759,Muse Spark 1.3 (Max),muse-spark-1-3,False,True
 Meta,2026-10-12,50.0772,13.46,Muse Wonder Full (Max),muse-wonder-full,False,True
